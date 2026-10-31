@@ -158,8 +158,26 @@
   "hotPaths": [
     {
       "path": "src/cli/ui.ts",
-      "accessCount": 3,
-      "lastAccessed": 1793467474825,
+      "accessCount": 6,
+      "lastAccessed": 1793468289011,
+      "type": "file"
+    },
+    {
+      "path": "tests/cli.test.ts",
+      "accessCount": 1,
+      "lastAccessed": 1793468381530,
+      "type": "file"
+    },
+    {
+      "path": "tests/ui.test.ts",
+      "accessCount": 1,
+      "lastAccessed": 1793468405655,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 1,
+      "lastAccessed": 1793468549190,
       "type": "file"
     }
   ],
