@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "scrapling": {
+      "command": "uvx",
+      "args": ["--from", "scrapling[ai]", "scrapling", "mcp"]
+    },
+    "scrapling-fetch": {
+      "command": "uvx",
+      "args": ["scrapling-fetch-mcp"]
+    },
+    "opencode-review": {
+      "command": "npx",
+      "args": ["-y", "@alibaba/open-code-review", "--mcp"]
+    }
+  }
+}

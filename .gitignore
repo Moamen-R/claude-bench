@@ -1,0 +1,8 @@
+node_modules
+dist
+.claude-flow
+receipts
+review-receipts
+*.log
+.DS_Store
+Thumbs.db
