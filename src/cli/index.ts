@@ -272,6 +272,7 @@ program
 
 export { program };
 
-if (process.argv[1] && process.argv[1].endsWith('index.ts')) {
-  program.parse();
+// Automatically parse arguments when executed as main CLI outside test environment
+if (process.env.NODE_ENV !== 'test') {
+  program.parse(process.argv);
 }

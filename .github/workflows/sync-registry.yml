@@ -1,0 +1,28 @@
+name: Sync Skills Registry
+
+on:
+  schedule:
+    - cron: '0 4 * * 1' # Every Monday at 04:00 UTC
+  workflow_dispatch:
+
+jobs:
+  sync:
+    name: Sync Marketplace Registry
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Registry Sync
+        run: node dist/index.js sync
+
+      - name: Validate Registry Seed
+        run: npx vitest run tests/registry.test.ts

@@ -1,0 +1,230 @@
+{
+  ".mcp.json": {
+    "mtime": 1793456255.4447834,
+    "seen": 1793460299.5445137,
+    "ast_hash": "9f6416d23fecaa245ce8a7d317c0177a",
+    "semantic_hash": "9f6416d23fecaa245ce8a7d317c0177a"
+  },
+  "package.json": {
+    "mtime": 1793456142.4571042,
+    "seen": 1793460299.5448303,
+    "ast_hash": "61f96316a7a656af7eb265d2e5c37aa5",
+    "semantic_hash": "61f96316a7a656af7eb265d2e5c37aa5"
+  },
+  "src/cli/index.ts": {
+    "mtime": 1793460984.8575664,
+    "seen": 1793461148.5466383,
+    "ast_hash": "dc4e51add947cdfc466df8a0e1fac59c",
+    "semantic_hash": ""
+  },
+  "src/cli/ui.ts": {
+    "mtime": 1793459308.0848167,
+    "seen": 1793460299.545128,
+    "ast_hash": "d2c6a461d291401ac80a9dc18923f860",
+    "semantic_hash": "d2c6a461d291401ac80a9dc18923f860"
+  },
+  "src/cli/wizard.ts": {
+    "mtime": 1793459340.7198787,
+    "seen": 1793460299.5452611,
+    "ast_hash": "acae5a822354322dc0c01bcdb385b0b5",
+    "semantic_hash": "acae5a822354322dc0c01bcdb385b0b5"
+  },
+  "src/core/backup-manager.ts": {
+    "mtime": 1793456900.9220233,
+    "seen": 1793460299.545391,
+    "ast_hash": "00ef78b1d15b11bc8b2069184d22e69a",
+    "semantic_hash": "00ef78b1d15b11bc8b2069184d22e69a"
+  },
+  "src/core/os-detector.ts": {
+    "mtime": 1793456731.9858801,
+    "seen": 1793460299.545522,
+    "ast_hash": "85fac68a58acf7ed94f7d77e231821e8",
+    "semantic_hash": "85fac68a58acf7ed94f7d77e231821e8"
+  },
+  "src/core/schema.ts": {
+    "mtime": 1793456476.0747738,
+    "seen": 1793460299.5456545,
+    "ast_hash": "9b32fe4bfae783ae5de6b6f6d6d9e199",
+    "semantic_hash": "9b32fe4bfae783ae5de6b6f6d6d9e199"
+  },
+  "src/core/security-auditor.ts": {
+    "mtime": 1793458163.5831385,
+    "seen": 1793460299.5457835,
+    "ast_hash": "a47ec2f4b98ca76102beb5b2544370c8",
+    "semantic_hash": "a47ec2f4b98ca76102beb5b2544370c8"
+  },
+  "src/generators/claude-md-generator.ts": {
+    "mtime": 1793459214.9807577,
+    "seen": 1793460299.5459054,
+    "ast_hash": "ed2fe5b430709c6a2dff9d14caf23988",
+    "semantic_hash": "ed2fe5b430709c6a2dff9d14caf23988"
+  },
+  "src/installers/claude-installer.ts": {
+    "mtime": 1793458397.7846074,
+    "seen": 1793460299.5460339,
+    "ast_hash": "8a392121b909a28ddd7adbd38b9ef3f5",
+    "semantic_hash": "8a392121b909a28ddd7adbd38b9ef3f5"
+  },
+  "src/installers/mcp-merger.ts": {
+    "mtime": 1793458818.368032,
+    "seen": 1793460299.546175,
+    "ast_hash": "175ceb153d3e3bb0bab36a714db3db85",
+    "semantic_hash": "175ceb153d3e3bb0bab36a714db3db85"
+  },
+  "src/installers/omniroute-installer.ts": {
+    "mtime": 1793458594.4056802,
+    "seen": 1793460299.546301,
+    "ast_hash": "72e0585d85bb74424c34b5a8c9a29f6c",
+    "semantic_hash": "72e0585d85bb74424c34b5a8c9a29f6c"
+  },
+  "src/installers/skill-installer.ts": {
+    "mtime": 1793459042.8345065,
+    "seen": 1793460299.5464232,
+    "ast_hash": "746bd9261baaaa6b9d3473912cb4608d",
+    "semantic_hash": "746bd9261baaaa6b9d3473912cb4608d"
+  },
+  "src/registry/registry.seed.json": {
+    "mtime": 1793460941.3323138,
+    "seen": 1793461148.546664,
+    "ast_hash": "54d29027c7f0dd451069853aab5284fd",
+    "semantic_hash": ""
+  },
+  "src/registry/scrapling-sync.ts": {
+    "mtime": 1793459560.3070264,
+    "seen": 1793460299.54655,
+    "ast_hash": "3260c16bbcaeaecb61b34b2cb44dcc39",
+    "semantic_hash": "3260c16bbcaeaecb61b34b2cb44dcc39"
+  },
+  "tests/backup-manager.test.ts": {
+    "mtime": 1793456838.961381,
+    "seen": 1793460299.5466733,
+    "ast_hash": "c6c740df5df896a26bec14c527b5bfc9",
+    "semantic_hash": "c6c740df5df896a26bec14c527b5bfc9"
+  },
+  "tests/claude-installer.test.ts": {
+    "mtime": 1793458334.4121108,
+    "seen": 1793460299.5467968,
+    "ast_hash": "8ed0b7d22553f55c43c887ff8fab5afb",
+    "semantic_hash": "8ed0b7d22553f55c43c887ff8fab5afb"
+  },
+  "tests/claude-md-generator.test.ts": {
+    "mtime": 1793459145.5876853,
+    "seen": 1793460299.5469172,
+    "ast_hash": "1b0e604058f8ec0b589740c6b9b32749",
+    "semantic_hash": "1b0e604058f8ec0b589740c6b9b32749"
+  },
+  "tests/cli.test.ts": {
+    "mtime": 1793459406.09049,
+    "seen": 1793460299.5470355,
+    "ast_hash": "5715d78b4aa673088aa058d3f262abd0",
+    "semantic_hash": "5715d78b4aa673088aa058d3f262abd0"
+  },
+  "tests/mcp-merger.test.ts": {
+    "mtime": 1793458762.6225722,
+    "seen": 1793460299.5471542,
+    "ast_hash": "cf5b95a1428c0f4d87e920e4b11ae553",
+    "semantic_hash": "cf5b95a1428c0f4d87e920e4b11ae553"
+  },
+  "tests/omniroute-installer.test.ts": {
+    "mtime": 1793458493.213211,
+    "seen": 1793460299.5472724,
+    "ast_hash": "7084ebb69fb3b4010b2a5c7077d6f79e",
+    "semantic_hash": "7084ebb69fb3b4010b2a5c7077d6f79e"
+  },
+  "tests/os-detector.test.ts": {
+    "mtime": 1793456668.0952935,
+    "seen": 1793460299.5473988,
+    "ast_hash": "969ee15fe37675ac4046c89d348ef21f",
+    "semantic_hash": "969ee15fe37675ac4046c89d348ef21f"
+  },
+  "tests/registry.test.ts": {
+    "mtime": 1793460652.9875913,
+    "seen": 1793461148.546682,
+    "ast_hash": "e7547e98a5ee96352f681ae221a8a117",
+    "semantic_hash": ""
+  },
+  "tests/schema.test.ts": {
+    "mtime": 1793456423.662974,
+    "seen": 1793460299.5476413,
+    "ast_hash": "a9f0ba1030b68edfcd6e3e3f7f62650b",
+    "semantic_hash": "a9f0ba1030b68edfcd6e3e3f7f62650b"
+  },
+  "tests/scrapling-sync.test.ts": {
+    "mtime": 1793459513.398009,
+    "seen": 1793460299.5477853,
+    "ast_hash": "9a987a56b470fd8aaf45a120fe136cd2",
+    "semantic_hash": "9a987a56b470fd8aaf45a120fe136cd2"
+  },
+  "tests/security-auditor.test.ts": {
+    "mtime": 1793458228.0842886,
+    "seen": 1793460299.547916,
+    "ast_hash": "372a8912387127928026384b36109309",
+    "semantic_hash": "372a8912387127928026384b36109309"
+  },
+  "tests/skill-installer.test.ts": {
+    "mtime": 1793458965.086018,
+    "seen": 1793460299.548044,
+    "ast_hash": "7322a0d734f14c5d54c08891faa40833",
+    "semantic_hash": "7322a0d734f14c5d54c08891faa40833"
+  },
+  "tsconfig.json": {
+    "mtime": 1793456167.92054,
+    "seen": 1793460299.548177,
+    "ast_hash": "4d06555056c52fe3f1cbcdf6c8945df0",
+    "semantic_hash": "4d06555056c52fe3f1cbcdf6c8945df0"
+  },
+  "tsup.config.ts": {
+    "mtime": 1793456191.9414754,
+    "seen": 1793460299.5483148,
+    "ast_hash": "4cce7c277b2c0d8fcb537d1cc1ce81ec",
+    "semantic_hash": "4cce7c277b2c0d8fcb537d1cc1ce81ec"
+  },
+  "vitest.config.ts": {
+    "mtime": 1793456213.4766152,
+    "seen": 1793460299.5484385,
+    "ast_hash": "d4c481863eff622d18863471782f37bf",
+    "semantic_hash": "d4c481863eff622d18863471782f37bf"
+  },
+  "scripts/generate-seed.ts": {
+    "mtime": 1793460917.1427364,
+    "seen": 1793461148.5466352,
+    "ast_hash": "5627941ef3043e126d35571d51ce47a5",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1793455077.6444857,
+    "seen": 1793461148.5466967,
+    "ast_hash": "a918d882f9e44c1a9ceb384412d58419",
+    "semantic_hash": ""
+  },
+  "claude_setup_cli_workflow_and_prompt.md": {
+    "mtime": 1793454488.805909,
+    "seen": 1793461148.5466986,
+    "ast_hash": "95e55b0174a5d65f0e3135d59a334b7e",
+    "semantic_hash": ""
+  },
+  "docs/FIELDS.md": {
+    "mtime": 1793456083.2305655,
+    "seen": 1793461148.5467002,
+    "ast_hash": "d0d18d20919d7a6b5aec507fb343a1cd",
+    "semantic_hash": ""
+  },
+  "docs/SPEC.md": {
+    "mtime": 1793455622.014801,
+    "seen": 1793461148.546702,
+    "ast_hash": "f572f59e1b81bdcf5c50275d6696499b",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-10-31-claude-forge.md": {
+    "mtime": 1793456118.627427,
+    "seen": 1793461148.5467033,
+    "ast_hash": "14cf40192548635f29bff9ebe76d2ea7",
+    "semantic_hash": ""
+  },
+  "package-lock.json": {
+    "mtime": 1793456373.6011577,
+    "seen": 1793461148.546705,
+    "ast_hash": "696149076bb9447ab17817d0873ad23d",
+    "semantic_hash": ""
+  }
+}

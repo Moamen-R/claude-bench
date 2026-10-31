@@ -1,0 +1,338 @@
+{
+  "communities": {
+    "0": [
+      "package",
+      "package_author",
+      "package_bin",
+      "package_bin_claude_forge",
+      "package_bin_create_claude_env",
+      "package_dependencies",
+      "package_dependencies_clack_prompts",
+      "package_dependencies_commander",
+      "package_dependencies_execa",
+      "package_dependencies_picocolors",
+      "package_dependencies_zod",
+      "package_description",
+      "package_devdependencies",
+      "package_devdependencies_tsup",
+      "package_devdependencies_tsx",
+      "package_devdependencies_types_node",
+      "package_devdependencies_typescript",
+      "package_devdependencies_vitest",
+      "package_engines",
+      "package_engines_node",
+      "package_files",
+      "package_keywords",
+      "package_license",
+      "package_main",
+      "package_name",
+      "package_type",
+      "package_types",
+      "package_version",
+      "ref_clack_prompts",
+      "ref_commander",
+      "ref_tsup",
+      "ref_tsx",
+      "ref_types_node",
+      "ref_typescript",
+      "ref_zod",
+      "tsup_config"
+    ],
+    "1": [
+      "ref_node_crypto",
+      "ref_node_fs",
+      "ref_node_os",
+      "ref_node_path",
+      "ref_vitest",
+      "src_core_backup_manager",
+      "src_core_backup_manager_backupmanager",
+      "src_core_backup_manager_backupmanager_constructor",
+      "src_core_backup_manager_backupmanager_createbackup",
+      "src_core_backup_manager_backupmanager_listsnapshots",
+      "src_core_backup_manager_backupmanager_rollbacklatest",
+      "src_core_backup_manager_backuprecord",
+      "src_core_backup_manager_backupsnapshot",
+      "src_core_schema_fieldid",
+      "src_core_schema_mcpserverconfig",
+      "src_generators_claude_md_generator",
+      "src_generators_claude_md_generator_claudemdgenerator",
+      "src_generators_claude_md_generator_claudemdgenerator_constructor",
+      "src_generators_claude_md_generator_claudemdgenerator_generate",
+      "src_generators_claude_md_generator_claudemdgenerator_writetofile",
+      "src_generators_claude_md_generator_domain_blueprints",
+      "src_installers_mcp_merger",
+      "src_installers_mcp_merger_mcpconfigmerger",
+      "src_installers_mcp_merger_mcpconfigmerger_constructor",
+      "src_installers_mcp_merger_mcpconfigmerger_mergeservers",
+      "src_installers_mcp_merger_mergeoptions",
+      "src_installers_mcp_merger_mergeresult",
+      "tests_backup_manager_test",
+      "tests_claude_md_generator_test",
+      "tests_mcp_merger_test",
+      "tests_omniroute_installer_test",
+      "tests_os_detector_test",
+      "tests_scrapling_sync_test",
+      "vitest_config"
+    ],
+    "2": [
+      "ref_execa",
+      "src_cli_wizard",
+      "src_cli_wizard_wizardoptions",
+      "src_cli_wizard_wizardrunner",
+      "src_cli_wizard_wizardrunner_loadregistry",
+      "src_cli_wizard_wizardrunner_run",
+      "src_core_os_detector",
+      "src_core_os_detector_configpaths",
+      "src_core_os_detector_platformtype",
+      "src_core_os_detector_shelltype",
+      "src_core_schema_gatewaymode",
+      "src_core_schema_installationtarget",
+      "src_installers_claude_installer",
+      "src_installers_claude_installer_claudeinstaller",
+      "src_installers_claude_installer_claudeinstaller_install",
+      "src_installers_claude_installer_claudeinstalloptions",
+      "src_installers_claude_installer_claudeinstallresult",
+      "src_installers_omniroute_installer",
+      "src_installers_omniroute_installer_omnirouteinstaller",
+      "src_installers_omniroute_installer_omnirouteinstaller_configuregatewayroute",
+      "src_installers_omniroute_installer_omnirouteinstaller_constructor",
+      "src_installers_omniroute_installer_omnirouteinstaller_setup",
+      "src_installers_omniroute_installer_omniroutesetupoptions",
+      "src_installers_omniroute_installer_omniroutesetupresult",
+      "tests_claude_installer_test"
+    ],
+    "3": [
+      "src_core_schema_registryitem",
+      "src_core_schema_scopemode",
+      "src_core_security_auditor",
+      "src_core_security_auditor_itemauditresult",
+      "src_core_security_auditor_min_trust_score",
+      "src_core_security_auditor_securityauditor",
+      "src_core_security_auditor_securityauditor_auditregistryitem",
+      "src_core_security_auditor_securityauditor_validateinstallcommand",
+      "src_core_security_auditor_securityauditor_validaterepourl",
+      "src_core_security_auditor_validationresult",
+      "src_installers_skill_installer",
+      "src_installers_skill_installer_skillinstallbatchresult",
+      "src_installers_skill_installer_skillinstaller",
+      "src_installers_skill_installer_skillinstaller_constructor",
+      "src_installers_skill_installer_skillinstaller_installbatch",
+      "src_installers_skill_installer_skillinstallfailure",
+      "src_installers_skill_installer_skillinstalloptions",
+      "src_registry_scrapling_sync",
+      "src_registry_scrapling_sync_scraplingsyncengine",
+      "src_registry_scrapling_sync_scraplingsyncengine_constructor",
+      "src_registry_scrapling_sync_scraplingsyncengine_loadexisting",
+      "src_registry_scrapling_sync_scraplingsyncengine_mergeincoming",
+      "src_registry_scrapling_sync_syncresult",
+      "tests_security_auditor_test",
+      "tests_skill_installer_test"
+    ],
+    "4": [
+      "tsconfig",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_declaration",
+      "tsconfig_compileroptions_declarationmap",
+      "tsconfig_compileroptions_esmoduleinterop",
+      "tsconfig_compileroptions_forceconsistentcasinginfilenames",
+      "tsconfig_compileroptions_lib",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_outdir",
+      "tsconfig_compileroptions_resolvejsonmodule",
+      "tsconfig_compileroptions_rootdir",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_sourcemap",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target",
+      "tsconfig_exclude",
+      "tsconfig_include"
+    ],
+    "5": [
+      "src_core_schema",
+      "src_core_schema_canonical_fields",
+      "src_core_schema_fieldidschema",
+      "src_core_schema_gatewaymodeschema",
+      "src_core_schema_installationtargetschema",
+      "src_core_schema_itemtype",
+      "src_core_schema_itemtypeschema",
+      "src_core_schema_mcpserverconfigschema",
+      "src_core_schema_registryitemschema",
+      "src_core_schema_scopemodeschema",
+      "src_core_schema_userprofile",
+      "src_core_schema_userprofileschema",
+      "tests_registry_test",
+      "tests_schema_test"
+    ],
+    "6": [
+      "ref_node_url",
+      "ref_picocolors",
+      "src_cli_index",
+      "src_cli_index_backupmanager",
+      "src_cli_index_detector",
+      "src_cli_index_getregistryitems",
+      "src_cli_index_program",
+      "src_cli_ui",
+      "src_cli_ui_formatfieldlist",
+      "src_cli_ui_printbanner",
+      "src_cli_ui_printsummarytable",
+      "tests_cli_test"
+    ],
+    "7": [
+      "src_core_os_detector_osdetector",
+      "src_core_os_detector_osdetector_checkcommandexists",
+      "src_core_os_detector_osdetector_detectshell",
+      "src_core_os_detector_osdetector_getplatform",
+      "src_core_os_detector_osdetector_islinux",
+      "src_core_os_detector_osdetector_ismac",
+      "src_core_os_detector_osdetector_iswindows",
+      "src_core_os_detector_osdetector_iswsl",
+      "src_core_os_detector_osdetector_resolveconfigpaths",
+      "src_installers_claude_installer_claudeinstaller_constructor"
+    ],
+    "8": [
+      "mcp",
+      "mcp_command_npx",
+      "mcp_command_uvx",
+      "mcp_mcp_server_opencode_review",
+      "mcp_mcp_server_scrapling",
+      "mcp_mcp_server_scrapling_fetch",
+      "mcp_package_alibaba_open_code_review",
+      "mcp_package_scrapling_fetch_mcp"
+    ],
+    "9": [
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_lint",
+      "package_scripts_test",
+      "package_scripts_test_watch",
+      "package_scripts_typecheck"
+    ]
+  },
+  "cohesion": {
+    "0": 0.06666666666666667,
+    "1": 0.12477718360071301,
+    "2": 0.14333333333333334,
+    "3": 0.15333333333333332,
+    "4": 0.1111111111111111,
+    "5": 0.23076923076923078,
+    "6": 0.22727272727272727,
+    "7": 0.35555555555555557,
+    "8": 0.2857142857142857,
+    "9": 0.2857142857142857
+  },
+  "gods": [
+    {
+      "id": "ref_vitest",
+      "label": "vitest",
+      "degree": 15
+    },
+    {
+      "id": "src_core_os_detector_osdetector",
+      "label": "OSDetector",
+      "degree": 15
+    },
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 15
+    },
+    {
+      "id": "src_core_schema_registryitem",
+      "label": "RegistryItem",
+      "degree": 14
+    },
+    {
+      "id": "src_core_backup_manager_backupmanager",
+      "label": "BackupManager",
+      "degree": 13
+    },
+    {
+      "id": "src_core_security_auditor_securityauditor",
+      "label": "SecurityAuditor",
+      "degree": 9
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 7
+    },
+    {
+      "id": "src_core_schema_fieldid",
+      "label": "FieldId",
+      "degree": 7
+    },
+    {
+      "id": "src_core_schema_gatewaymode",
+      "label": "GatewayMode",
+      "degree": 7
+    },
+    {
+      "id": "src_installers_omniroute_installer_omnirouteinstaller",
+      "label": "OmniRouteInstaller",
+      "degree": 7
+    }
+  ],
+  "surprises": [
+    {
+      "source": "WizardOptions",
+      "target": "FieldId",
+      "source_files": [
+        "src/cli/wizard.ts",
+        "src/core/schema.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "WizardOptions",
+      "target": "ScopeMode",
+      "source_files": [
+        "src/cli/wizard.ts",
+        "src/core/schema.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "ClaudeInstallOptions",
+      "target": "InstallationTarget",
+      "source_files": [
+        "src/installers/claude-installer.ts",
+        "src/core/schema.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `ClaudeInstallOptions` unexpectedly reaches hub `InstallationTarget`"
+    },
+    {
+      "source": "OmniRouteSetupResult",
+      "target": "GatewayMode",
+      "source_files": [
+        "src/installers/omniroute-installer.ts",
+        "src/core/schema.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `OmniRouteSetupResult` unexpectedly reaches hub `GatewayMode`"
+    },
+    {
+      "source": "SkillInstallOptions",
+      "target": "ScopeMode",
+      "source_files": [
+        "src/installers/skill-installer.ts",
+        "src/core/schema.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `SkillInstallOptions` unexpectedly reaches hub `ScopeMode`"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}
