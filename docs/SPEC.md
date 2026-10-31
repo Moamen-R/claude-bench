@@ -1,8 +1,8 @@
-# `claude-forge` Technical Specification (SPEC.md)
+# `claude-bench` Technical Specification (SPEC.md)
 
 ## 1. System Overview & Architecture
 
-`claude-forge` is an open-source, cross-platform TypeScript CLI tool (`npx claude-forge`) designed to automate the installation, configuration, and optimization of the official **Claude Code CLI** and/or **Claude Desktop App**.
+`claude-bench` is an open-source, cross-platform TypeScript CLI tool (`npx claude-bench`) designed to automate the installation, configuration, and optimization of the official **Claude Code CLI** and/or **Claude Desktop App**.
 
 The system operates across three modular layers:
 1. **Core Runtime & Host Abstraction**: OS detection, package manager resolution, path resolution for Claude global & project configurations, atomic backup & rollback manager, and security auditing for skill payloads.
@@ -120,7 +120,7 @@ export type UserProfile = z.infer<typeof UserProfileSchema>;
   - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
   - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
   - Linux: `~/.config/Claude/claude_desktop_config.json`
-- **Backup Directory**: `~/.claude-forge/backups/<timestamp>/`
+- **Backup Directory**: `~/.claude-bench/backups/<timestamp>/`
 
 ---
 

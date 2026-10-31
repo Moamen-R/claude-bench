@@ -1,6 +1,6 @@
 # Canonical 11 Professional Fields Specification (`docs/FIELDS.md`)
 
-This document details the configuration presets, tool packages, MCP servers, and CLI-Anything harnesses for each of the 11 supported fields in `claude-forge`.
+This document details the configuration presets, tool packages, MCP servers, and CLI-Anything harnesses for each of the 11 supported fields in `claude-bench`.
 
 ---
 

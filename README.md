@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/logo.svg" alt="claude-forge logo" width="520" />
+<img src="./assets/logo.svg" alt="claude-bench logo" width="520" />
 
 <br />
 <br />
@@ -9,8 +9,8 @@
 
 *Provision 11 specialized engineering & creative workflows, 640+ curated skills/MCPs, and official Anthropic or [OmniRoute](https://github.com/cheaper-inference/OmniRoute) multi-provider routing in seconds.*
 
-[![npm version](https://img.shields.io/npm/v/claude-forge.svg?style=flat-square&color=D97757)](https://www.npmjs.com/package/claude-forge)
-[![Node.js Compatibility](https://img.shields.io/node/v/claude-forge.svg?style=flat-square&color=2E2D2B)](https://nodejs.org)
+[![npm version](https://img.shields.io/npm/v/claude-bench.svg?style=flat-square&color=D97757)](https://www.npmjs.com/package/claude-bench)
+[![Node.js Compatibility](https://img.shields.io/node/v/claude-bench.svg?style=flat-square&color=2E2D2B)](https://nodejs.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](./CONTRIBUTING.md)
 
@@ -24,12 +24,12 @@
 
 ### 🚀 One-Line Run (Zero Install)
 ```bash
-npx claude-forge init
+npx claude-bench init
 ```
 
 Or install globally as a persistent CLI:
 ```bash
-npm install -g claude-forge
+npm install -g claude-bench
 ```
 
 ### Prerequisites
@@ -41,14 +41,14 @@ npm install -g claude-forge
 Launch the guided terminal wizard to detect your OS, choose your routing gateway, and select domain presets:
 
 ```bash
-npx claude-forge init
+npx claude-bench init
 ```
 
 ### Unattended / CI Setup
 Provision both Claude Code CLI and Claude Desktop non-interactively using headless flags:
 
 ```bash
-npx claude-forge init \
+npx claude-bench init \
   --target both \
   --gateway omniroute \
   --fields fullstack,cybersecurity \
@@ -65,7 +65,7 @@ npx claude-forge init \
    - **Official Anthropic (`official`)**: Standard `/login` OAuth flow or direct `ANTHROPIC_API_KEY` configuration.
    - **OmniRoute AI Gateway (`omniroute`)**: Installs `omniroute`, launches the local routing daemon (`http://127.0.0.1:4000`), injects `ANTHROPIC_BASE_URL` into `~/.claude/settings.json`, and provisions the `cli-serve` and `cli-models` management skills.
 3. **Safety-First Configuration Management**:
-   - **Atomic Backups & Instant Rollback**: Takes a timestamped snapshot in `~/.claude-forge/backups/` prior to every write operation. Revert anytime via `claude-forge rollback`.
+   - **Atomic Backups & Instant Rollback**: Takes a timestamped snapshot in `~/.claude-bench/backups/` prior to every write operation. Revert anytime via `claude-bench rollback`.
    - **Lossless Deep Merge**: Preserves existing MCP servers, custom hooks, environment variables, and permission rules inside `~/.claude/settings.json` and `claude_desktop_config.json`.
    - **Built-In Security Gate**: Pre-scans all skill install commands, package identifiers, and remote URLs against shell injection patterns and untrusted payloads before execution.
 4. **Composable CLAUDE.md Generation**: Combines multiple domain presets into a unified, conflict-free global or workspace `CLAUDE.md` file tailored to your active tech stack.
@@ -98,15 +98,15 @@ Each preset equips Claude with 50+ curated skills, plugins, and MCP servers alon
 
 | Command | Description |
 | :--- | :--- |
-| `claude-forge init` | Launch the interactive multi-step setup wizard or run headlessly with flags |
-| `claude-forge list [-f <field>]` | Browse and filter the 640+ curated skills, plugins, and MCP servers |
-| `claude-forge add <id>` | Install an individual skill or lossless-merge an MCP server by registry ID |
-| `claude-forge switch-gateway <mode>` | Toggle routing dynamically between `official` and `omniroute` |
-| `claude-forge doctor` | Run diagnostics on Node, Git, Claude CLI, OmniRoute daemon, and JSON configs |
-| `claude-forge rollback` | Restore configurations from the latest or a selected atomic backup snapshot |
-| `claude-forge export [file]` | Export your active setup profile to a portable JSON manifest for team sharing |
-| `claude-forge import <file>` | Apply a shared team configuration manifest to the local machine |
-| `claude-forge sync` | Refresh the local catalog via Scrapling MCP |
+| `claude-bench init` | Launch the interactive multi-step setup wizard or run headlessly with flags |
+| `claude-bench list [-f <field>]` | Browse and filter the 640+ curated skills, plugins, and MCP servers |
+| `claude-bench add <id>` | Install an individual skill or lossless-merge an MCP server by registry ID |
+| `claude-bench switch-gateway <mode>` | Toggle routing dynamically between `official` and `omniroute` |
+| `claude-bench doctor` | Run diagnostics on Node, Git, Claude CLI, OmniRoute daemon, and JSON configs |
+| `claude-bench rollback` | Restore configurations from the latest or a selected atomic backup snapshot |
+| `claude-bench export [file]` | Export your active setup profile to a portable JSON manifest for team sharing |
+| `claude-bench import <file>` | Apply a shared team configuration manifest to the local machine |
+| `claude-bench sync` | Refresh the local catalog via Scrapling MCP |
 
 ### `init` Flags
 
@@ -126,10 +126,10 @@ Standardize Claude tooling across your engineering organization by exporting and
 
 ```bash
 # Export your current configuration
-npx claude-forge export ./team-claude-profile.json
+npx claude-bench export ./team-claude-profile.json
 
 # Teammates can replicate the exact setup with one command
-npx claude-forge import ./team-claude-profile.json
+npx claude-bench import ./team-claude-profile.json
 ```
 
 ---
@@ -144,7 +144,7 @@ src/
 │   └── ui.ts                     # Terminal banner, spinners & table formatters
 ├── core/
 │   ├── os-detector.ts            # OS, shell, WSL, and config path resolution
-│   ├── backup-manager.ts         # Atomic backups & rollback (~/.claude-forge/backups/)
+│   ├── backup-manager.ts         # Atomic backups & rollback (~/.claude-bench/backups/)
 │   ├── security-auditor.ts       # Command injection & URL security gate
 │   └── schema.ts                 # Strict Zod validation schemas
 ├── installers/
@@ -165,8 +165,8 @@ src/
 
 ```bash
 # Clone the repository
-git clone https://github.com/Moamen-R/claude-forge.git
-cd claude-forge
+git clone https://github.com/Moamen-R/claude-bench.git
+cd claude-bench
 
 # Install dependencies
 npm install
@@ -178,7 +178,7 @@ npm run dev -- init
 npm run typecheck && npm test
 ```
 
-Contributions, new domain presets, and MCP registry additions are welcome! Please run `claude-forge doctor` and ensure all schema checks pass before opening a Pull Request.
+Contributions, new domain presets, and MCP registry additions are welcome! Please run `claude-bench doctor` and ensure all schema checks pass before opening a Pull Request.
 
 ---
 

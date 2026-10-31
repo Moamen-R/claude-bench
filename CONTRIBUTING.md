@@ -1,13 +1,13 @@
-# Contributing to `claude-forge`
+# Contributing to `claude-bench`
 
-Thank you for contributing to `claude-forge`! We welcome contributions from the community.
+Thank you for contributing to `claude-bench`! We welcome contributions from the community.
 
 ## Development Workflow
 
 1. **Clone repository & install dependencies**:
    ```bash
-   git clone https://github.com/community/claude-forge.git
-   cd claude-forge
+   git clone https://github.com/Moamen-R/claude-bench.git
+   cd claude-bench
    npm install
    ```
 

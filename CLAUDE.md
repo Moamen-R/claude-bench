@@ -1,7 +1,7 @@
-# CLAUDE.md — Project Context & Autonomous Agent Rules for `claude-forge`
+# CLAUDE.md — Project Context & Autonomous Agent Rules for `claude-bench`
 
 ## 1. Project Identity & Mission
-**`claude-forge`** is a production-grade, open-source TypeScript CLI tool (`npx claude-forge init`) that bootstraps, configures, and optimizes the official [Claude Code CLI](https://code.claude.com/docs/en/quickstart) and/or **Claude Desktop App** based on a user's professional field(s) and routing preference (**Official Anthropic** vs. **[OmniRoute](https://github.com/cheaper-inference/OmniRoute)**).
+**`claude-bench`** is a production-grade, open-source TypeScript CLI tool (`npx claude-bench init`) that bootstraps, configures, and optimizes the official [Claude Code CLI](https://code.claude.com/docs/en/quickstart) and/or **Claude Desktop App** based on a user's professional field(s) and routing preference (**Official Anthropic** vs. **[OmniRoute](https://github.com/cheaper-inference/OmniRoute)**).
 
 Every agent working in this repository MUST follow the orchestration, scraping, testing, and security rules defined in this file.
 
@@ -79,7 +79,7 @@ All CLI flags, wizard prompts, registry entries, and `CLAUDE.md` templates must 
      - `npx -y skills add diegosouzapw/OmniRoute --skill cli-serve --agent claude-code`
      - `npx -y skills add mayankjain1815-commits/OmniRoute --skill cli-models --agent claude-code`
   3. Starts/verifies `omniroute serve` daemon health and merges `ANTHROPIC_BASE_URL` (pointing to the local OmniRoute gateway port) into the `"env"` block of `~/.claude/settings.json` without overwriting existing user settings.
-  4. Provides `claude-forge switch-gateway <official|omniroute>` to toggle cleanly at any time.
+  4. Provides `claude-bench switch-gateway <official|omniroute>` to toggle cleanly at any time.
 
 ## 7. Repository Architecture & Module Boundaries
 
@@ -91,7 +91,7 @@ src/
 │   └── ui.ts                    # Terminal tables, spinners, and diagnostic formatters
 ├── core/
 │   ├── os-detector.ts           # OS, shell, package manager, and config path resolution
-│   ├── backup-manager.ts        # Automatic timestamped backups & atomic rollback (~/.claude-forge/backups/)
+│   ├── backup-manager.ts        # Automatic timestamped backups & atomic rollback (~/.claude-bench/backups/)
 │   ├── security-auditor.ts      # Validates SKILL.md and install commands against malicious payloads
 │   └── schema.ts                # Zod schemas for Registry, FieldPreset, MCPServerConfig, and UserProfile
 ├── installers/
@@ -104,7 +104,7 @@ src/
 │   └── claude-md-generator.ts   # Composes multi-field CLAUDE.md instructions
 └── registry/
     ├── registry.seed.json       # Verified offline snapshot of skills, plugins, MCPs, and CLI-Anything tools
-    └── scrapling-sync.ts        # Live Scrapling MCP sync engine for `claude-forge sync`
+    └── scrapling-sync.ts        # Live Scrapling MCP sync engine for `claude-bench sync`
 ```
 
 ## 8. Non-Negotiable Engineering & Security Guardrails

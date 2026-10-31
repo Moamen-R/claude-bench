@@ -42,7 +42,7 @@ export class WizardRunner {
   async run(options: WizardOptions = {}): Promise<void> {
     const { dryRun = false } = options;
 
-    p.intro(pc.bold(pc.bgCyan(pc.black(' claude-forge setup wizard '))));
+    p.intro(pc.bold(pc.bgCyan(pc.black(' claude-bench setup wizard '))));
 
     // 1. Select Target
     let target = options.target;
