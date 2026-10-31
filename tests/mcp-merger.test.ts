@@ -13,7 +13,7 @@ describe('MCPConfigMerger', () => {
   let backupManager: BackupManager;
 
   beforeEach(async () => {
-    tempBaseDir = await fs.mkdtemp(path.join(os.tmpdir(), 'claude-bench-mcp-'));
+    tempBaseDir = await fs.mkdtemp(path.join(os.tmpdir(), 'claude-forge-mcp-'));
     targetConfigFile = path.join(tempBaseDir, 'settings.json');
     backupDir = path.join(tempBaseDir, 'backups');
     backupManager = new BackupManager(backupDir);

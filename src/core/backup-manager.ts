@@ -21,7 +21,7 @@ export class BackupManager {
   private baseDir: string;
 
   constructor(customBaseDir?: string) {
-    this.baseDir = customBaseDir || path.join(os.homedir(), '.claude-bench', 'backups');
+    this.baseDir = customBaseDir || path.join(os.homedir(), '.claude-forge', 'backups');
   }
 
   async createBackup(targetFilePath: string): Promise<BackupRecord | null> {

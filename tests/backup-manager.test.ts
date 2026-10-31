@@ -10,7 +10,7 @@ describe('BackupManager', () => {
   let backupDir: string;
 
   beforeEach(async () => {
-    tempBaseDir = await fs.mkdtemp(path.join(os.tmpdir(), 'claude-bench-test-'));
+    tempBaseDir = await fs.mkdtemp(path.join(os.tmpdir(), 'claude-forge-test-'));
     tempTargetFile = path.join(tempBaseDir, 'settings.json');
     backupDir = path.join(tempBaseDir, 'backups');
     await fs.writeFile(tempTargetFile, JSON.stringify({ mcpServers: { oldServer: {} } }, null, 2));

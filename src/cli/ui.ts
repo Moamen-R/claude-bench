@@ -94,9 +94,9 @@ export function formatBadge(
 }
 
 /**
- * Prints the upgraded Claude-Bench Hero Banner with 3D Anvil icon, gradient sparks, and telemetry bar.
+ * Prints the upgraded Claude-Forge Hero Banner with 3D Anvil icon, gradient sparks, and telemetry bar.
  */
-export function printBanner(version = 'v1.0.0'): void {
+export function printBanner(version = 'v2.1.0'): void {
   const anvil = [
     `   ${amber('✦')}  ${coral(pc.bold('✦'))} ${peach('·')}    `,
     `  ${coral(pc.bold('▀█████████▀'))}  `,
@@ -106,7 +106,7 @@ export function printBanner(version = 'v1.0.0'): void {
   ];
 
   const titleLine =
-    `${pc.bold(pc.white('claude'))}${coral(pc.bold('-bench'))} ` +
+    `${pc.bold(pc.white('claude'))}${coral(pc.bold('-forge'))} ` +
     `${ slate(version) } ` +
     `${formatBadge('SUPERPOWERS + RUFLO', 'muted')}`;
 
@@ -254,13 +254,13 @@ export function printSummaryTable(summary: {
 
   lines.push(charcoal('─'.repeat(58)));
   lines.push(
-    `${slate('Next Step:')} Run ${coral(pc.bold('claude'))} to launch or ${peach(pc.bold('claude-bench doctor'))} to verify.`
+    `${slate('Next Step:')} Run ${coral(pc.bold('claude'))} to launch or ${peach(pc.bold('claude-forge doctor'))} to verify.`
   );
 
   console.log();
   console.log(
     renderBox(
-      coral(pc.bold('✦ CLAUDE-BENCH EXECUTION SUMMARY')),
+      coral(pc.bold('✦ CLAUDE-FORGE EXECUTION SUMMARY')),
       lines,
       { width: 66, borderColor: summary.dryRun ? amber : coral }
     )
@@ -277,7 +277,7 @@ export function printStepHeader(step: number, total: number, title: string): voi
 }
 
 /**
- * Prints a diagnostic table for `claude-bench doctor`.
+ * Prints a diagnostic table for `claude-forge doctor`.
  */
 export function printDoctorReport(
   checks: Array<{
@@ -298,7 +298,7 @@ export function printDoctorReport(
 
   console.log();
   console.log(
-    renderBox(peach(pc.bold('🩺 CLAUDE-BENCH SYSTEM DIAGNOSTICS')), rows, {
+    renderBox(peach(pc.bold('🩺 CLAUDE-FORGE SYSTEM DIAGNOSTICS')), rows, {
       width: 66,
       borderColor: peach,
     })

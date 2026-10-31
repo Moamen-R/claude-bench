@@ -30,7 +30,7 @@
 
   <!-- Wordmark -->
   <text x="124" y="65" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="34" font-weight="700" letter-spacing="-0.5" fill="#F5F4F0">
-    claude<tspan fill="#D97757">-bench</tspan>
+    claude<tspan fill="#D97757">-forge</tspan>
   </text>
 
   <!-- Subtitle Tagline -->
