@@ -128,7 +128,6 @@ export function printBanner(version: string = `v${CLI_VERSION}`): void {
   const registryLine =
     `${emerald('●')} ${slate('Registries:')} ${pc.white('claudemarketplaces.com')} ${charcoal('│')} ` +
     `${pc.white('skills.sh')} ${charcoal('│')} ` +
-    `${pc.white('clianything.cc')} ${charcoal('│')} ` +
     `${pc.white('mcp.so')}`;
 
   console.log();
