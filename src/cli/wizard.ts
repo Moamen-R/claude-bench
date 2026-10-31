@@ -16,6 +16,7 @@ import { SkillInstaller } from '../installers/skill-installer.js';
 import { MCPConfigMerger } from '../installers/mcp-merger.js';
 import { ClaudeMdGenerator } from '../generators/claude-md-generator.js';
 import { BackupManager } from '../core/backup-manager.js';
+import { theme } from './ui.js';
 
 export interface WizardOptions {
   target?: InstallationTarget;
@@ -42,7 +43,9 @@ export class WizardRunner {
   async run(options: WizardOptions = {}): Promise<void> {
     const { dryRun = false } = options;
 
-    p.intro(pc.bold(pc.bgCyan(pc.black(' claude-bench setup wizard '))));
+    p.intro(
+      `${theme.coral('◖')}${theme.coralBg(pc.bold(pc.white(' claude-bench setup wizard ')))}${theme.coral('◗')}`
+    );
 
     // 1. Select Target
     let target = options.target;

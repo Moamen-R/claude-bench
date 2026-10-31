@@ -1,5 +1,19 @@
 [
   {
+    "id": "rea",
+    "name": "REA Reverse Engineering Agent",
+    "type": "skill",
+    "fields": [
+      "cybersecurity",
+      "software-eng"
+    ],
+    "repoUrl": "https://github.com/morluto/rea",
+    "installCommand": "npx -y skills add morluto/rea --agent claude-code",
+    "description": "Reverse engineer anything with agents, from app behavior down to native binaries",
+    "stars": 4150,
+    "trustScore": 95
+  },
+  {
     "id": "hyperframes",
     "name": "HyperFrames Mandatory Engine",
     "type": "skill",
