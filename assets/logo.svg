@@ -39,7 +39,7 @@
   <!-- v1.0 Badge -->
   <g transform="translate(366, 30)">
     <rect width="34" height="19" rx="5" fill="#252422" stroke="#3E3C38" stroke-width="1" />
-    <text x="17" y="13" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="600" fill="#B8B5B0">v1.0</text>
+    <text x="17" y="13" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="600" fill="#B8B5B0">v1.0.2</text>
   </g>
 
   <!-- Subtitle & Pill Tags -->
