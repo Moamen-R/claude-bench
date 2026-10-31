@@ -1,29 +1,24 @@
 import pc from 'picocolors';
 
+// Claude brand terracotta (#D97757) and accent (#E88B6B)
+const coral = (str: string) => `\x1b[38;2;217;119;87m${str}\x1b[0m`;
+const peach = (str: string) => `\x1b[38;2;232;139;107m${str}\x1b[0m`;
+
 export function printBanner(): void {
-  console.log(
-    pc.cyan(`
-   ██████╗██╗      █████╗ ██╗   ██╗██████╗ ███████╗
-  ██╔════╝██║     ██╔══██╗██║   ██║██╔══██╗██╔════╝
-  ██║     ██║     ███████║██║   ██║██║  ██║█████╗
-  ██║     ██║     ██╔══██║██║   ██║██║  ██║██╔══╝
-  ╚██████╗███████╗██║  ██║╚██████╔╝██████╔╝███████╗
-   ╚═════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝
-   ███████╗ ██████╗ ██████╗  ██████╗ ███████╗
-   ██╔════╝██╔═══██╗██╔══██╗██╔════╝ ██╔════╝
-   █████╗  ██║   ██║██████╔╝██║  ███╗█████╗
-   ██╔══╝  ██║   ██║██╔══██╗██║   ██║██╔══╝
-   ██║     ╚██████╔╝██║  ██║╚██████╔╝███████╗
-   ╚═╝      ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝
-`)
-  );
-  console.log(
-    pc.bold(
-      pc.magenta(
-        '  A full setup tool for Official Claude code and app\n'
-      )
-    )
-  );
+  // Minimal Forge Anvil + Terminal Spark Icon matching brand logo
+  const icon = [
+    coral(pc.bold('       ✦')),
+    peach(pc.bold('   ▀████████▀')),
+    pc.white(pc.bold('      ████')),
+    pc.white(pc.bold('     ██████')),
+  ];
+
+  console.log();
+  console.log(`${icon[0]}   ${pc.bold(pc.white('claude'))}${coral(pc.bold('-forge'))}`);
+  console.log(`${icon[1]}   ${pc.dim(pc.gray('CLI & DESKTOP BOOTSTRAPPER ENGINE'))}`);
+  console.log(`${icon[2]}   ${pc.dim('Multi-domain AI engineering & creative orchestrator')}`);
+  console.log(`${icon[3]}   ${coral('──────────────────────────────────────────────────')}`);
+  console.log();
 }
 
 export function formatFieldList(fields: string[]): string {
@@ -39,7 +34,7 @@ export function printSummaryTable(summary: {
   backupPath?: string;
   dryRun?: boolean;
 }): void {
-  console.log(pc.bold(pc.cyan('\n=== Execution Summary ===')));
+  console.log(coral(pc.bold('\n=== Execution Summary ===')));
   console.log(`${pc.bold('Target:')}       ${summary.target}`);
   console.log(`${pc.bold('Gateway:')}      ${summary.gateway}`);
   console.log(`${pc.bold('Fields:')}       ${summary.fields.join(', ')}`);
@@ -51,5 +46,5 @@ export function printSummaryTable(summary: {
   if (summary.dryRun) {
     console.log(pc.yellow(`\n[DRY RUN] No files or system binaries were modified.`));
   }
-  console.log(pc.cyan('=========================\n'));
+  console.log(coral('=========================\n'));
 }
