@@ -1,15 +1,17 @@
 {
-  "name": "claude-forge",
+  "name": "@moamen-r/claude-forge",
   "version": "1.0.0",
   "description": "Production-grade, open-source CLI bootstrapper for Claude Code and Claude Desktop tailored across 11 professional fields",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
     "claude-forge": "./dist/index.js",
+    "claude-forge-cli": "./dist/index.js",
     "create-claude-env": "./dist/index.js"
   },
   "files": [
     "dist",
+    "assets",
     "src/registry/registry.seed.json"
   ],
   "scripts": {
@@ -18,7 +20,19 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint src/ tests/ --ext .ts"
+    "lint": "eslint src/ tests/ --ext .ts",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moamen-R/claude-forge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Moamen-R/claude-forge/issues"
+  },
+  "homepage": "https://github.com/Moamen-R/claude-forge#readme",
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "claude",
@@ -30,7 +44,7 @@
     "skills",
     "cli"
   ],
-  "author": "Open Source Community",
+  "author": "Mo'men Refaey",
   "license": "MIT",
   "type": "module",
   "dependencies": {

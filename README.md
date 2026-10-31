@@ -9,8 +9,8 @@
 
 *Provision 11 specialized engineering & creative workflows, 640+ curated skills/MCPs, and official Anthropic or [OmniRoute](https://github.com/cheaper-inference/OmniRoute) multi-provider routing in seconds.*
 
-[![npm version](https://img.shields.io/npm/v/claude-forge.svg?style=flat-square&color=D97757)](https://www.npmjs.com/package/claude-forge)
-[![Node.js Compatibility](https://img.shields.io/node/v/claude-forge.svg?style=flat-square&color=2E2D2B)](https://nodejs.org)
+[![npm version](https://img.shields.io/npm/v/@moamen-r/claude-forge.svg?style=flat-square&color=D97757)](https://www.npmjs.com/package/@moamen-r/claude-forge)
+[![Node.js Compatibility](https://img.shields.io/node/v/@moamen-r/claude-forge.svg?style=flat-square&color=2E2D2B)](https://nodejs.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](./CONTRIBUTING.md)
 
@@ -22,6 +22,16 @@
 
 ## ⚡ Quick Start
 
+### 🚀 One-Line Run (Zero Install)
+```bash
+npx @moamen-r/claude-forge init
+```
+
+Or install globally as a persistent CLI:
+```bash
+npm install -g @moamen-r/claude-forge
+```
+
 ### Prerequisites
 - **Node.js** `>= 18.18.0`
 - **Git** `>= 2.30.0`
@@ -31,14 +41,14 @@
 Launch the guided terminal wizard to detect your OS, choose your routing gateway, and select domain presets:
 
 ```bash
-npx claude-forge init
+npx @moamen-r/claude-forge init
 ```
 
 ### Unattended / CI Setup
 Provision both Claude Code CLI and Claude Desktop non-interactively using headless flags:
 
 ```bash
-npx claude-forge init \
+npx @moamen-r/claude-forge init \
   --target both \
   --gateway omniroute \
   --fields fullstack,cybersecurity \
@@ -155,7 +165,7 @@ src/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/claude-forge.git
+git clone https://github.com/Moamen-R/claude-forge.git
 cd claude-forge
 
 # Install dependencies
