@@ -12,6 +12,8 @@ export const CANONICAL_FIELDS = [
   'backend-dev',
   'frontend-dev',
   'software-eng',
+  'data-engineering',
+  'ai-ml',
 ] as const;
 
 export const FieldIdSchema = z.enum(CANONICAL_FIELDS);

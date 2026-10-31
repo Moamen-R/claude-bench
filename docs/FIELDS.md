@@ -1,6 +1,6 @@
-# Canonical 11 Professional Fields Specification (`docs/FIELDS.md`)
+# Canonical 13 Professional Fields Specification (`docs/FIELDS.md`)
 
-This document details the configuration presets, tool packages, MCP servers, and CLI-Anything harnesses for each of the 11 supported fields in `claude-bench`.
+This document details the configuration presets, tool packages, MCP servers, and CLI-Anything harnesses for each of the 13 supported fields in `claude-bench`.
 
 ---
 
@@ -167,3 +167,53 @@ This document details the configuration presets, tool packages, MCP servers, and
 - **MCP Servers**:
   - `opencode-review`: Automated static analysis and multi-model code review (`npx -y @alibaba/open-code-review --mcp`)
 - **CLAUDE.md Persona Focus**: Red-Green-Refactor TDD, minimal viable diffs, backward-compatible APIs, comprehensive unit and integration tests.
+
+---
+
+## 12. Data Analyst & Engineering (`data-engineering`)
+- **Display Name**: Data Analyst & Engineering
+- **Focus**: High-throughput ETL/ELT pipelines, distributed data processing, data warehousing, lakehouse architecture, data modeling, statistical analysis & data visualization.
+- **Curated Skills (50+ items)**:
+  - `duckdb-embedded-olap`: In-process SQL OLAP engine for fast analytics.
+  - `polars-fast-dataframe`: Multi-threaded, lightning-fast DataFrame library.
+  - `pandas-2-arrow-backend`: Arrow-backed data manipulation and analysis.
+  - `pyspark-cluster-etl`: Distributed batch and streaming data processing.
+  - `dbt-core-transformation`: Modular SQL transformation pipelines and data testing.
+  - `apache-airflow-dag-orchestration`: Directed Acyclic Graph (DAG) scheduling.
+  - `great-expectations-data-contracts`: Automated data quality validation and profiling.
+  - `apache-kafka-event-streaming`: Real-time distributed pub/sub event streaming.
+  - `apache-iceberg-lakehouse`: Open table format for huge analytic datasets.
+  - `snowflake-data-warehouse`: Cloud-native data warehousing and Snowpark.
+  - `clickhouse-realtime-olap`: High-performance column-oriented DBMS.
+  - `evidence-dev-bi-markdown`: Code-driven business intelligence and reporting.
+  - `plotly-interactive-viz` & `seaborn-statistical-plots`: Visual storytelling.
+- **MCP Servers**:
+  - `postgres`: Direct PostgreSQL analytics and schema inspection.
+  - `duckdb`: Embedded SQL execution on local Parquet, CSV, and Arrow files.
+  - `bigquery`: Google Cloud BigQuery data queries and metadata inspection.
+- **CLAUDE.md Persona Focus**: Idempotent ETL pipelines, schema validation contracts, Parquet/Delta lakehouse optimization, colorblind-safe accessible data visualization.
+
+---
+
+## 13. Machine Learning & AI (`ai-ml`)
+- **Display Name**: Machine Learning & AI
+- **Focus**: Deep learning architectures, LLM fine-tuning, retrieval-augmented generation (RAG), autonomous multi-agent systems, MLOps, inference serving, and safety guardrails.
+- **Curated Skills (50+ items)**:
+  - `pytorch-2-compile-inductor`: High-performance deep learning model development.
+  - `huggingface-transformers-pipeline`: State-of-the-art NLP, vision, and multimodal inference.
+  - `huggingface-accelerate-fsdp`: Multi-GPU and distributed training with FSDP and DeepSpeed.
+  - `huggingface-peft-qlora`: Parameter-Efficient Fine-Tuning and QLoRA recipes.
+  - `unsloth-fast-finetune`: 5x faster, memory-efficient LLM fine-tuning.
+  - `vllm-paged-attention-serving`: High-throughput LLM serving with PagedAttention.
+  - `ollama-local-model-runner`: Air-gapped local SLM and model management.
+  - `langchain-rag-agent` & `langgraph-stateful-graph`: Stateful multi-agent graphs.
+  - `crewai-multi-agent-system`: Collaborative multi-agent teams with task delegation.
+  - `qdrant-vector-database-client`: Production vector search engine.
+  - `ragas-rag-evaluation`: Metric-driven eval framework for RAG pipelines.
+  - `prompt-injection-guardrails` & `nemo-guardrails-colang`: Adversarial safety filters.
+  - `rea`: Reverse engineer anything with agents down to native binaries.
+- **MCP Servers**:
+  - `qdrant`: Vector search and similarity retrieval.
+  - `chroma`: Local embedded vector database for agent memory and embeddings.
+  - `weaviate`: Hybrid vector and keyword search.
+- **CLAUDE.md Persona Focus**: Evaluation-first model promotion, PEFT/QLoRA memory discipline, deterministic multi-agent state graphs, strict prompt-injection guardrails.

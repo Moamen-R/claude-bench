@@ -44,9 +44,9 @@ When populating or refreshing `src/registry/registry.seed.json`, `Harvester-Scra
 - Extract only verified fields: `id`, `name`, `type` (`skill` | `plugin` | `mcp` | `cli-anything`), `fields` (array of matching field IDs), `repoUrl`, `installCommand`, `description`, `stars`, and `trustScore`.
 - **Zero Fabrication Policy**: Never invent fake repository names, placeholder URLs, or unverified `npx skills add` commands. Every entry in `registry.seed.json` must come from live Scrapling MCP extraction and pass `tests/registry-schema.test.ts`.
 
-## 5. Canonical 11 Professional Fields (`FieldId`)
+## 5. Canonical 13 Professional Fields (`FieldId`)
 
-All CLI flags, wizard prompts, registry entries, and `CLAUDE.md` templates must support single or multi-select across these exact 11 canonical field IDs:
+All CLI flags, wizard prompts, registry entries, and `CLAUDE.md` templates must support single or multi-select across these exact 13 canonical field IDs:
 
 | # | `FieldId` | Display Name | Required Bundle Composition |
 | :--- | :--- | :--- | :--- |
@@ -61,6 +61,8 @@ All CLI flags, wizard prompts, registry entries, and `CLAUDE.md` templates must 
 | 9 | `backend-dev` | **Backend Developer** | OpenAPI/gRPC schema skills, Postgres/Redis/MongoDB MCPs, Kubernetes/Docker validators, SQL optimization & k6 load-testing skills |
 | 10 | `frontend-dev` | **Front-End Developer** | [shadcn/ui skill](https://ui.shadcn.com/docs/skills), Tailwind/CSS architecture, WCAG/Lighthouse accessibility MCP, Figma-to-Code MCP, Playwright visual testing |
 | 11 | `software-eng` | **Software Engineer** | [Superpowers](https://claudemarketplaces.com/plugins/obra-superpowers), [Ruflo orchestration](https://claudemarketplaces.com/skills/ruvnet/ruflo/discover-plugins), [OpenCode Review MCP](https://github.com/alibaba/open-code-review), C4 system design, GitHub Actions CI/CD skills |
+| 12 | `data-engineering` | **Data Analyst & Engineering** | DuckDB, Polars, Pandas, Apache Spark/Airflow, dbt, Parquet lakehouse, Great Expectations, Plotly/Seaborn |
+| 13 | `ai-ml` | **Machine Learning & AI** | PyTorch 2.x, Hugging Face (Transformers/TRL/Accelerate), LangChain, LangGraph, CrewAI, vLLM, Qdrant/Chroma |
 
 ## 6. Target Installation & Gateway Routing Rules
 

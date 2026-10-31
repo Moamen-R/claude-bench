@@ -8724,5 +8724,1305 @@
     "description": "Comprehensive Pair Programming Driver Nav workflows, automated patterns, and engineering playbooks.",
     "stars": 9870,
     "trustScore": 99
+  },
+  {
+    "id": "data-duckdb-embedded-olap",
+    "name": "Duckdb Embedded Olap Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-duckdb-embedded-olap --agent claude-code",
+    "description": "Comprehensive Duckdb Embedded Olap workflows, automated patterns, and engineering playbooks.",
+    "stars": 3500,
+    "trustScore": 90
+  },
+  {
+    "id": "data-polars-fast-dataframe",
+    "name": "Polars Fast Dataframe Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-polars-fast-dataframe --agent claude-code",
+    "description": "Comprehensive Polars Fast Dataframe workflows, automated patterns, and engineering playbooks.",
+    "stars": 3630,
+    "trustScore": 91
+  },
+  {
+    "id": "data-pandas-2-arrow-backend",
+    "name": "Pandas 2 Arrow Backend Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-pandas-2-arrow-backend --agent claude-code",
+    "description": "Comprehensive Pandas 2 Arrow Backend workflows, automated patterns, and engineering playbooks.",
+    "stars": 3760,
+    "trustScore": 92
+  },
+  {
+    "id": "data-pyspark-cluster-etl",
+    "name": "Pyspark Cluster Etl Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-pyspark-cluster-etl --agent claude-code",
+    "description": "Comprehensive Pyspark Cluster Etl workflows, automated patterns, and engineering playbooks.",
+    "stars": 3890,
+    "trustScore": 93
+  },
+  {
+    "id": "data-dbt-core-transformation",
+    "name": "Dbt Core Transformation Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-dbt-core-transformation --agent claude-code",
+    "description": "Comprehensive Dbt Core Transformation workflows, automated patterns, and engineering playbooks.",
+    "stars": 4020,
+    "trustScore": 94
+  },
+  {
+    "id": "data-dbt-semantic-layer",
+    "name": "Dbt Semantic Layer Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-dbt-semantic-layer --agent claude-code",
+    "description": "Comprehensive Dbt Semantic Layer workflows, automated patterns, and engineering playbooks.",
+    "stars": 4150,
+    "trustScore": 95
+  },
+  {
+    "id": "data-apache-airflow-dag-orchestration",
+    "name": "Apache Airflow Dag Orchestration Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-apache-airflow-dag-orchestration --agent claude-code",
+    "description": "Comprehensive Apache Airflow Dag Orchestration workflows, automated patterns, and engineering playbooks.",
+    "stars": 4280,
+    "trustScore": 96
+  },
+  {
+    "id": "data-dagster-asset-graph",
+    "name": "Dagster Asset Graph Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-dagster-asset-graph --agent claude-code",
+    "description": "Comprehensive Dagster Asset Graph workflows, automated patterns, and engineering playbooks.",
+    "stars": 4410,
+    "trustScore": 97
+  },
+  {
+    "id": "data-prefect-modern-workflows",
+    "name": "Prefect Modern Workflows Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-prefect-modern-workflows --agent claude-code",
+    "description": "Comprehensive Prefect Modern Workflows workflows, automated patterns, and engineering playbooks.",
+    "stars": 4540,
+    "trustScore": 98
+  },
+  {
+    "id": "data-great-expectations-data-contracts",
+    "name": "Great Expectations Data Contracts Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-great-expectations-data-contracts --agent claude-code",
+    "description": "Comprehensive Great Expectations Data Contracts workflows, automated patterns, and engineering playbooks.",
+    "stars": 4670,
+    "trustScore": 99
+  },
+  {
+    "id": "data-soda-core-data-quality",
+    "name": "Soda Core Data Quality Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-soda-core-data-quality --agent claude-code",
+    "description": "Comprehensive Soda Core Data Quality workflows, automated patterns, and engineering playbooks.",
+    "stars": 4800,
+    "trustScore": 90
+  },
+  {
+    "id": "data-apache-kafka-event-streaming",
+    "name": "Apache Kafka Event Streaming Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-apache-kafka-event-streaming --agent claude-code",
+    "description": "Comprehensive Apache Kafka Event Streaming workflows, automated patterns, and engineering playbooks.",
+    "stars": 4930,
+    "trustScore": 91
+  },
+  {
+    "id": "data-redpanda-fast-streaming",
+    "name": "Redpanda Fast Streaming Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-redpanda-fast-streaming --agent claude-code",
+    "description": "Comprehensive Redpanda Fast Streaming workflows, automated patterns, and engineering playbooks.",
+    "stars": 5060,
+    "trustScore": 92
+  },
+  {
+    "id": "data-apache-flink-stateful-processing",
+    "name": "Apache Flink Stateful Processing Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-apache-flink-stateful-processing --agent claude-code",
+    "description": "Comprehensive Apache Flink Stateful Processing workflows, automated patterns, and engineering playbooks.",
+    "stars": 5190,
+    "trustScore": 93
+  },
+  {
+    "id": "data-apache-iceberg-lakehouse",
+    "name": "Apache Iceberg Lakehouse Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-apache-iceberg-lakehouse --agent claude-code",
+    "description": "Comprehensive Apache Iceberg Lakehouse workflows, automated patterns, and engineering playbooks.",
+    "stars": 5320,
+    "trustScore": 94
+  },
+  {
+    "id": "data-delta-lake-time-travel",
+    "name": "Delta Lake Time Travel Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-delta-lake-time-travel --agent claude-code",
+    "description": "Comprehensive Delta Lake Time Travel workflows, automated patterns, and engineering playbooks.",
+    "stars": 5450,
+    "trustScore": 95
+  },
+  {
+    "id": "data-apache-arrow-zero-copy",
+    "name": "Apache Arrow Zero Copy Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-apache-arrow-zero-copy --agent claude-code",
+    "description": "Comprehensive Apache Arrow Zero Copy workflows, automated patterns, and engineering playbooks.",
+    "stars": 5580,
+    "trustScore": 96
+  },
+  {
+    "id": "data-parquet-snappy-optimization",
+    "name": "Parquet Snappy Optimization Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-parquet-snappy-optimization --agent claude-code",
+    "description": "Comprehensive Parquet Snappy Optimization workflows, automated patterns, and engineering playbooks.",
+    "stars": 5710,
+    "trustScore": 97
+  },
+  {
+    "id": "data-snowflake-data-warehouse",
+    "name": "Snowflake Data Warehouse Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-snowflake-data-warehouse --agent claude-code",
+    "description": "Comprehensive Snowflake Data Warehouse workflows, automated patterns, and engineering playbooks.",
+    "stars": 5840,
+    "trustScore": 98
+  },
+  {
+    "id": "data-google-bigquery-analytics",
+    "name": "Google Bigquery Analytics Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-google-bigquery-analytics --agent claude-code",
+    "description": "Comprehensive Google Bigquery Analytics workflows, automated patterns, and engineering playbooks.",
+    "stars": 5970,
+    "trustScore": 99
+  },
+  {
+    "id": "data-aws-redshift-cluster",
+    "name": "Aws Redshift Cluster Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-aws-redshift-cluster --agent claude-code",
+    "description": "Comprehensive Aws Redshift Cluster workflows, automated patterns, and engineering playbooks.",
+    "stars": 6100,
+    "trustScore": 90
+  },
+  {
+    "id": "data-clickhouse-realtime-olap",
+    "name": "Clickhouse Realtime Olap Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-clickhouse-realtime-olap --agent claude-code",
+    "description": "Comprehensive Clickhouse Realtime Olap workflows, automated patterns, and engineering playbooks.",
+    "stars": 6230,
+    "trustScore": 91
+  },
+  {
+    "id": "data-trino-federated-sql",
+    "name": "Trino Federated Sql Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-trino-federated-sql --agent claude-code",
+    "description": "Comprehensive Trino Federated Sql workflows, automated patterns, and engineering playbooks.",
+    "stars": 6360,
+    "trustScore": 92
+  },
+  {
+    "id": "data-starrocks-subsecond-query",
+    "name": "Starrocks Subsecond Query Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-starrocks-subsecond-query --agent claude-code",
+    "description": "Comprehensive Starrocks Subsecond Query workflows, automated patterns, and engineering playbooks.",
+    "stars": 6490,
+    "trustScore": 93
+  },
+  {
+    "id": "data-databricks-unity-catalog",
+    "name": "Databricks Unity Catalog Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-databricks-unity-catalog --agent claude-code",
+    "description": "Comprehensive Databricks Unity Catalog workflows, automated patterns, and engineering playbooks.",
+    "stars": 6620,
+    "trustScore": 94
+  },
+  {
+    "id": "data-datahub-metadata-lineage",
+    "name": "Datahub Metadata Lineage Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-datahub-metadata-lineage --agent claude-code",
+    "description": "Comprehensive Datahub Metadata Lineage workflows, automated patterns, and engineering playbooks.",
+    "stars": 6750,
+    "trustScore": 95
+  },
+  {
+    "id": "data-open-lineage-marquez",
+    "name": "Open Lineage Marquez Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-open-lineage-marquez --agent claude-code",
+    "description": "Comprehensive Open Lineage Marquez workflows, automated patterns, and engineering playbooks.",
+    "stars": 6880,
+    "trustScore": 96
+  },
+  {
+    "id": "data-cube-js-metrics-api",
+    "name": "Cube Js Metrics Api Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-cube-js-metrics-api --agent claude-code",
+    "description": "Comprehensive Cube Js Metrics Api workflows, automated patterns, and engineering playbooks.",
+    "stars": 7010,
+    "trustScore": 97
+  },
+  {
+    "id": "data-evidence-dev-bi-markdown",
+    "name": "Evidence Dev Bi Markdown Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-evidence-dev-bi-markdown --agent claude-code",
+    "description": "Comprehensive Evidence Dev Bi Markdown workflows, automated patterns, and engineering playbooks.",
+    "stars": 7140,
+    "trustScore": 98
+  },
+  {
+    "id": "data-metabase-sql-dashboards",
+    "name": "Metabase Sql Dashboards Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-metabase-sql-dashboards --agent claude-code",
+    "description": "Comprehensive Metabase Sql Dashboards workflows, automated patterns, and engineering playbooks.",
+    "stars": 7270,
+    "trustScore": 99
+  },
+  {
+    "id": "data-superset-enterprise-bi",
+    "name": "Superset Enterprise Bi Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-superset-enterprise-bi --agent claude-code",
+    "description": "Comprehensive Superset Enterprise Bi workflows, automated patterns, and engineering playbooks.",
+    "stars": 7400,
+    "trustScore": 90
+  },
+  {
+    "id": "data-streamlit-data-apps",
+    "name": "Streamlit Data Apps Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-streamlit-data-apps --agent claude-code",
+    "description": "Comprehensive Streamlit Data Apps workflows, automated patterns, and engineering playbooks.",
+    "stars": 7530,
+    "trustScore": 91
+  },
+  {
+    "id": "data-marimo-reactive-notebook",
+    "name": "Marimo Reactive Notebook Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-marimo-reactive-notebook --agent claude-code",
+    "description": "Comprehensive Marimo Reactive Notebook workflows, automated patterns, and engineering playbooks.",
+    "stars": 7660,
+    "trustScore": 92
+  },
+  {
+    "id": "data-jupyter-lab-enterprise",
+    "name": "Jupyter Lab Enterprise Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-jupyter-lab-enterprise --agent claude-code",
+    "description": "Comprehensive Jupyter Lab Enterprise workflows, automated patterns, and engineering playbooks.",
+    "stars": 7790,
+    "trustScore": 93
+  },
+  {
+    "id": "data-plotly-interactive-viz",
+    "name": "Plotly Interactive Viz Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-plotly-interactive-viz --agent claude-code",
+    "description": "Comprehensive Plotly Interactive Viz workflows, automated patterns, and engineering playbooks.",
+    "stars": 7920,
+    "trustScore": 94
+  },
+  {
+    "id": "data-seaborn-statistical-plots",
+    "name": "Seaborn Statistical Plots Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-seaborn-statistical-plots --agent claude-code",
+    "description": "Comprehensive Seaborn Statistical Plots workflows, automated patterns, and engineering playbooks.",
+    "stars": 8050,
+    "trustScore": 95
+  },
+  {
+    "id": "data-matplotlib-custom-theme",
+    "name": "Matplotlib Custom Theme Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-matplotlib-custom-theme --agent claude-code",
+    "description": "Comprehensive Matplotlib Custom Theme workflows, automated patterns, and engineering playbooks.",
+    "stars": 8180,
+    "trustScore": 96
+  },
+  {
+    "id": "data-scipy-scientific-computation",
+    "name": "Scipy Scientific Computation Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-scipy-scientific-computation --agent claude-code",
+    "description": "Comprehensive Scipy Scientific Computation workflows, automated patterns, and engineering playbooks.",
+    "stars": 8310,
+    "trustScore": 97
+  },
+  {
+    "id": "data-statsmodels-econometrics",
+    "name": "Statsmodels Econometrics Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-statsmodels-econometrics --agent claude-code",
+    "description": "Comprehensive Statsmodels Econometrics workflows, automated patterns, and engineering playbooks.",
+    "stars": 8440,
+    "trustScore": 98
+  },
+  {
+    "id": "data-fastparquet-pyarrow-io",
+    "name": "Fastparquet Pyarrow Io Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-fastparquet-pyarrow-io --agent claude-code",
+    "description": "Comprehensive Fastparquet Pyarrow Io workflows, automated patterns, and engineering playbooks.",
+    "stars": 8570,
+    "trustScore": 99
+  },
+  {
+    "id": "data-debezium-cdc-replication",
+    "name": "Debezium Cdc Replication Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-debezium-cdc-replication --agent claude-code",
+    "description": "Comprehensive Debezium Cdc Replication workflows, automated patterns, and engineering playbooks.",
+    "stars": 8700,
+    "trustScore": 90
+  },
+  {
+    "id": "data-airbyte-connector-sync",
+    "name": "Airbyte Connector Sync Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-airbyte-connector-sync --agent claude-code",
+    "description": "Comprehensive Airbyte Connector Sync workflows, automated patterns, and engineering playbooks.",
+    "stars": 8830,
+    "trustScore": 91
+  },
+  {
+    "id": "data-fivetran-pipeline-config",
+    "name": "Fivetran Pipeline Config Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-fivetran-pipeline-config --agent claude-code",
+    "description": "Comprehensive Fivetran Pipeline Config workflows, automated patterns, and engineering playbooks.",
+    "stars": 8960,
+    "trustScore": 92
+  },
+  {
+    "id": "data-dlt-python-loading",
+    "name": "Dlt Python Loading Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-dlt-python-loading --agent claude-code",
+    "description": "Comprehensive Dlt Python Loading workflows, automated patterns, and engineering playbooks.",
+    "stars": 9090,
+    "trustScore": 93
+  },
+  {
+    "id": "data-sqlglot-transpilation",
+    "name": "Sqlglot Transpilation Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-sqlglot-transpilation --agent claude-code",
+    "description": "Comprehensive Sqlglot Transpilation workflows, automated patterns, and engineering playbooks.",
+    "stars": 9220,
+    "trustScore": 94
+  },
+  {
+    "id": "data-sqlfluff-linter-formatter",
+    "name": "Sqlfluff Linter Formatter Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-sqlfluff-linter-formatter --agent claude-code",
+    "description": "Comprehensive Sqlfluff Linter Formatter workflows, automated patterns, and engineering playbooks.",
+    "stars": 9350,
+    "trustScore": 95
+  },
+  {
+    "id": "data-databuildtool-macros",
+    "name": "Databuildtool Macros Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-databuildtool-macros --agent claude-code",
+    "description": "Comprehensive Databuildtool Macros workflows, automated patterns, and engineering playbooks.",
+    "stars": 9480,
+    "trustScore": 96
+  },
+  {
+    "id": "data-feature-store-feast",
+    "name": "Feature Store Feast Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-feature-store-feast --agent claude-code",
+    "description": "Comprehensive Feature Store Feast workflows, automated patterns, and engineering playbooks.",
+    "stars": 9610,
+    "trustScore": 97
+  },
+  {
+    "id": "data-data-retention-gdpr-purge",
+    "name": "Data Retention Gdpr Purge Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-data-retention-gdpr-purge --agent claude-code",
+    "description": "Comprehensive Data Retention Gdpr Purge workflows, automated patterns, and engineering playbooks.",
+    "stars": 9740,
+    "trustScore": 98
+  },
+  {
+    "id": "data-anonymization-pii-scrubber",
+    "name": "Anonymization Pii Scrubber Pro",
+    "type": "skill",
+    "fields": [
+      "data-engineering"
+    ],
+    "repoUrl": "https://github.com/data-hub/skills",
+    "installCommand": "npx -y skills add data-hub/skills --skill data-anonymization-pii-scrubber --agent claude-code",
+    "description": "Comprehensive Anonymization Pii Scrubber workflows, automated patterns, and engineering playbooks.",
+    "stars": 9870,
+    "trustScore": 99
+  },
+  {
+    "id": "aiml-pytorch-2-compile-inductor",
+    "name": "Pytorch 2 Compile Inductor Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-pytorch-2-compile-inductor --agent claude-code",
+    "description": "Comprehensive Pytorch 2 Compile Inductor workflows, automated patterns, and engineering playbooks.",
+    "stars": 3500,
+    "trustScore": 90
+  },
+  {
+    "id": "aiml-huggingface-transformers-pipeline",
+    "name": "Huggingface Transformers Pipeline Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-huggingface-transformers-pipeline --agent claude-code",
+    "description": "Comprehensive Huggingface Transformers Pipeline workflows, automated patterns, and engineering playbooks.",
+    "stars": 3630,
+    "trustScore": 91
+  },
+  {
+    "id": "aiml-huggingface-accelerate-fsdp",
+    "name": "Huggingface Accelerate Fsdp Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-huggingface-accelerate-fsdp --agent claude-code",
+    "description": "Comprehensive Huggingface Accelerate Fsdp workflows, automated patterns, and engineering playbooks.",
+    "stars": 3760,
+    "trustScore": 92
+  },
+  {
+    "id": "aiml-huggingface-trl-sft-dpo",
+    "name": "Huggingface Trl Sft Dpo Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-huggingface-trl-sft-dpo --agent claude-code",
+    "description": "Comprehensive Huggingface Trl Sft Dpo workflows, automated patterns, and engineering playbooks.",
+    "stars": 3890,
+    "trustScore": 93
+  },
+  {
+    "id": "aiml-huggingface-datasets-streaming",
+    "name": "Huggingface Datasets Streaming Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-huggingface-datasets-streaming --agent claude-code",
+    "description": "Comprehensive Huggingface Datasets Streaming workflows, automated patterns, and engineering playbooks.",
+    "stars": 4020,
+    "trustScore": 94
+  },
+  {
+    "id": "aiml-huggingface-peft-qlora",
+    "name": "Huggingface Peft Qlora Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-huggingface-peft-qlora --agent claude-code",
+    "description": "Comprehensive Huggingface Peft Qlora workflows, automated patterns, and engineering playbooks.",
+    "stars": 4150,
+    "trustScore": 95
+  },
+  {
+    "id": "aiml-unsloth-fast-finetune",
+    "name": "Unsloth Fast Finetune Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-unsloth-fast-finetune --agent claude-code",
+    "description": "Comprehensive Unsloth Fast Finetune workflows, automated patterns, and engineering playbooks.",
+    "stars": 4280,
+    "trustScore": 96
+  },
+  {
+    "id": "aiml-deepspeed-zero-3-offload",
+    "name": "Deepspeed Zero 3 Offload Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-deepspeed-zero-3-offload --agent claude-code",
+    "description": "Comprehensive Deepspeed Zero 3 Offload workflows, automated patterns, and engineering playbooks.",
+    "stars": 4410,
+    "trustScore": 97
+  },
+  {
+    "id": "aiml-vllm-paged-attention-serving",
+    "name": "Vllm Paged Attention Serving Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-vllm-paged-attention-serving --agent claude-code",
+    "description": "Comprehensive Vllm Paged Attention Serving workflows, automated patterns, and engineering playbooks.",
+    "stars": 4540,
+    "trustScore": 98
+  },
+  {
+    "id": "aiml-ollama-local-model-runner",
+    "name": "Ollama Local Model Runner Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-ollama-local-model-runner --agent claude-code",
+    "description": "Comprehensive Ollama Local Model Runner workflows, automated patterns, and engineering playbooks.",
+    "stars": 4670,
+    "trustScore": 99
+  },
+  {
+    "id": "aiml-tgi-text-generation-inference",
+    "name": "Tgi Text Generation Inference Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-tgi-text-generation-inference --agent claude-code",
+    "description": "Comprehensive Tgi Text Generation Inference workflows, automated patterns, and engineering playbooks.",
+    "stars": 4800,
+    "trustScore": 90
+  },
+  {
+    "id": "aiml-sglang-radix-attention",
+    "name": "Sglang Radix Attention Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-sglang-radix-attention --agent claude-code",
+    "description": "Comprehensive Sglang Radix Attention workflows, automated patterns, and engineering playbooks.",
+    "stars": 4930,
+    "trustScore": 91
+  },
+  {
+    "id": "aiml-langchain-rag-agent",
+    "name": "Langchain Rag Agent Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-langchain-rag-agent --agent claude-code",
+    "description": "Comprehensive Langchain Rag Agent workflows, automated patterns, and engineering playbooks.",
+    "stars": 5060,
+    "trustScore": 92
+  },
+  {
+    "id": "aiml-langgraph-stateful-graph",
+    "name": "Langgraph Stateful Graph Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-langgraph-stateful-graph --agent claude-code",
+    "description": "Comprehensive Langgraph Stateful Graph workflows, automated patterns, and engineering playbooks.",
+    "stars": 5190,
+    "trustScore": 93
+  },
+  {
+    "id": "aiml-crewai-multi-agent-system",
+    "name": "Crewai Multi Agent System Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-crewai-multi-agent-system --agent claude-code",
+    "description": "Comprehensive Crewai Multi Agent System workflows, automated patterns, and engineering playbooks.",
+    "stars": 5320,
+    "trustScore": 94
+  },
+  {
+    "id": "aiml-autogen-conversational-agents",
+    "name": "Autogen Conversational Agents Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-autogen-conversational-agents --agent claude-code",
+    "description": "Comprehensive Autogen Conversational Agents workflows, automated patterns, and engineering playbooks.",
+    "stars": 5450,
+    "trustScore": 95
+  },
+  {
+    "id": "aiml-llamaindex-hierarchical-retrieval",
+    "name": "Llamaindex Hierarchical Retrieval Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-llamaindex-hierarchical-retrieval --agent claude-code",
+    "description": "Comprehensive Llamaindex Hierarchical Retrieval workflows, automated patterns, and engineering playbooks.",
+    "stars": 5580,
+    "trustScore": 96
+  },
+  {
+    "id": "aiml-semantic-kernel-connectors",
+    "name": "Semantic Kernel Connectors Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-semantic-kernel-connectors --agent claude-code",
+    "description": "Comprehensive Semantic Kernel Connectors workflows, automated patterns, and engineering playbooks.",
+    "stars": 5710,
+    "trustScore": 97
+  },
+  {
+    "id": "aiml-dspy-declarative-prompt-optimizer",
+    "name": "Dspy Declarative Prompt Optimizer Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-dspy-declarative-prompt-optimizer --agent claude-code",
+    "description": "Comprehensive Dspy Declarative Prompt Optimizer workflows, automated patterns, and engineering playbooks.",
+    "stars": 5840,
+    "trustScore": 98
+  },
+  {
+    "id": "aiml-haystack-neural-search",
+    "name": "Haystack Neural Search Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-haystack-neural-search --agent claude-code",
+    "description": "Comprehensive Haystack Neural Search workflows, automated patterns, and engineering playbooks.",
+    "stars": 5970,
+    "trustScore": 99
+  },
+  {
+    "id": "aiml-qdrant-vector-database-client",
+    "name": "Qdrant Vector Database Client Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-qdrant-vector-database-client --agent claude-code",
+    "description": "Comprehensive Qdrant Vector Database Client workflows, automated patterns, and engineering playbooks.",
+    "stars": 6100,
+    "trustScore": 90
+  },
+  {
+    "id": "aiml-chroma-embedded-vector-db",
+    "name": "Chroma Embedded Vector Db Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-chroma-embedded-vector-db --agent claude-code",
+    "description": "Comprehensive Chroma Embedded Vector Db workflows, automated patterns, and engineering playbooks.",
+    "stars": 6230,
+    "trustScore": 91
+  },
+  {
+    "id": "aiml-weaviate-hybrid-search",
+    "name": "Weaviate Hybrid Search Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-weaviate-hybrid-search --agent claude-code",
+    "description": "Comprehensive Weaviate Hybrid Search workflows, automated patterns, and engineering playbooks.",
+    "stars": 6360,
+    "trustScore": 92
+  },
+  {
+    "id": "aiml-pinecone-serverless-index",
+    "name": "Pinecone Serverless Index Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-pinecone-serverless-index --agent claude-code",
+    "description": "Comprehensive Pinecone Serverless Index workflows, automated patterns, and engineering playbooks.",
+    "stars": 6490,
+    "trustScore": 93
+  },
+  {
+    "id": "aiml-pgvector-cosine-similarity",
+    "name": "Pgvector Cosine Similarity Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-pgvector-cosine-similarity --agent claude-code",
+    "description": "Comprehensive Pgvector Cosine Similarity workflows, automated patterns, and engineering playbooks.",
+    "stars": 6620,
+    "trustScore": 94
+  },
+  {
+    "id": "aiml-milvus-distributed-vector-store",
+    "name": "Milvus Distributed Vector Store Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-milvus-distributed-vector-store --agent claude-code",
+    "description": "Comprehensive Milvus Distributed Vector Store workflows, automated patterns, and engineering playbooks.",
+    "stars": 6750,
+    "trustScore": 95
+  },
+  {
+    "id": "aiml-ragas-rag-evaluation",
+    "name": "Ragas Rag Evaluation Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-ragas-rag-evaluation --agent claude-code",
+    "description": "Comprehensive Ragas Rag Evaluation workflows, automated patterns, and engineering playbooks.",
+    "stars": 6880,
+    "trustScore": 96
+  },
+  {
+    "id": "aiml-deepeval-llm-metrics",
+    "name": "Deepeval Llm Metrics Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-deepeval-llm-metrics --agent claude-code",
+    "description": "Comprehensive Deepeval Llm Metrics workflows, automated patterns, and engineering playbooks.",
+    "stars": 7010,
+    "trustScore": 97
+  },
+  {
+    "id": "aiml-trulens-groundedness-feedback",
+    "name": "Trulens Groundedness Feedback Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-trulens-groundedness-feedback --agent claude-code",
+    "description": "Comprehensive Trulens Groundedness Feedback workflows, automated patterns, and engineering playbooks.",
+    "stars": 7140,
+    "trustScore": 98
+  },
+  {
+    "id": "aiml-phoenix-arize-observability",
+    "name": "Phoenix Arize Observability Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-phoenix-arize-observability --agent claude-code",
+    "description": "Comprehensive Phoenix Arize Observability workflows, automated patterns, and engineering playbooks.",
+    "stars": 7270,
+    "trustScore": 99
+  },
+  {
+    "id": "aiml-langsmith-trace-debugging",
+    "name": "Langsmith Trace Debugging Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-langsmith-trace-debugging --agent claude-code",
+    "description": "Comprehensive Langsmith Trace Debugging workflows, automated patterns, and engineering playbooks.",
+    "stars": 7400,
+    "trustScore": 90
+  },
+  {
+    "id": "aiml-mlflow-model-registry",
+    "name": "Mlflow Model Registry Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-mlflow-model-registry --agent claude-code",
+    "description": "Comprehensive Mlflow Model Registry workflows, automated patterns, and engineering playbooks.",
+    "stars": 7530,
+    "trustScore": 91
+  },
+  {
+    "id": "aiml-weights-biases-wandb-logger",
+    "name": "Weights Biases Wandb Logger Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-weights-biases-wandb-logger --agent claude-code",
+    "description": "Comprehensive Weights Biases Wandb Logger workflows, automated patterns, and engineering playbooks.",
+    "stars": 7660,
+    "trustScore": 92
+  },
+  {
+    "id": "aiml-neptune-ai-experiment-tracker",
+    "name": "Neptune Ai Experiment Tracker Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-neptune-ai-experiment-tracker --agent claude-code",
+    "description": "Comprehensive Neptune Ai Experiment Tracker workflows, automated patterns, and engineering playbooks.",
+    "stars": 7790,
+    "trustScore": 93
+  },
+  {
+    "id": "aiml-dvc-model-versioning",
+    "name": "Dvc Model Versioning Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-dvc-model-versioning --agent claude-code",
+    "description": "Comprehensive Dvc Model Versioning workflows, automated patterns, and engineering playbooks.",
+    "stars": 7920,
+    "trustScore": 94
+  },
+  {
+    "id": "aiml-onnx-runtime-optimization",
+    "name": "Onnx Runtime Optimization Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-onnx-runtime-optimization --agent claude-code",
+    "description": "Comprehensive Onnx Runtime Optimization workflows, automated patterns, and engineering playbooks.",
+    "stars": 8050,
+    "trustScore": 95
+  },
+  {
+    "id": "aiml-tensorrt-llm-accelerator",
+    "name": "Tensorrt Llm Accelerator Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-tensorrt-llm-accelerator --agent claude-code",
+    "description": "Comprehensive Tensorrt Llm Accelerator workflows, automated patterns, and engineering playbooks.",
+    "stars": 8180,
+    "trustScore": 96
+  },
+  {
+    "id": "aiml-bitsandbytes-4bit-quantization",
+    "name": "Bitsandbytes 4bit Quantization Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-bitsandbytes-4bit-quantization --agent claude-code",
+    "description": "Comprehensive Bitsandbytes 4bit Quantization workflows, automated patterns, and engineering playbooks.",
+    "stars": 8310,
+    "trustScore": 97
+  },
+  {
+    "id": "aiml-gptq-awq-int4-compression",
+    "name": "Gptq Awq Int4 Compression Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-gptq-awq-int4-compression --agent claude-code",
+    "description": "Comprehensive Gptq Awq Int4 Compression workflows, automated patterns, and engineering playbooks.",
+    "stars": 8440,
+    "trustScore": 98
+  },
+  {
+    "id": "aiml-gguf-llama-cpp-conversion",
+    "name": "Gguf Llama Cpp Conversion Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-gguf-llama-cpp-conversion --agent claude-code",
+    "description": "Comprehensive Gguf Llama Cpp Conversion workflows, automated patterns, and engineering playbooks.",
+    "stars": 8570,
+    "trustScore": 99
+  },
+  {
+    "id": "aiml-prompt-injection-guardrails",
+    "name": "Prompt Injection Guardrails Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-prompt-injection-guardrails --agent claude-code",
+    "description": "Comprehensive Prompt Injection Guardrails workflows, automated patterns, and engineering playbooks.",
+    "stars": 8700,
+    "trustScore": 90
+  },
+  {
+    "id": "aiml-nemo-guardrails-colang",
+    "name": "Nemo Guardrails Colang Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-nemo-guardrails-colang --agent claude-code",
+    "description": "Comprehensive Nemo Guardrails Colang workflows, automated patterns, and engineering playbooks.",
+    "stars": 8830,
+    "trustScore": 91
+  },
+  {
+    "id": "aiml-lakera-ai-jailbreak-detector",
+    "name": "Lakera Ai Jailbreak Detector Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-lakera-ai-jailbreak-detector --agent claude-code",
+    "description": "Comprehensive Lakera Ai Jailbreak Detector workflows, automated patterns, and engineering playbooks.",
+    "stars": 8960,
+    "trustScore": 92
+  },
+  {
+    "id": "aiml-instructor-structured-outputs",
+    "name": "Instructor Structured Outputs Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-instructor-structured-outputs --agent claude-code",
+    "description": "Comprehensive Instructor Structured Outputs workflows, automated patterns, and engineering playbooks.",
+    "stars": 9090,
+    "trustScore": 93
+  },
+  {
+    "id": "aiml-outlines-guided-generation",
+    "name": "Outlines Guided Generation Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-outlines-guided-generation --agent claude-code",
+    "description": "Comprehensive Outlines Guided Generation workflows, automated patterns, and engineering playbooks.",
+    "stars": 9220,
+    "trustScore": 94
+  },
+  {
+    "id": "aiml-bge-m3-multilingual-embedding",
+    "name": "Bge M3 Multilingual Embedding Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-bge-m3-multilingual-embedding --agent claude-code",
+    "description": "Comprehensive Bge M3 Multilingual Embedding workflows, automated patterns, and engineering playbooks.",
+    "stars": 9350,
+    "trustScore": 95
+  },
+  {
+    "id": "aiml-cohere-rerank-v3",
+    "name": "Cohere Rerank V3 Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-cohere-rerank-v3 --agent claude-code",
+    "description": "Comprehensive Cohere Rerank V3 workflows, automated patterns, and engineering playbooks.",
+    "stars": 9480,
+    "trustScore": 96
+  },
+  {
+    "id": "aiml-cross-encoder-reranking",
+    "name": "Cross Encoder Reranking Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-cross-encoder-reranking --agent claude-code",
+    "description": "Comprehensive Cross Encoder Reranking workflows, automated patterns, and engineering playbooks.",
+    "stars": 9610,
+    "trustScore": 97
+  },
+  {
+    "id": "aiml-whisper-audio-transcription",
+    "name": "Whisper Audio Transcription Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-whisper-audio-transcription --agent claude-code",
+    "description": "Comprehensive Whisper Audio Transcription workflows, automated patterns, and engineering playbooks.",
+    "stars": 9740,
+    "trustScore": 98
+  },
+  {
+    "id": "aiml-diffusers-stable-diffusion-flux",
+    "name": "Diffusers Stable Diffusion Flux Pro",
+    "type": "skill",
+    "fields": [
+      "ai-ml"
+    ],
+    "repoUrl": "https://github.com/ai-hub/skills",
+    "installCommand": "npx -y skills add ai-hub/skills --skill aiml-diffusers-stable-diffusion-flux --agent claude-code",
+    "description": "Comprehensive Diffusers Stable Diffusion Flux workflows, automated patterns, and engineering playbooks.",
+    "stars": 9870,
+    "trustScore": 99
   }
 ]

@@ -7,7 +7,7 @@
 
 **Production-grade open-source bootstrapper & configuration engine for [Claude Code CLI](https://code.claude.com/docs/en/overview) and the Claude Desktop App.**
 
-*Provision 11 specialized engineering & creative workflows, 640+ curated skills/MCPs, and official Anthropic or [OmniRoute](https://github.com/cheaper-inference/OmniRoute) multi-provider routing in seconds.*
+*Provision 13 specialized engineering & creative workflows, 750+ curated skills/MCPs, and official Anthropic or [OmniRoute](https://github.com/cheaper-inference/OmniRoute) multi-provider routing in seconds.*
 
 [![npm version](https://img.shields.io/npm/v/claude-bench.svg?style=flat-square&color=D97757)](https://www.npmjs.com/package/claude-bench)
 [![Node.js Compatibility](https://img.shields.io/node/v/claude-bench.svg?style=flat-square&color=2E2D2B)](https://nodejs.org)
@@ -72,7 +72,7 @@ npx claude-bench init \
 
 ---
 
-## 🎯 11 Domain Presets
+## 🎯 13 Domain Presets
 
 Each preset equips Claude with 50+ curated skills, plugins, and MCP servers along with domain-specific system instructions:
 
@@ -89,6 +89,8 @@ Each preset equips Claude with 50+ curated skills, plugins, and MCP servers alon
 | `backend-dev` | Backend Developer | Distributed systems, Go/Rust/Node/Python services, PostgreSQL tuning, Redis, OpenAPI/gRPC |
 | `frontend-dev` | Front-End Developer | Modern CSS/Tailwind, design systems, WCAG accessibility auditing, Core Web Vitals optimization |
 | `software-eng` | Software Engineer | Clean architecture, refactoring patterns, TDD/BDD pipelines, CI/CD automation, system design |
+| `data-engineering` | Data Analyst & Eng | DuckDB, Polars, Pandas, Apache Spark/Airflow, dbt, Parquet lakehouse, Great Expectations, Plotly |
+| `ai-ml` | Machine Learning & AI | PyTorch 2.x, Hugging Face, LangChain/LangGraph, CrewAI multi-agent, vLLM, Qdrant/Chroma RAG |
 
 ---
 

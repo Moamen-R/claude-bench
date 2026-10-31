@@ -72,6 +72,20 @@ const DOMAIN_BLUEPRINTS: Record<FieldId, { title: string; body: string }> = {
 - **Architecture**: Enforce clean boundaries and Domain-Driven Design (DDD).
 - **Code Reviews**: Verify all diffs with OpenCode Review MCP before merging.`,
   },
+  'data-engineering': {
+    title: 'Data Analyst & Engineering Guidelines',
+    body: `- **Data Pipelines**: Write modular, idempotent ETL/ELT pipelines using DuckDB, Polars, and dbt.
+- **Analytics & Warehousing**: Index-optimized SQL queries, schema migrations, and Parquet/Delta lakehouse architecture.
+- **Data Quality**: Enforce data contracts and statistical validation with Great Expectations before ingestion.
+- **Storytelling**: Produce colorblind-safe, publication-grade figures with Matplotlib, Seaborn, and Plotly.`,
+  },
+  'ai-ml': {
+    title: 'Machine Learning & AI Engineering Guidelines',
+    body: `- **Model Development**: PyTorch 2.x and Hugging Face ecosystem (Transformers, Accelerate, TRL, PEFT).
+- **Agent Orchestration**: Multi-agent collaboration with CrewAI, LangGraph, and deterministic state graphs.
+- **RAG & Retrieval**: Hybrid lexical + vector search with Qdrant, Pinecone, or pgvector, guarded against injection.
+- **MLOps & Evaluation**: Rigorous eval harness before promotion; track experiments and metrics via Trackio or MLflow.`,
+  },
 };
 
 export class ClaudeMdGenerator {

@@ -49,8 +49,10 @@ const FIELD_META: Record<string, { label: string; icon: string; tag: string }> =
   'desktop-dev':   { label: 'Desktop Developer',        icon: '🖥️', tag: 'Tauri & Electron' },
   'ios-dev':       { label: 'iOS Developer',            icon: '🍎', tag: 'Swift & Xcode' },
   'backend-dev':   { label: 'Backend Developer',        icon: '⚙️', tag: 'APIs & Infra' },
-  'frontend-dev':  { label: 'Front-End Developer',      icon: '🎨', tag: 'UI/UX & WCAG' },
-  'software-eng':  { label: 'Software Engineer',        icon: '🏗️', tag: 'Arch & TDD' },
+  'frontend-dev':     { label: 'Front-End Developer',        icon: '🎨', tag: 'UI/UX & WCAG' },
+  'software-eng':     { label: 'Software Engineer',          icon: '🏗️', tag: 'Arch & TDD' },
+  'data-engineering': { label: 'Data Analyst & Engineering', icon: '📊', tag: 'ETL & Analytics' },
+  'ai-ml':            { label: 'Machine Learning & AI',      icon: '🧠', tag: 'LLMs & MLOps' },
 };
 
 /**

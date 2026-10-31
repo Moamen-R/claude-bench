@@ -9,8 +9,8 @@ import {
 } from '../src/core/schema.js';
 
 describe('Core Schema Validation', () => {
-  it('validates all 11 canonical Field IDs', () => {
-    expect(CANONICAL_FIELDS).toHaveLength(11);
+  it('validates all 13 canonical Field IDs', () => {
+    expect(CANONICAL_FIELDS).toHaveLength(13);
     expect(CANONICAL_FIELDS).toContain('fullstack');
     expect(CANONICAL_FIELDS).toContain('cybersecurity');
     expect(CANONICAL_FIELDS).toContain('video-editing');
@@ -22,6 +22,8 @@ describe('Core Schema Validation', () => {
     expect(CANONICAL_FIELDS).toContain('backend-dev');
     expect(CANONICAL_FIELDS).toContain('frontend-dev');
     expect(CANONICAL_FIELDS).toContain('software-eng');
+    expect(CANONICAL_FIELDS).toContain('data-engineering');
+    expect(CANONICAL_FIELDS).toContain('ai-ml');
 
     CANONICAL_FIELDS.forEach((field) => {
       expect(FieldIdSchema.safeParse(field).success).toBe(true);

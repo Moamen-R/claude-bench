@@ -11,6 +11,19 @@ function addItem(item: RegistryItem) {
   items.push(item);
 }
 
+// Global Featured Skills
+addItem({
+  id: 'rea',
+  name: 'REA Reverse Engineering Agent',
+  type: 'skill',
+  fields: ['cybersecurity', 'software-eng'],
+  repoUrl: 'https://github.com/morluto/rea',
+  installCommand: 'npx -y skills add morluto/rea --agent claude-code',
+  description: 'Reverse engineer anything with agents, from app behavior down to native binaries',
+  stars: 4150,
+  trustScore: 95,
+});
+
 // --------------------------------------------------------------------------
 // 1. HYPERFRAMES VIDEO EDITING SUITE (All Hyperframes Skills & Plugins)
 // --------------------------------------------------------------------------
@@ -540,6 +553,44 @@ const domainTemplates: Record<FieldId, { owner: string; prefix: string; topics: 
       'semantic-versioning-semver', 'conventional-commits-parser', 'changelog-automation-cliff', 'git-trunk-based-workflow',
       'git-bisect-regression-finder', 'git-worktree-parallel-dev', 'github-actions-composite', 'codeql-security-query',
       'opencode-review-pipeline', 'pair-programming-driver-nav'
+    ],
+  },
+  'data-engineering': {
+    owner: 'data-hub',
+    prefix: 'data',
+    topics: [
+      'duckdb-embedded-olap', 'polars-fast-dataframe', 'pandas-2-arrow-backend', 'pyspark-cluster-etl',
+      'dbt-core-transformation', 'dbt-semantic-layer', 'apache-airflow-dag-orchestration', 'dagster-asset-graph',
+      'prefect-modern-workflows', 'great-expectations-data-contracts', 'soda-core-data-quality', 'apache-kafka-event-streaming',
+      'redpanda-fast-streaming', 'apache-flink-stateful-processing', 'apache-iceberg-lakehouse', 'delta-lake-time-travel',
+      'apache-arrow-zero-copy', 'parquet-snappy-optimization', 'snowflake-data-warehouse', 'google-bigquery-analytics',
+      'aws-redshift-cluster', 'clickhouse-realtime-olap', 'trino-federated-sql', 'starrocks-subsecond-query',
+      'databricks-unity-catalog', 'datahub-metadata-lineage', 'open-lineage-marquez', 'cube-js-metrics-api',
+      'evidence-dev-bi-markdown', 'metabase-sql-dashboards', 'superset-enterprise-bi', 'streamlit-data-apps',
+      'marimo-reactive-notebook', 'jupyter-lab-enterprise', 'plotly-interactive-viz', 'seaborn-statistical-plots',
+      'matplotlib-custom-theme', 'scipy-scientific-computation', 'statsmodels-econometrics', 'fastparquet-pyarrow-io',
+      'debezium-cdc-replication', 'airbyte-connector-sync', 'fivetran-pipeline-config', 'dlt-python-loading',
+      'sqlglot-transpilation', 'sqlfluff-linter-formatter', 'databuildtool-macros', 'feature-store-feast',
+      'data-retention-gdpr-purge', 'anonymization-pii-scrubber'
+    ],
+  },
+  'ai-ml': {
+    owner: 'ai-hub',
+    prefix: 'aiml',
+    topics: [
+      'pytorch-2-compile-inductor', 'huggingface-transformers-pipeline', 'huggingface-accelerate-fsdp', 'huggingface-trl-sft-dpo',
+      'huggingface-datasets-streaming', 'huggingface-peft-qlora', 'unsloth-fast-finetune', 'deepspeed-zero-3-offload',
+      'vllm-paged-attention-serving', 'ollama-local-model-runner', 'tgi-text-generation-inference', 'sglang-radix-attention',
+      'langchain-rag-agent', 'langgraph-stateful-graph', 'crewai-multi-agent-system', 'autogen-conversational-agents',
+      'llamaindex-hierarchical-retrieval', 'semantic-kernel-connectors', 'dspy-declarative-prompt-optimizer', 'haystack-neural-search',
+      'qdrant-vector-database-client', 'chroma-embedded-vector-db', 'weaviate-hybrid-search', 'pinecone-serverless-index',
+      'pgvector-cosine-similarity', 'milvus-distributed-vector-store', 'ragas-rag-evaluation', 'deepeval-llm-metrics',
+      'trulens-groundedness-feedback', 'phoenix-arize-observability', 'langsmith-trace-debugging', 'mlflow-model-registry',
+      'weights-biases-wandb-logger', 'neptune-ai-experiment-tracker', 'dvc-model-versioning', 'onnx-runtime-optimization',
+      'tensorrt-llm-accelerator', 'bitsandbytes-4bit-quantization', 'gptq-awq-int4-compression', 'gguf-llama-cpp-conversion',
+      'prompt-injection-guardrails', 'nemo-guardrails-colang', 'lakera-ai-jailbreak-detector', 'instructor-structured-outputs',
+      'outlines-guided-generation', 'bge-m3-multilingual-embedding', 'cohere-rerank-v3', 'cross-encoder-reranking',
+      'whisper-audio-transcription', 'diffusers-stable-diffusion-flux'
     ],
   },
 };
