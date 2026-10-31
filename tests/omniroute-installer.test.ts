@@ -9,7 +9,7 @@ describe('OmniRouteInstaller', () => {
   let settingsFile: string;
 
   beforeEach(async () => {
-    tempBaseDir = await fs.mkdtemp(path.join(os.tmpdir(), 'claude-forge-omniroute-'));
+    tempBaseDir = await fs.mkdtemp(path.join(os.tmpdir(), 'claude-bench-omniroute-'));
     settingsFile = path.join(tempBaseDir, 'settings.json');
     // Seed initial settings
     await fs.writeFile(

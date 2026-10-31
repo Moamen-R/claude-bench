@@ -10,7 +10,7 @@ describe('ScraplingSyncEngine', () => {
   let tempSeedPath: string;
 
   beforeEach(async () => {
-    tempBaseDir = await fs.mkdtemp(path.join(os.tmpdir(), 'claude-forge-sync-'));
+    tempBaseDir = await fs.mkdtemp(path.join(os.tmpdir(), 'claude-bench-sync-'));
     tempSeedPath = path.join(tempBaseDir, 'registry.seed.json');
     await fs.writeFile(
       tempSeedPath,

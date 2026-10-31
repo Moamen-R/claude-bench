@@ -29,7 +29,7 @@ const detector = new OSDetector();
 const backupManager = new BackupManager();
 
 program
-  .name('claude-forge')
+  .name('claude-bench')
   .description('Production-grade CLI bootstrapper for Claude Code & Claude Desktop across 11 professional fields')
   .version('1.0.0');
 
@@ -105,7 +105,7 @@ program
     const match = items.find((i) => i.id.toLowerCase() === id.toLowerCase());
 
     if (!match) {
-      console.error(pc.red(`Item with ID "${id}" not found in registry. Run "claude-forge list" to view available items.`));
+      console.error(pc.red(`Item with ID "${id}" not found in registry. Run "claude-bench list" to view available items.`));
       process.exit(1);
     }
 
@@ -183,7 +183,7 @@ program
     checks.push({
       name: 'Claude Code CLI',
       status: claudeExists ? 'ok' : 'warning',
-      detail: claudeExists ? 'Installed on PATH' : 'Not found on PATH (run "claude-forge init" to install)',
+      detail: claudeExists ? 'Installed on PATH' : 'Not found on PATH (run "claude-bench init" to install)',
     });
 
     // OmniRoute

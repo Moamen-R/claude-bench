@@ -50,7 +50,7 @@ export class OSDetector {
 
   resolveConfigPaths(scope: 'global' | 'project' = 'global', customProjectRoot?: string): ConfigPaths {
     const home = os.homedir();
-    const backupDir = path.join(home, '.claude-forge', 'backups');
+    const backupDir = path.join(home, '.claude-bench', 'backups');
 
     let claudeDesktopConfig: string;
     if (this.isWindows()) {
