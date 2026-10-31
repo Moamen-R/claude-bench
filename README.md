@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/logo.svg" alt="claude-bench logo" width="520" />
+<img src="https://raw.githubusercontent.com/Moamen-R/claude-forge/master/assets/logo.svg" alt="claude-bench logo" width="520" />
 
 <br />
 <br />
