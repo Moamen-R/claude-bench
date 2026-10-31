@@ -1,0 +1,467 @@
+[
+  {
+    "id": "shadcn-ui",
+    "name": "shadcn/ui",
+    "type": "skill",
+    "fields": ["fullstack", "frontend-dev"],
+    "repoUrl": "https://github.com/shadcn-ui/ui",
+    "installCommand": "npx -y skills add shadcn-ui/ui --skill add-component --agent claude-code",
+    "description": "Add beautifully designed and accessible Radix UI and Tailwind CSS components.",
+    "stars": 74000,
+    "trustScore": 99
+  },
+  {
+    "id": "frontend-design",
+    "name": "Frontend Design Assistant",
+    "type": "skill",
+    "fields": ["fullstack", "frontend-dev"],
+    "repoUrl": "https://github.com/anthropics/skills",
+    "installCommand": "npx -y skills add anthropics/skills --skill frontend-design --agent claude-code",
+    "description": "Official Anthropic skill for modern, responsive, and accessible UI engineering.",
+    "stars": 16500,
+    "trustScore": 100
+  },
+  {
+    "id": "superpowers",
+    "name": "Superpowers TDD Framework",
+    "type": "skill",
+    "fields": ["fullstack", "software-eng", "backend-dev", "frontend-dev"],
+    "repoUrl": "https://github.com/obra/superpowers",
+    "installCommand": "npx -y skills add obra/superpowers --skill superpowers --agent claude-code",
+    "description": "Disciplined spec-first development, micro-task planning, and red-green-refactor TDD loop.",
+    "stars": 8200,
+    "trustScore": 99
+  },
+  {
+    "id": "git-workflow",
+    "name": "Git Workflow Pro",
+    "type": "skill",
+    "fields": ["fullstack", "software-eng", "backend-dev"],
+    "repoUrl": "https://github.com/vercel-labs/skills",
+    "installCommand": "npx -y skills add vercel-labs/skills --skill git-workflow --agent claude-code",
+    "description": "Automated git branching, atomic commits, PR drafting, and rebase helpers.",
+    "stars": 6100,
+    "trustScore": 95
+  },
+  {
+    "id": "nextjs-helpers",
+    "name": "Next.js App Router Master",
+    "type": "skill",
+    "fields": ["fullstack", "frontend-dev"],
+    "repoUrl": "https://github.com/vercel-labs/skills",
+    "installCommand": "npx -y skills add vercel-labs/skills --skill nextjs-helpers --agent claude-code",
+    "description": "Optimized Next.js App Router patterns, server actions, metadata, and cache configuration.",
+    "stars": 5400,
+    "trustScore": 95
+  },
+  {
+    "id": "mcp-playwright",
+    "name": "Playwright Browser MCP",
+    "type": "mcp",
+    "fields": ["fullstack", "frontend-dev", "marketing"],
+    "repoUrl": "https://github.com/modelcontextprotocol/servers",
+    "installCommand": "npx -y @modelcontextprotocol/server-playwright",
+    "description": "Headless browser control, DOM inspection, screenshots, and visual regression testing.",
+    "stars": 42000,
+    "trustScore": 99,
+    "mcpConfig": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-playwright"]
+    }
+  },
+  {
+    "id": "mcp-postgres",
+    "name": "PostgreSQL Database MCP",
+    "type": "mcp",
+    "fields": ["fullstack", "backend-dev"],
+    "repoUrl": "https://github.com/modelcontextprotocol/servers",
+    "installCommand": "npx -y @modelcontextprotocol/server-postgres",
+    "description": "Direct read/write database inspection, schema introspection, and SQL query analysis.",
+    "stars": 42000,
+    "trustScore": 99,
+    "mcpConfig": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://localhost:5432/postgres"]
+    }
+  },
+  {
+    "id": "mcp-supabase",
+    "name": "Supabase Platform MCP",
+    "type": "mcp",
+    "fields": ["fullstack", "backend-dev", "mobile-dev"],
+    "repoUrl": "https://github.com/supabase/mcp-server",
+    "installCommand": "npx -y @supabase/mcp-server",
+    "description": "Manage database schemas, row-level security (RLS), edge functions, and storage buckets.",
+    "stars": 11000,
+    "trustScore": 96,
+    "mcpConfig": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server"]
+    }
+  },
+  {
+    "id": "owasp-auditor",
+    "name": "OWASP Top 10 Auditor",
+    "type": "skill",
+    "fields": ["cybersecurity", "backend-dev"],
+    "repoUrl": "https://github.com/security-hub/skills",
+    "installCommand": "npx -y skills add security-hub/skills --skill owasp-auditor --agent claude-code",
+    "description": "Identifies injection vulnerabilities, broken authentication, IDOR, and SSRF flaws.",
+    "stars": 3800,
+    "trustScore": 92
+  },
+  {
+    "id": "sast-scanner",
+    "name": "Static Application Security Tester",
+    "type": "skill",
+    "fields": ["cybersecurity", "software-eng"],
+    "repoUrl": "https://github.com/security-hub/skills",
+    "installCommand": "npx -y skills add security-hub/skills --skill sast-scanner --agent claude-code",
+    "description": "Codebase static analysis scanning for hardcoded secrets, unsafe deserialization, and crypto issues.",
+    "stars": 2900,
+    "trustScore": 90
+  },
+  {
+    "id": "secret-scanner",
+    "name": "Pre-Commit Secret Scanner",
+    "type": "skill",
+    "fields": ["cybersecurity", "software-eng"],
+    "repoUrl": "https://github.com/security-hub/skills",
+    "installCommand": "npx -y skills add security-hub/skills --skill secret-scanner --agent claude-code",
+    "description": "Blocks API keys, private certificates, and tokens before git commits.",
+    "stars": 4100,
+    "trustScore": 94
+  },
+  {
+    "id": "mcp-semgrep",
+    "name": "Semgrep Code Scanner MCP",
+    "type": "mcp",
+    "fields": ["cybersecurity", "software-eng"],
+    "repoUrl": "https://github.com/semgrep/semgrep",
+    "installCommand": "uvx semgrep-mcp",
+    "description": "Fast multi-language static analysis for security vulnerabilities and bug patterns.",
+    "stars": 10500,
+    "trustScore": 97,
+    "mcpConfig": {
+      "command": "uvx",
+      "args": ["semgrep-mcp"]
+    }
+  },
+  {
+    "id": "cli-nmap",
+    "name": "Nmap Network Scanner Harness",
+    "type": "cli-anything",
+    "fields": ["cybersecurity"],
+    "repoUrl": "https://github.com/HKUDS/CLI-Anything",
+    "installCommand": "npx -y skills add HKUDS/CLI-Anything --skill nmap-harness --agent claude-code",
+    "description": "Agent-native CLI wrapper for Nmap port discovery, service detection, and firewall auditing.",
+    "stars": 3400,
+    "trustScore": 93
+  },
+  {
+    "id": "remotion-video",
+    "name": "Remotion Video Generation",
+    "type": "skill",
+    "fields": ["video-editing"],
+    "repoUrl": "https://github.com/remotion-dev/skills",
+    "installCommand": "npx -y skills add remotion-dev/skills --skill remotion --agent claude-code",
+    "description": "Programmatic video creation in React, frame-accurate animation, and SVG compositions.",
+    "stars": 21000,
+    "trustScore": 98
+  },
+  {
+    "id": "caption-generator",
+    "name": "Video Captioning & SRT Sync",
+    "type": "skill",
+    "fields": ["video-editing"],
+    "repoUrl": "https://github.com/media-skills/skills",
+    "installCommand": "npx -y skills add media-skills/skills --skill caption-generator --agent claude-code",
+    "description": "Extracts audio, generates synced subtitles, and formats VTT/SRT for video projects.",
+    "stars": 1800,
+    "trustScore": 88
+  },
+  {
+    "id": "cli-ffmpeg",
+    "name": "FFmpeg Media Converter Harness",
+    "type": "cli-anything",
+    "fields": ["video-editing"],
+    "repoUrl": "https://github.com/HKUDS/CLI-Anything",
+    "installCommand": "npx -y skills add HKUDS/CLI-Anything --skill ffmpeg-harness --agent claude-code",
+    "description": "Agent CLI wrapper for audio/video transcoding, muxing, filtering, and compression.",
+    "stars": 3400,
+    "trustScore": 96
+  },
+  {
+    "id": "cli-blender",
+    "name": "Blender 3D Headless Harness",
+    "type": "cli-anything",
+    "fields": ["video-editing"],
+    "repoUrl": "https://github.com/HKUDS/CLI-Anything",
+    "installCommand": "npx -y skills add HKUDS/CLI-Anything --skill blender-harness --agent claude-code",
+    "description": "Python-driven 3D rendering, procedural assets, and visual FX scripting.",
+    "stars": 3400,
+    "trustScore": 92
+  },
+  {
+    "id": "mcp-scrapling",
+    "name": "Scrapling Anti-Bot Web Scraping MCP",
+    "type": "mcp",
+    "fields": ["researcher", "marketing"],
+    "repoUrl": "https://github.com/d4vinci/Scrapling",
+    "installCommand": "uvx --from scrapling[ai] scrapling mcp",
+    "description": "Stealthy web scraping with Cloudflare turnstile bypass and token-efficient CSS extraction.",
+    "stars": 4900,
+    "trustScore": 95,
+    "mcpConfig": {
+      "command": "uvx",
+      "args": ["--from", "scrapling[ai]", "scrapling", "mcp"]
+    }
+  },
+  {
+    "id": "mcp-arxiv",
+    "name": "ArXiv Paper Search MCP",
+    "type": "mcp",
+    "fields": ["researcher"],
+    "repoUrl": "https://github.com/modelcontextprotocol/servers",
+    "installCommand": "uvx arxiv-mcp",
+    "description": "Search scientific papers, read abstracts, and extract literature citations from arXiv.",
+    "stars": 42000,
+    "trustScore": 98,
+    "mcpConfig": {
+      "command": "uvx",
+      "args": ["arxiv-mcp"]
+    }
+  },
+  {
+    "id": "latex-builder",
+    "name": "LaTeX Paper Synthesis",
+    "type": "skill",
+    "fields": ["researcher"],
+    "repoUrl": "https://github.com/academic-skills/skills",
+    "installCommand": "npx -y skills add academic-skills/skills --skill latex-builder --agent claude-code",
+    "description": "Compiles IEEE/ACM LaTeX documents, formats equations, and verifies bibliography tables.",
+    "stars": 2400,
+    "trustScore": 91
+  },
+  {
+    "id": "seo-audit",
+    "name": "Technical SEO Auditor",
+    "type": "skill",
+    "fields": ["marketing", "frontend-dev"],
+    "repoUrl": "https://github.com/marketing-hub/skills",
+    "installCommand": "npx -y skills add marketing-hub/skills --skill seo-audit --agent claude-code",
+    "description": "Inspects metadata, OpenGraph tags, canonical URLs, schema.org markup, and Core Web Vitals.",
+    "stars": 3200,
+    "trustScore": 90
+  },
+  {
+    "id": "copywriting-playbook",
+    "name": "Direct Response Copywriting",
+    "type": "skill",
+    "fields": ["marketing"],
+    "repoUrl": "https://github.com/marketing-hub/skills",
+    "installCommand": "npx -y skills add marketing-hub/skills --skill copywriting --agent claude-code",
+    "description": "High-converting sales copy, email sequences, landing page headers, and ad copy frameworks.",
+    "stars": 4500,
+    "trustScore": 93
+  },
+  {
+    "id": "mcp-scrapling-fetch",
+    "name": "Scrapling Fetch Fast MCP",
+    "type": "mcp",
+    "fields": ["marketing", "researcher"],
+    "repoUrl": "https://github.com/cyberchitta/scrapling-fetch-mcp",
+    "installCommand": "uvx scrapling-fetch-mcp",
+    "description": "Fast competitor intelligence scraping and structured text extraction.",
+    "stars": 1200,
+    "trustScore": 89,
+    "mcpConfig": {
+      "command": "uvx",
+      "args": ["scrapling-fetch-mcp"]
+    }
+  },
+  {
+    "id": "expo-dev",
+    "name": "Expo & React Native Master",
+    "type": "skill",
+    "fields": ["mobile-dev"],
+    "repoUrl": "https://github.com/expo/skills",
+    "installCommand": "npx -y skills add expo/skills --skill expo-dev --agent claude-code",
+    "description": "Modern Expo SDK 52 patterns, native modules, OTA updates, and deep linking.",
+    "stars": 34000,
+    "trustScore": 98
+  },
+  {
+    "id": "flutter-tools",
+    "name": "Flutter Community Tools",
+    "type": "skill",
+    "fields": ["mobile-dev"],
+    "repoUrl": "https://github.com/flutter-community/skills",
+    "installCommand": "npx -y skills add flutter-community/skills --skill flutter-pro --agent claude-code",
+    "description": "Dart 3 sound null safety, Riverpod/Bloc state management, and multiplatform rendering.",
+    "stars": 18000,
+    "trustScore": 96
+  },
+  {
+    "id": "cli-adb",
+    "name": "Android ADB Harness",
+    "type": "cli-anything",
+    "fields": ["mobile-dev"],
+    "repoUrl": "https://github.com/HKUDS/CLI-Anything",
+    "installCommand": "npx -y skills add HKUDS/CLI-Anything --skill adb-harness --agent claude-code",
+    "description": "CLI wrapper for Android device debugging, logcat streaming, and APK installation.",
+    "stars": 3400,
+    "trustScore": 94
+  },
+  {
+    "id": "tauri-architecture",
+    "name": "Tauri Rust Desktop Architecture",
+    "type": "skill",
+    "fields": ["desktop-dev"],
+    "repoUrl": "https://github.com/tauri-apps/skills",
+    "installCommand": "npx -y skills add tauri-apps/skills --skill tauri-dev --agent claude-code",
+    "description": "High-performance native desktop apps using Rust backend and modern web frontend.",
+    "stars": 86000,
+    "trustScore": 99
+  },
+  {
+    "id": "electron-security",
+    "name": "Electron Security Hardener",
+    "type": "skill",
+    "fields": ["desktop-dev"],
+    "repoUrl": "https://github.com/electron/skills",
+    "installCommand": "npx -y skills add electron/skills --skill electron-security --agent claude-code",
+    "description": "Context isolation, CSP policies, secure IPC channels, and safe native preload scripts.",
+    "stars": 115000,
+    "trustScore": 99
+  },
+  {
+    "id": "cli-cross-packaging",
+    "name": "Desktop Cross-Platform Packaging Harness",
+    "type": "cli-anything",
+    "fields": ["desktop-dev"],
+    "repoUrl": "https://github.com/HKUDS/CLI-Anything",
+    "installCommand": "npx -y skills add HKUDS/CLI-Anything --skill packaging-harness --agent claude-code",
+    "description": "Automated packaging for MSI, DMG, AppImage, and Debian installers.",
+    "stars": 3400,
+    "trustScore": 92
+  },
+  {
+    "id": "swiftui-architecture",
+    "name": "SwiftUI & Swift 6 Pro",
+    "type": "skill",
+    "fields": ["ios-dev"],
+    "repoUrl": "https://github.com/apple-dev/skills",
+    "installCommand": "npx -y skills add apple-dev/skills --skill swiftui-pro --agent claude-code",
+    "description": "Modern Swift 6 concurrency, actors, SwiftUI NavigationStack, and SwiftData models.",
+    "stars": 8900,
+    "trustScore": 97
+  },
+  {
+    "id": "apple-hig-auditor",
+    "name": "Apple HIG Compliance Auditor",
+    "type": "skill",
+    "fields": ["ios-dev"],
+    "repoUrl": "https://github.com/apple-dev/skills",
+    "installCommand": "npx -y skills add apple-dev/skills --skill hig-compliance --agent claude-code",
+    "description": "Audits typography, spacing, touch targets, and dark mode against Apple Design Guidelines.",
+    "stars": 4200,
+    "trustScore": 93
+  },
+  {
+    "id": "cli-xcodebuild",
+    "name": "Xcodebuild & Simctl Harness",
+    "type": "cli-anything",
+    "fields": ["ios-dev"],
+    "repoUrl": "https://github.com/HKUDS/CLI-Anything",
+    "installCommand": "npx -y skills add HKUDS/CLI-Anything --skill xcodebuild-harness --agent claude-code",
+    "description": "Command line iOS simulator boots, build schemes, and automated test execution.",
+    "stars": 3400,
+    "trustScore": 95
+  },
+  {
+    "id": "openapi-designer",
+    "name": "OpenAPI Spec Designer",
+    "type": "skill",
+    "fields": ["backend-dev"],
+    "repoUrl": "https://github.com/api-skills/skills",
+    "installCommand": "npx -y skills add api-skills/skills --skill openapi-spec --agent claude-code",
+    "description": "Contract-first OpenAPI 3.1 schema design, mock servers, and automated client generation.",
+    "stars": 5200,
+    "trustScore": 94
+  },
+  {
+    "id": "mcp-redis",
+    "name": "Redis In-Memory MCP",
+    "type": "mcp",
+    "fields": ["backend-dev"],
+    "repoUrl": "https://github.com/modelcontextprotocol/servers",
+    "installCommand": "npx -y @modelcontextprotocol/server-redis",
+    "description": "Inspect in-memory keys, cache TTLs, pub/sub streams, and Redis cluster health.",
+    "stars": 42000,
+    "trustScore": 97,
+    "mcpConfig": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-redis", "redis://localhost:6379"]
+    }
+  },
+  {
+    "id": "wcag-accessibility",
+    "name": "WCAG 2.1 AA Accessibility Auditor",
+    "type": "skill",
+    "fields": ["frontend-dev"],
+    "repoUrl": "https://github.com/a11y-skills/skills",
+    "installCommand": "npx -y skills add a11y-skills/skills --skill wcag-audit --agent claude-code",
+    "description": "Screen reader verification, color contrast ratios, ARIA landmarks, and focus management.",
+    "stars": 4700,
+    "trustScore": 96
+  },
+  {
+    "id": "mcp-opencode-review",
+    "name": "OpenCode Review MCP",
+    "type": "mcp",
+    "fields": ["software-eng", "cybersecurity"],
+    "repoUrl": "https://github.com/alibaba/open-code-review",
+    "installCommand": "npx -y @alibaba/open-code-review --mcp",
+    "description": "Automated code review, static security analysis, and git diff quality checks.",
+    "stars": 8500,
+    "trustScore": 98,
+    "mcpConfig": {
+      "command": "npx",
+      "args": ["-y", "@alibaba/open-code-review", "--mcp"]
+    }
+  },
+  {
+    "id": "c4-architecture",
+    "name": "C4 Model Architecture Builder",
+    "type": "skill",
+    "fields": ["software-eng"],
+    "repoUrl": "https://github.com/arch-skills/skills",
+    "installCommand": "npx -y skills add arch-skills/skills --skill c4-model --agent claude-code",
+    "description": "Generates Context, Container, Component, and Code diagrams with PlantUML & Mermaid.",
+    "stars": 3900,
+    "trustScore": 94
+  },
+  {
+    "id": "omniroute-cli-serve",
+    "name": "OmniRoute CLI Serve",
+    "type": "skill",
+    "fields": ["fullstack", "software-eng", "backend-dev"],
+    "repoUrl": "https://github.com/cheaper-inference/OmniRoute",
+    "installCommand": "npx -y skills add diegosouzapw/OmniRoute --skill cli-serve --agent claude-code",
+    "description": "Manages local OmniRoute AI gateway daemon, auto-routing, and multi-provider fallback.",
+    "stars": 1900,
+    "trustScore": 95
+  },
+  {
+    "id": "omniroute-cli-models",
+    "name": "OmniRoute Models Manager",
+    "type": "skill",
+    "fields": ["fullstack", "software-eng", "backend-dev"],
+    "repoUrl": "https://github.com/cheaper-inference/OmniRoute",
+    "installCommand": "npx -y skills add mayankjain1815-commits/OmniRoute --skill cli-models --agent claude-code",
+    "description": "Configures model aliases, provider fallbacks, and cost-efficient routes for OmniRoute.",
+    "stars": 1200,
+    "trustScore": 92
+  }
+]
