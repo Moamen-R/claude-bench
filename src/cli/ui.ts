@@ -1,4 +1,5 @@
 import pc from 'picocolors';
+import { CLI_VERSION } from './version.js';
 
 /**
  * Claude Brand & Bench TrueColor Palette
@@ -96,7 +97,7 @@ export function formatBadge(
 /**
  * Prints the upgraded Claude-Bench Hero Banner with 3D Anvil icon, gradient sparks, and telemetry bar.
  */
-export function printBanner(version = 'v1.0.1'): void {
+export function printBanner(version: string = `v${CLI_VERSION}`): void {
   const anvil = [
     `   ${amber('✦')}  ${coral(pc.bold('✦'))} ${peach('·')}    `,
     `  ${coral(pc.bold('▀█████████▀'))}  `,

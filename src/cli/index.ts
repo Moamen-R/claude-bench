@@ -19,6 +19,7 @@ import {
   type ScopeMode,
   type RegistryItem,
 } from '../core/schema.js';
+import { CLI_VERSION } from './version.js';
 
 function getRegistryItems(): RegistryItem[] {
   return loadRegistrySeed();
@@ -31,7 +32,7 @@ const backupManager = new BackupManager();
 program
   .name('claude-bench')
   .description('Production-grade CLI bootstrapper for Claude Code & Claude Desktop across 11 professional fields')
-  .version('1.0.1');
+  .version(CLI_VERSION);
 
 // Command: init
 program
@@ -246,7 +247,7 @@ program
   .description('Export current setup profile into a shareable JSON lockfile')
   .action(async (file = 'claude-profile.json') => {
     const profile = {
-      version: '1.0.0',
+      version: CLI_VERSION,
       exportedAt: new Date().toISOString(),
       platform: detector.getPlatform(),
       configPaths: detector.resolveConfigPaths('global'),

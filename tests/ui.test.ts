@@ -53,7 +53,7 @@ describe('UI Utilities and Formatters', () => {
   it('prints hero banner and summary table without crashing', () => {
     const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
 
-    printBanner('v1.0.0');
+    printBanner();
     expect(logSpy).toHaveBeenCalled();
 
     printSummaryTable({
