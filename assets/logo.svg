@@ -13,7 +13,7 @@
   <!-- Background Card -->
   <rect width="520" height="120" rx="16" fill="url(#bgGrad)" stroke="#2E2D2B" stroke-width="1.5" />
 
-  <!-- Minimal Forge + Terminal Icon -->
+  <!-- Minimal Bench + Terminal Icon -->
   <g transform="translate(32, 24)">
     <!-- Icon Container -->
     <rect width="72" height="72" rx="14" fill="#1C1B1A" stroke="#383633" stroke-width="1.5" />
@@ -30,7 +30,7 @@
 
   <!-- Wordmark -->
   <text x="124" y="65" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="34" font-weight="700" letter-spacing="-0.5" fill="#F5F4F0">
-    claude<tspan fill="#D97757">-forge</tspan>
+    claude<tspan fill="#D97757">-bench</tspan>
   </text>
 
   <!-- Subtitle Tagline -->
