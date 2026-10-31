@@ -20,7 +20,7 @@ export function printBanner(): void {
   console.log(
     pc.bold(
       pc.magenta(
-        '  Production-grade Claude Setup CLI for Official Claude & OmniRoute\n'
+        '  A full setup tool for Official Claude code and app\n'
       )
     )
   );

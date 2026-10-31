@@ -676,6 +676,214 @@
     "trustScore": 99
   },
   {
+    "id": "superpowers",
+    "name": "Superpowers TDD Framework",
+    "type": "skill",
+    "fields": [
+      "fullstack",
+      "cybersecurity",
+      "mobile-dev",
+      "desktop-dev",
+      "ios-dev",
+      "backend-dev",
+      "frontend-dev",
+      "software-eng"
+    ],
+    "repoUrl": "https://github.com/obra/superpowers",
+    "installCommand": "npx -y skills add obra/superpowers --skill superpowers --agent claude-code",
+    "description": "Spec-first design, micro-task planning, and red-green-refactor TDD loop.",
+    "stars": 8200,
+    "trustScore": 98
+  },
+  {
+    "id": "superpowers-brainstorming",
+    "name": "Superpowers Brainstorming & Spec Lock",
+    "type": "skill",
+    "fields": [
+      "fullstack",
+      "cybersecurity",
+      "mobile-dev",
+      "desktop-dev",
+      "ios-dev",
+      "backend-dev",
+      "frontend-dev",
+      "software-eng"
+    ],
+    "repoUrl": "https://github.com/obra/superpowers",
+    "installCommand": "npx -y skills add obra/superpowers --skill superpowers-brainstorming --agent claude-code",
+    "description": "Socratic requirements interview and architecture spec locking before code.",
+    "stars": 8200,
+    "trustScore": 98
+  },
+  {
+    "id": "superpowers-writing-plans",
+    "name": "Superpowers Implementation Planner",
+    "type": "skill",
+    "fields": [
+      "fullstack",
+      "cybersecurity",
+      "mobile-dev",
+      "desktop-dev",
+      "ios-dev",
+      "backend-dev",
+      "frontend-dev",
+      "software-eng"
+    ],
+    "repoUrl": "https://github.com/obra/superpowers",
+    "installCommand": "npx -y skills add obra/superpowers --skill superpowers-writing-plans --agent claude-code",
+    "description": "Decomposes complex feature specs into bite-sized testable tasks.",
+    "stars": 8200,
+    "trustScore": 98
+  },
+  {
+    "id": "superpowers-executing-plans",
+    "name": "Superpowers Plan Executor",
+    "type": "skill",
+    "fields": [
+      "fullstack",
+      "cybersecurity",
+      "mobile-dev",
+      "desktop-dev",
+      "ios-dev",
+      "backend-dev",
+      "frontend-dev",
+      "software-eng"
+    ],
+    "repoUrl": "https://github.com/obra/superpowers",
+    "installCommand": "npx -y skills add obra/superpowers --skill superpowers-executing-plans --agent claude-code",
+    "description": "Executes planned tasks with strict subagent verification gates.",
+    "stars": 8200,
+    "trustScore": 98
+  },
+  {
+    "id": "superpowers-tdd",
+    "name": "Superpowers Test-Driven Development",
+    "type": "skill",
+    "fields": [
+      "fullstack",
+      "cybersecurity",
+      "mobile-dev",
+      "desktop-dev",
+      "ios-dev",
+      "backend-dev",
+      "frontend-dev",
+      "software-eng"
+    ],
+    "repoUrl": "https://github.com/obra/superpowers",
+    "installCommand": "npx -y skills add obra/superpowers --skill superpowers-tdd --agent claude-code",
+    "description": "Red-green-refactor testing discipline with Vitest, Pytest, or Jest.",
+    "stars": 8200,
+    "trustScore": 98
+  },
+  {
+    "id": "superpowers-systematic-debugging",
+    "name": "Superpowers Systematic Debugger",
+    "type": "skill",
+    "fields": [
+      "fullstack",
+      "cybersecurity",
+      "mobile-dev",
+      "desktop-dev",
+      "ios-dev",
+      "backend-dev",
+      "frontend-dev",
+      "software-eng"
+    ],
+    "repoUrl": "https://github.com/obra/superpowers",
+    "installCommand": "npx -y skills add obra/superpowers --skill superpowers-systematic-debugging --agent claude-code",
+    "description": "Hypothesis-driven root cause tracing with verifiable proofs.",
+    "stars": 8200,
+    "trustScore": 98
+  },
+  {
+    "id": "superpowers-code-review",
+    "name": "Superpowers Requesting Code Review",
+    "type": "skill",
+    "fields": [
+      "fullstack",
+      "cybersecurity",
+      "mobile-dev",
+      "desktop-dev",
+      "ios-dev",
+      "backend-dev",
+      "frontend-dev",
+      "software-eng"
+    ],
+    "repoUrl": "https://github.com/obra/superpowers",
+    "installCommand": "npx -y skills add obra/superpowers --skill superpowers-code-review --agent claude-code",
+    "description": "Rigorous multi-lens pre-commit and PR code review protocol.",
+    "stars": 8200,
+    "trustScore": 98
+  },
+  {
+    "id": "mcp-opencode-review",
+    "name": "OpenCode Review MCP",
+    "type": "mcp",
+    "fields": [
+      "fullstack",
+      "cybersecurity",
+      "mobile-dev",
+      "desktop-dev",
+      "ios-dev",
+      "backend-dev",
+      "frontend-dev",
+      "software-eng"
+    ],
+    "repoUrl": "https://github.com/alibaba/open-code-review",
+    "installCommand": "npx -y @alibaba/open-code-review --mcp",
+    "description": "Automated code review, static analysis, and git diff quality checks.",
+    "stars": 8500,
+    "trustScore": 98,
+    "mcpConfig": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@alibaba/open-code-review",
+        "--mcp"
+      ]
+    }
+  },
+  {
+    "id": "ocr-diff-review",
+    "name": "OpenCode Diff Reviewer",
+    "type": "skill",
+    "fields": [
+      "fullstack",
+      "cybersecurity",
+      "mobile-dev",
+      "desktop-dev",
+      "ios-dev",
+      "backend-dev",
+      "frontend-dev",
+      "software-eng"
+    ],
+    "repoUrl": "https://github.com/alibaba/open-code-review",
+    "installCommand": "npx -y skills add alibaba/open-code-review --skill ocr-diff-review --agent claude-code",
+    "description": "Performs deep multi-file diff reviews with security and clean-code rule enforcement.",
+    "stars": 8500,
+    "trustScore": 98
+  },
+  {
+    "id": "ocr-security-audit",
+    "name": "OpenCode Security & Vulnerability Auditor",
+    "type": "skill",
+    "fields": [
+      "fullstack",
+      "cybersecurity",
+      "mobile-dev",
+      "desktop-dev",
+      "ios-dev",
+      "backend-dev",
+      "frontend-dev",
+      "software-eng"
+    ],
+    "repoUrl": "https://github.com/alibaba/open-code-review",
+    "installCommand": "npx -y skills add alibaba/open-code-review --skill ocr-security-audit --agent claude-code",
+    "description": "Audits diffs for injection flaws, command execution, and API key exposure.",
+    "stars": 8500,
+    "trustScore": 98
+  },
+  {
     "id": "shadcn-ui",
     "name": "shadcn/ui",
     "type": "skill",
@@ -701,22 +909,6 @@
     "repoUrl": "https://github.com/anthropics/skills",
     "installCommand": "npx -y skills add anthropics/skills --skill frontend-design --agent claude-code",
     "description": "Intentional visual design and responsive UI engineering",
-    "stars": 15000,
-    "trustScore": 98
-  },
-  {
-    "id": "superpowers",
-    "name": "Superpowers TDD Framework",
-    "type": "skill",
-    "fields": [
-      "fullstack",
-      "software-eng",
-      "backend-dev",
-      "frontend-dev"
-    ],
-    "repoUrl": "https://github.com/obra/superpowers",
-    "installCommand": "npx -y skills add obra/superpowers --skill superpowers --agent claude-code",
-    "description": "Spec-first design, micro-task planning, and red-green-refactor TDD",
     "stars": 15000,
     "trustScore": 98
   },
@@ -988,21 +1180,6 @@
     "trustScore": 98
   },
   {
-    "id": "systematic-debugging",
-    "name": "Systematic Hypothesis Debugger",
-    "type": "skill",
-    "fields": [
-      "software-eng",
-      "fullstack",
-      "backend-dev"
-    ],
-    "repoUrl": "https://github.com/obra/superpowers",
-    "installCommand": "npx -y skills add obra/superpowers --skill systematic-debugging --agent claude-code",
-    "description": "Root cause analysis with verifiable failure scenario proofs",
-    "stars": 15000,
-    "trustScore": 98
-  },
-  {
     "id": "openapi-designer",
     "name": "OpenAPI 3.1 Spec Designer",
     "type": "skill",
@@ -1188,6 +1365,175 @@
     "description": "Coordinates multi-agent swarms with shared vector memory",
     "stars": 15000,
     "trustScore": 98
+  },
+  {
+    "id": "mcp-playwright",
+    "name": "Playwright Browser MCP",
+    "type": "mcp",
+    "fields": [
+      "fullstack",
+      "frontend-dev",
+      "marketing"
+    ],
+    "repoUrl": "https://github.com/modelcontextprotocol/servers",
+    "installCommand": "npx -y @modelcontextprotocol/server-playwright",
+    "description": "Headless browser control, DOM inspection, and visual testing.",
+    "stars": 15000,
+    "trustScore": 98,
+    "mcpConfig": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-playwright"
+      ]
+    }
+  },
+  {
+    "id": "mcp-postgres",
+    "name": "PostgreSQL Database MCP",
+    "type": "mcp",
+    "fields": [
+      "fullstack",
+      "backend-dev"
+    ],
+    "repoUrl": "https://github.com/modelcontextprotocol/servers",
+    "installCommand": "npx -y @modelcontextprotocol/server-postgres postgresql://localhost:5432/postgres",
+    "description": "Direct read/write database inspection and query analysis.",
+    "stars": 15000,
+    "trustScore": 98,
+    "mcpConfig": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://localhost:5432/postgres"
+      ]
+    }
+  },
+  {
+    "id": "mcp-supabase",
+    "name": "Supabase Platform MCP",
+    "type": "mcp",
+    "fields": [
+      "fullstack",
+      "backend-dev",
+      "mobile-dev"
+    ],
+    "repoUrl": "https://github.com/supabase/mcp-server",
+    "installCommand": "npx -y @supabase/mcp-server",
+    "description": "Manage schemas, RLS policies, edge functions, and buckets.",
+    "stars": 15000,
+    "trustScore": 98,
+    "mcpConfig": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server"
+      ]
+    }
+  },
+  {
+    "id": "mcp-semgrep",
+    "name": "Semgrep Code Scanner MCP",
+    "type": "mcp",
+    "fields": [
+      "cybersecurity",
+      "software-eng"
+    ],
+    "repoUrl": "https://github.com/semgrep/semgrep",
+    "installCommand": "uvx semgrep-mcp",
+    "description": "Multi-language static analysis for security vulnerabilities.",
+    "stars": 15000,
+    "trustScore": 98,
+    "mcpConfig": {
+      "command": "uvx",
+      "args": [
+        "semgrep-mcp"
+      ]
+    }
+  },
+  {
+    "id": "mcp-scrapling",
+    "name": "Scrapling Anti-Bot Scraping MCP",
+    "type": "mcp",
+    "fields": [
+      "researcher",
+      "marketing"
+    ],
+    "repoUrl": "https://github.com/d4vinci/Scrapling",
+    "installCommand": "uvx --from scrapling[ai] scrapling mcp",
+    "description": "Stealthy web scraping with Cloudflare turnstile bypass.",
+    "stars": 15000,
+    "trustScore": 98,
+    "mcpConfig": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "scrapling[ai]",
+        "scrapling",
+        "mcp"
+      ]
+    }
+  },
+  {
+    "id": "mcp-arxiv",
+    "name": "ArXiv Paper Search MCP",
+    "type": "mcp",
+    "fields": [
+      "researcher"
+    ],
+    "repoUrl": "https://github.com/modelcontextprotocol/servers",
+    "installCommand": "uvx arxiv-mcp",
+    "description": "Search scientific papers and extract research citations.",
+    "stars": 15000,
+    "trustScore": 98,
+    "mcpConfig": {
+      "command": "uvx",
+      "args": [
+        "arxiv-mcp"
+      ]
+    }
+  },
+  {
+    "id": "mcp-redis",
+    "name": "Redis In-Memory MCP",
+    "type": "mcp",
+    "fields": [
+      "backend-dev",
+      "fullstack"
+    ],
+    "repoUrl": "https://github.com/modelcontextprotocol/servers",
+    "installCommand": "npx -y @modelcontextprotocol/server-redis redis://localhost:6379",
+    "description": "Inspect in-memory keys, cache TTLs, and pub/sub streams.",
+    "stars": 15000,
+    "trustScore": 98,
+    "mcpConfig": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-redis",
+        "redis://localhost:6379"
+      ]
+    }
+  },
+  {
+    "id": "mcp-whisper",
+    "name": "Whisper Audio Transcription MCP",
+    "type": "mcp",
+    "fields": [
+      "video-editing"
+    ],
+    "repoUrl": "https://github.com/media-skills/whisper",
+    "installCommand": "uvx whisper-mcp",
+    "description": "Local speech-to-text transcription and subtitle timing.",
+    "stars": 15000,
+    "trustScore": 98,
+    "mcpConfig": {
+      "command": "uvx",
+      "args": [
+        "whisper-mcp"
+      ]
+    }
   },
   {
     "id": "fs-auth-session",

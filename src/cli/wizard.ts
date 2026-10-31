@@ -1,8 +1,6 @@
 import * as p from '@clack/prompts';
 import pc from 'picocolors';
-import { readFileSync } from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { loadRegistrySeed } from '../registry/registry-loader.js';
 import {
   CANONICAL_FIELDS,
   type FieldId,
@@ -38,17 +36,7 @@ export class WizardRunner {
   private claudeMdGenerator = new ClaudeMdGenerator(this.backupManager);
 
   loadRegistry(): RegistryItem[] {
-    const currentDir = path.dirname(fileURLToPath(import.meta.url));
-    const seedPath = path.resolve(currentDir, '../registry/registry.seed.json');
-    try {
-      const data = readFileSync(seedPath, 'utf8');
-      return JSON.parse(data);
-    } catch {
-      // Fallback for root execution
-      const fallbackPath = path.resolve('src/registry/registry.seed.json');
-      const data = readFileSync(fallbackPath, 'utf8');
-      return JSON.parse(data);
-    }
+    return loadRegistrySeed();
   }
 
   async run(options: WizardOptions = {}): Promise<void> {

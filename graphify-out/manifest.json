@@ -12,22 +12,22 @@
     "semantic_hash": "61f96316a7a656af7eb265d2e5c37aa5"
   },
   "src/cli/index.ts": {
-    "mtime": 1793460984.8575664,
-    "seen": 1793461148.5466383,
-    "ast_hash": "dc4e51add947cdfc466df8a0e1fac59c",
+    "mtime": 1793462434.4795654,
+    "seen": 1793463779.6237507,
+    "ast_hash": "969aacc6bf9048fc79f57cb5ed2ed02c",
     "semantic_hash": ""
   },
   "src/cli/ui.ts": {
-    "mtime": 1793459308.0848167,
-    "seen": 1793460299.545128,
-    "ast_hash": "d2c6a461d291401ac80a9dc18923f860",
-    "semantic_hash": "d2c6a461d291401ac80a9dc18923f860"
+    "mtime": 1793464209.8402672,
+    "seen": 1793464433.9030638,
+    "ast_hash": "ce3271e32098e4fc52586bafe992bdf0",
+    "semantic_hash": ""
   },
   "src/cli/wizard.ts": {
-    "mtime": 1793459340.7198787,
-    "seen": 1793460299.5452611,
-    "ast_hash": "acae5a822354322dc0c01bcdb385b0b5",
-    "semantic_hash": "acae5a822354322dc0c01bcdb385b0b5"
+    "mtime": 1793462392.6255932,
+    "seen": 1793463779.6237526,
+    "ast_hash": "6665dee07bdafce0124e1eb4dc46f201",
+    "semantic_hash": ""
   },
   "src/core/backup-manager.ts": {
     "mtime": 1793456900.9220233,
@@ -48,10 +48,10 @@
     "semantic_hash": "9b32fe4bfae783ae5de6b6f6d6d9e199"
   },
   "src/core/security-auditor.ts": {
-    "mtime": 1793458163.5831385,
-    "seen": 1793460299.5457835,
-    "ast_hash": "a47ec2f4b98ca76102beb5b2544370c8",
-    "semantic_hash": "a47ec2f4b98ca76102beb5b2544370c8"
+    "mtime": 1793463545.6365237,
+    "seen": 1793463779.6237593,
+    "ast_hash": "8e78d78ee260f8b5a681f057bc43255e",
+    "semantic_hash": ""
   },
   "src/generators/claude-md-generator.ts": {
     "mtime": 1793459214.9807577,
@@ -84,9 +84,9 @@
     "semantic_hash": "746bd9261baaaa6b9d3473912cb4608d"
   },
   "src/registry/registry.seed.json": {
-    "mtime": 1793460941.3323138,
-    "seen": 1793461148.546664,
-    "ast_hash": "54d29027c7f0dd451069853aab5284fd",
+    "mtime": 1793464311.0577447,
+    "seen": 1793464433.9030867,
+    "ast_hash": "93366e292cf71c8afa8cbe5644af0651",
     "semantic_hash": ""
   },
   "src/registry/scrapling-sync.ts": {
@@ -138,9 +138,9 @@
     "semantic_hash": "969ee15fe37675ac4046c89d348ef21f"
   },
   "tests/registry.test.ts": {
-    "mtime": 1793460652.9875913,
-    "seen": 1793461148.546682,
-    "ast_hash": "e7547e98a5ee96352f681ae221a8a117",
+    "mtime": 1793464333.875964,
+    "seen": 1793464433.9031029,
+    "ast_hash": "2e2d96fcf6218e639921d1497452866e",
     "semantic_hash": ""
   },
   "tests/schema.test.ts": {
@@ -174,10 +174,10 @@
     "semantic_hash": "4d06555056c52fe3f1cbcdf6c8945df0"
   },
   "tsup.config.ts": {
-    "mtime": 1793456191.9414754,
-    "seen": 1793460299.5483148,
-    "ast_hash": "4cce7c277b2c0d8fcb537d1cc1ce81ec",
-    "semantic_hash": "4cce7c277b2c0d8fcb537d1cc1ce81ec"
+    "mtime": 1793462176.6771965,
+    "seen": 1793463779.623788,
+    "ast_hash": "fae2045a2ffedbeb292797ef8745a0f0",
+    "semantic_hash": ""
   },
   "vitest.config.ts": {
     "mtime": 1793456213.4766152,
@@ -186,9 +186,9 @@
     "semantic_hash": "d4c481863eff622d18863471782f37bf"
   },
   "scripts/generate-seed.ts": {
-    "mtime": 1793460917.1427364,
-    "seen": 1793461148.5466352,
-    "ast_hash": "5627941ef3043e126d35571d51ce47a5",
+    "mtime": 1793464236.0862024,
+    "seen": 1793464433.903059,
+    "ast_hash": "ec377265da98b3b06443104b6b65b4b1",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
@@ -219,6 +219,36 @@
     "mtime": 1793456118.627427,
     "seen": 1793461148.5467033,
     "ast_hash": "14cf40192548635f29bff9ebe76d2ea7",
+    "semantic_hash": ""
+  },
+  ".github/workflows/ci.yml": {
+    "mtime": 1793461293.4135125,
+    "seen": 1793463779.6237319,
+    "ast_hash": "bbe2650c64fdc4434f96ce8532f346a9",
+    "semantic_hash": ""
+  },
+  ".github/workflows/sync-registry.yml": {
+    "mtime": 1793461318.0282612,
+    "seen": 1793463779.6237376,
+    "ast_hash": "8ee8c35e8a174c7ec843fe3b0197daa5",
+    "semantic_hash": ""
+  },
+  "src/registry/registry-loader.ts": {
+    "mtime": 1793462150.3502848,
+    "seen": 1793463779.6237671,
+    "ast_hash": "958fa72b8bd8c030aa12df27b75d3782",
+    "semantic_hash": ""
+  },
+  "CONTRIBUTING.md": {
+    "mtime": 1793461224.1025372,
+    "seen": 1793463779.6237988,
+    "ast_hash": "f3eba3438356be2d1f911b6d74235d8a",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1793461200.29211,
+    "seen": 1793463779.6238,
+    "ast_hash": "e4f875ee2f2f5d90941334b5c1701faf",
     "semantic_hash": ""
   },
   "package-lock.json": {

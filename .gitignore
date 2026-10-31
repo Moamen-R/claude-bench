@@ -6,3 +6,6 @@ review-receipts
 *.log
 .DS_Store
 Thumbs.db
+graphify-out
+docs
+.graphify-out

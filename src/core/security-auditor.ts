@@ -26,6 +26,10 @@ export class SecurityAuditor {
   private allowedCommandPrefixes: string[] = [
     'npx -y skills add',
     'npx skills add',
+    'npx -y @',
+    'npx -y ',
+    'npx ',
+    'uvx ',
     'npm install -g',
     'uv tool install',
     'brew install',

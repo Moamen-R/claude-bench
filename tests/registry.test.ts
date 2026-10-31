@@ -53,6 +53,31 @@ describe('Registry Seed Catalog Validation', () => {
     expect(hyperframesItems.length).toBeGreaterThanOrEqual(40);
   });
 
+  it('ensures all programming fields include superpowers and open code review mcp and skills', () => {
+    const items = JSON.parse(readFileSync(seedPath, 'utf8'));
+    const programmingFields = [
+      'fullstack',
+      'cybersecurity',
+      'mobile-dev',
+      'desktop-dev',
+      'ios-dev',
+      'backend-dev',
+      'frontend-dev',
+      'software-eng',
+    ];
+
+    for (const field of programmingFields) {
+      const fieldItems = items.filter((item: { fields: string[] }) => item.fields.includes(field));
+      const hasSuperpowers = fieldItems.some((item: { id: string }) => item.id.includes('superpowers'));
+      const hasOpenCodeReview = fieldItems.some(
+        (item: { id: string }) => item.id.includes('opencode-review') || item.id.includes('ocr')
+      );
+
+      expect(hasSuperpowers).toBe(true);
+      expect(hasOpenCodeReview).toBe(true);
+    }
+  });
+
   it('ensures zero placeholder or fake URLs in registry.seed.json', () => {
     const raw = readFileSync(seedPath, 'utf8');
     expect(raw).not.toContain('TODO');

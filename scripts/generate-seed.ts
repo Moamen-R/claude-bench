@@ -87,6 +87,17 @@ hyperframesSkills.forEach((s) => {
 // 2. DOMAIN SKILLS FOR THE REMAINING 10 FIELDS (>= 50 PER FIELD)
 // --------------------------------------------------------------------------
 
+const PROGRAMMING_FIELDS: FieldId[] = [
+  'fullstack',
+  'cybersecurity',
+  'mobile-dev',
+  'desktop-dev',
+  'ios-dev',
+  'backend-dev',
+  'frontend-dev',
+  'software-eng',
+];
+
 interface SkillDef {
   id: string;
   name: string;
@@ -99,10 +110,95 @@ interface SkillDef {
 }
 
 const catalog: SkillDef[] = [
+  // --- Mandatory Superpowers Suite for ALL Programming Fields ---
+  {
+    id: 'superpowers',
+    name: 'Superpowers TDD Framework',
+    ownerRepo: 'obra/superpowers',
+    fields: PROGRAMMING_FIELDS,
+    desc: 'Spec-first design, micro-task planning, and red-green-refactor TDD loop.',
+    stars: 8200,
+  },
+  {
+    id: 'superpowers-brainstorming',
+    name: 'Superpowers Brainstorming & Spec Lock',
+    ownerRepo: 'obra/superpowers',
+    fields: PROGRAMMING_FIELDS,
+    desc: 'Socratic requirements interview and architecture spec locking before code.',
+    stars: 8200,
+  },
+  {
+    id: 'superpowers-writing-plans',
+    name: 'Superpowers Implementation Planner',
+    ownerRepo: 'obra/superpowers',
+    fields: PROGRAMMING_FIELDS,
+    desc: 'Decomposes complex feature specs into bite-sized testable tasks.',
+    stars: 8200,
+  },
+  {
+    id: 'superpowers-executing-plans',
+    name: 'Superpowers Plan Executor',
+    ownerRepo: 'obra/superpowers',
+    fields: PROGRAMMING_FIELDS,
+    desc: 'Executes planned tasks with strict subagent verification gates.',
+    stars: 8200,
+  },
+  {
+    id: 'superpowers-tdd',
+    name: 'Superpowers Test-Driven Development',
+    ownerRepo: 'obra/superpowers',
+    fields: PROGRAMMING_FIELDS,
+    desc: 'Red-green-refactor testing discipline with Vitest, Pytest, or Jest.',
+    stars: 8200,
+  },
+  {
+    id: 'superpowers-systematic-debugging',
+    name: 'Superpowers Systematic Debugger',
+    ownerRepo: 'obra/superpowers',
+    fields: PROGRAMMING_FIELDS,
+    desc: 'Hypothesis-driven root cause tracing with verifiable proofs.',
+    stars: 8200,
+  },
+  {
+    id: 'superpowers-code-review',
+    name: 'Superpowers Requesting Code Review',
+    ownerRepo: 'obra/superpowers',
+    fields: PROGRAMMING_FIELDS,
+    desc: 'Rigorous multi-lens pre-commit and PR code review protocol.',
+    stars: 8200,
+  },
+
+  // --- Mandatory OpenCode Review Suite for ALL Programming Fields ---
+  {
+    id: 'mcp-opencode-review',
+    name: 'OpenCode Review MCP',
+    ownerRepo: 'alibaba/open-code-review',
+    fields: PROGRAMMING_FIELDS,
+    desc: 'Automated code review, static analysis, and git diff quality checks.',
+    type: 'mcp',
+    mcpConfig: { command: 'npx', args: ['-y', '@alibaba/open-code-review', '--mcp'] },
+    stars: 8500,
+  },
+  {
+    id: 'ocr-diff-review',
+    name: 'OpenCode Diff Reviewer',
+    ownerRepo: 'alibaba/open-code-review',
+    fields: PROGRAMMING_FIELDS,
+    desc: 'Performs deep multi-file diff reviews with security and clean-code rule enforcement.',
+    stars: 8500,
+  },
+  {
+    id: 'ocr-security-audit',
+    name: 'OpenCode Security & Vulnerability Auditor',
+    ownerRepo: 'alibaba/open-code-review',
+    fields: PROGRAMMING_FIELDS,
+    desc: 'Audits diffs for injection flaws, command execution, and API key exposure.',
+    stars: 8500,
+  },
+
   // --- Fullstack / Frontend / Backend / Software-Eng Shared Skills ---
   { id: 'shadcn-ui', name: 'shadcn/ui', ownerRepo: 'shadcn-ui/ui', fields: ['fullstack', 'frontend-dev'], desc: 'Radix UI and Tailwind CSS accessible components' },
   { id: 'frontend-design', name: 'Frontend Design Assistant', ownerRepo: 'anthropics/skills', fields: ['fullstack', 'frontend-dev', 'software-eng'], desc: 'Intentional visual design and responsive UI engineering' },
-  { id: 'superpowers', name: 'Superpowers TDD Framework', ownerRepo: 'obra/superpowers', fields: ['fullstack', 'software-eng', 'backend-dev', 'frontend-dev'], desc: 'Spec-first design, micro-task planning, and red-green-refactor TDD' },
   { id: 'git-workflow', name: 'Git Workflow Pro', ownerRepo: 'vercel-labs/skills', fields: ['fullstack', 'software-eng', 'backend-dev'], desc: 'Atomic commits, smart branching, rebase, and PR management' },
   { id: 'nextjs-helpers', name: 'Next.js App Router Master', ownerRepo: 'vercel-labs/skills', fields: ['fullstack', 'frontend-dev'], desc: 'Next.js App Router patterns, server actions, and metadata optimization' },
   { id: 'tailwind-v4', name: 'Tailwind CSS v4 Architect', ownerRepo: 'tailwindlabs/skills', fields: ['fullstack', 'frontend-dev'], desc: 'CSS-first configuration, fluid typography, and design tokens' },
@@ -122,7 +218,6 @@ const catalog: SkillDef[] = [
   { id: 'clean-architecture', name: 'Clean Architecture Enforcer', ownerRepo: 'arch-skills/skills', fields: ['software-eng', 'backend-dev'], desc: 'Enforces dependency inversion and domain entity isolation' },
   { id: 'domain-driven-design', name: 'Domain Driven Design Modeler', ownerRepo: 'arch-skills/skills', fields: ['software-eng', 'backend-dev'], desc: 'Identifies aggregates, bounded contexts, and domain events' },
   { id: 'refactoring-guru', name: 'Safe Refactoring Specialist', ownerRepo: 'clean-code/skills', fields: ['software-eng', 'fullstack'], desc: 'Extracts duplicate patterns and simplifies complex control flow' },
-  { id: 'systematic-debugging', name: 'Systematic Hypothesis Debugger', ownerRepo: 'obra/superpowers', fields: ['software-eng', 'fullstack', 'backend-dev'], desc: 'Root cause analysis with verifiable failure scenario proofs' },
   { id: 'openapi-designer', name: 'OpenAPI 3.1 Spec Designer', ownerRepo: 'api-skills/skills', fields: ['backend-dev', 'fullstack'], desc: 'Contract-first REST API schema design and mock servers' },
   { id: 'grpc-protobuf', name: 'gRPC Protobuf Schema Architect', ownerRepo: 'api-skills/skills', fields: ['backend-dev', 'software-eng'], desc: 'High-performance binary serialization and RPC interfaces' },
   { id: 'sql-optimizer', name: 'SQL Query Optimizer', ownerRepo: 'db-skills/skills', fields: ['backend-dev', 'fullstack'], desc: 'EXPLAIN ANALYZE interpretation and composite index design' },
@@ -136,6 +231,88 @@ const catalog: SkillDef[] = [
   { id: 'omniroute-cli-serve', name: 'OmniRoute Gateway Daemon', ownerRepo: 'diegosouzapw/OmniRoute', fields: ['fullstack', 'software-eng', 'backend-dev'], desc: 'Manages local multi-provider LLM gateway and routing' },
   { id: 'omniroute-cli-models', name: 'OmniRoute Models Router', ownerRepo: 'mayankjain1815-commits/OmniRoute', fields: ['fullstack', 'software-eng', 'backend-dev'], desc: 'Configures cost-efficient fallback routes and model aliases' },
   { id: 'ruflo-orchestration', name: 'Ruflo Swarm Orchestration', ownerRepo: 'ruvnet/ruflo', fields: ['software-eng', 'fullstack', 'backend-dev'], desc: 'Coordinates multi-agent swarms with shared vector memory' },
+  // --- Curated MCP Servers ---
+  {
+    id: 'mcp-playwright',
+    name: 'Playwright Browser MCP',
+    ownerRepo: 'modelcontextprotocol/servers',
+    fields: ['fullstack', 'frontend-dev', 'marketing'],
+    desc: 'Headless browser control, DOM inspection, and visual testing.',
+    type: 'mcp',
+    mcpConfig: { command: 'npx', args: ['-y', '@modelcontextprotocol/server-playwright'] },
+  },
+  {
+    id: 'mcp-postgres',
+    name: 'PostgreSQL Database MCP',
+    ownerRepo: 'modelcontextprotocol/servers',
+    fields: ['fullstack', 'backend-dev'],
+    desc: 'Direct read/write database inspection and query analysis.',
+    type: 'mcp',
+    mcpConfig: { command: 'npx', args: ['-y', '@modelcontextprotocol/server-postgres', 'postgresql://localhost:5432/postgres'] },
+  },
+  {
+    id: 'mcp-supabase',
+    name: 'Supabase Platform MCP',
+    ownerRepo: 'supabase/mcp-server',
+    fields: ['fullstack', 'backend-dev', 'mobile-dev'],
+    desc: 'Manage schemas, RLS policies, edge functions, and buckets.',
+    type: 'mcp',
+    mcpConfig: { command: 'npx', args: ['-y', '@supabase/mcp-server'] },
+  },
+  {
+    id: 'mcp-semgrep',
+    name: 'Semgrep Code Scanner MCP',
+    ownerRepo: 'semgrep/semgrep',
+    fields: ['cybersecurity', 'software-eng'],
+    desc: 'Multi-language static analysis for security vulnerabilities.',
+    type: 'mcp',
+    mcpConfig: { command: 'uvx', args: ['semgrep-mcp'] },
+  },
+  {
+    id: 'mcp-scrapling',
+    name: 'Scrapling Anti-Bot Scraping MCP',
+    ownerRepo: 'd4vinci/Scrapling',
+    fields: ['researcher', 'marketing'],
+    desc: 'Stealthy web scraping with Cloudflare turnstile bypass.',
+    type: 'mcp',
+    mcpConfig: { command: 'uvx', args: ['--from', 'scrapling[ai]', 'scrapling', 'mcp'] },
+  },
+  {
+    id: 'mcp-arxiv',
+    name: 'ArXiv Paper Search MCP',
+    ownerRepo: 'modelcontextprotocol/servers',
+    fields: ['researcher'],
+    desc: 'Search scientific papers and extract research citations.',
+    type: 'mcp',
+    mcpConfig: { command: 'uvx', args: ['arxiv-mcp'] },
+  },
+  {
+    id: 'mcp-redis',
+    name: 'Redis In-Memory MCP',
+    ownerRepo: 'modelcontextprotocol/servers',
+    fields: ['backend-dev', 'fullstack'],
+    desc: 'Inspect in-memory keys, cache TTLs, and pub/sub streams.',
+    type: 'mcp',
+    mcpConfig: { command: 'npx', args: ['-y', '@modelcontextprotocol/server-redis', 'redis://localhost:6379'] },
+  },
+  {
+    id: 'mcp-opencode-review',
+    name: 'OpenCode Review MCP',
+    ownerRepo: 'alibaba/open-code-review',
+    fields: ['software-eng', 'cybersecurity'],
+    desc: 'Automated code review, static analysis, and git diff checks.',
+    type: 'mcp',
+    mcpConfig: { command: 'npx', args: ['-y', '@alibaba/open-code-review', '--mcp'] },
+  },
+  {
+    id: 'mcp-whisper',
+    name: 'Whisper Audio Transcription MCP',
+    ownerRepo: 'media-skills/whisper',
+    fields: ['video-editing'],
+    desc: 'Local speech-to-text transcription and subtitle timing.',
+    type: 'mcp',
+    mcpConfig: { command: 'uvx', args: ['whisper-mcp'] },
+  },
 ];
 
 catalog.forEach((s) => {
@@ -145,7 +322,10 @@ catalog.forEach((s) => {
     type: s.type || 'skill',
     fields: s.fields,
     repoUrl: `https://github.com/${s.ownerRepo}`,
-    installCommand: `npx -y skills add ${s.ownerRepo} --skill ${s.id} --agent claude-code`,
+    installCommand:
+      s.type === 'mcp' && s.mcpConfig
+        ? `${s.mcpConfig.command} ${s.mcpConfig.args.join(' ')}`
+        : `npx -y skills add ${s.ownerRepo} --skill ${s.id} --agent claude-code`,
     description: s.desc,
     stars: s.stars || 15000,
     trustScore: 98,

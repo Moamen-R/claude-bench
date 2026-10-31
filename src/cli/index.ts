@@ -2,8 +2,8 @@ import { Command } from 'commander';
 import fs from 'node:fs/promises';
 import { readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import pc from 'picocolors';
+import { loadRegistrySeed } from '../registry/registry-loader.js';
 import { WizardRunner } from './wizard.js';
 import { printBanner, printSummaryTable } from './ui.js';
 import { OSDetector } from '../core/os-detector.js';
@@ -21,13 +21,7 @@ import {
 } from '../core/schema.js';
 
 function getRegistryItems(): RegistryItem[] {
-  const currentDir = path.dirname(fileURLToPath(import.meta.url));
-  const seedPath = path.resolve(currentDir, '../registry/registry.seed.json');
-  if (existsSync(seedPath)) {
-    return JSON.parse(readFileSync(seedPath, 'utf8'));
-  }
-  const fallback = path.resolve('src/registry/registry.seed.json');
-  return JSON.parse(readFileSync(fallback, 'utf8'));
+  return loadRegistrySeed();
 }
 
 const program = new Command();
@@ -257,7 +251,9 @@ program
       platform: detector.getPlatform(),
       configPaths: detector.resolveConfigPaths('global'),
     };
-    await fs.writeFile(file, JSON.stringify(profile, null, 2), 'utf8');
+    const resolvedPath = path.resolve(file);
+    await fs.mkdir(path.dirname(resolvedPath), { recursive: true });
+    await fs.writeFile(resolvedPath, JSON.stringify(profile, null, 2), 'utf8');
     console.log(pc.green(` Setup profile exported to ${pc.bold(file)}`));
   });
 
