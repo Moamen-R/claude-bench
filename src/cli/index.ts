@@ -5,7 +5,7 @@ import path from 'node:path';
 import pc from 'picocolors';
 import { loadRegistrySeed } from '../registry/registry-loader.js';
 import { WizardRunner } from './wizard.js';
-import { printBanner, printSummaryTable } from './ui.js';
+import { printBanner, printSummaryTable, printDoctorReport } from './ui.js';
 import { OSDetector } from '../core/os-detector.js';
 import { BackupManager } from '../core/backup-manager.js';
 import { OmniRouteInstaller } from '../installers/omniroute-installer.js';
@@ -20,10 +20,6 @@ import {
   type RegistryItem,
 } from '../core/schema.js';
 import { CLI_VERSION } from './version.js';
-
-function getRegistryItems(): RegistryItem[] {
-  return loadRegistrySeed();
-}
 
 const program = new Command();
 const detector = new OSDetector();
@@ -74,7 +70,7 @@ program
   .option('-f, --field <field>', 'Filter by specific professional field')
   .action((opts) => {
     printBanner();
-    const items = getRegistryItems();
+    const items = loadRegistrySeed();
     const fieldFilter = opts.field?.trim().toLowerCase();
 
     console.log(pc.bold(pc.cyan('=== Curated Claude Ecosystem Registry ===\n')));
@@ -102,7 +98,7 @@ program
   .option('-s, --scope <scope>', 'global or project', 'global')
   .option('--dry-run', 'Simulate installation', false)
   .action(async (id, opts) => {
-    const items = getRegistryItems();
+    const items = loadRegistrySeed();
     const match = items.find((i) => i.id.toLowerCase() === id.toLowerCase());
 
     if (!match) {
@@ -158,9 +154,8 @@ program
   .description('Diagnose host environment, Claude installation, and config syntax')
   .action(async () => {
     printBanner();
-    console.log(pc.bold(pc.cyan('Running Claude Forge Diagnostics...\n')));
 
-    const checks: Array<{ name: string; status: 'ok' | 'warning' | 'fail'; detail: string }> = [];
+    const checks: Array<{ name: string; status: 'ok' | 'warn' | 'fail'; detail: string }> = [];
 
     // Node.js
     const nodeVer = process.version;
@@ -183,7 +178,7 @@ program
     const claudeExists = await detector.checkCommandExists('claude');
     checks.push({
       name: 'Claude Code CLI',
-      status: claudeExists ? 'ok' : 'warning',
+      status: claudeExists ? 'ok' : 'warn',
       detail: claudeExists ? 'Installed on PATH' : 'Not found on PATH (run "claude-bench init" to install)',
     });
 
@@ -191,7 +186,7 @@ program
     const omnirouteExists = await detector.checkCommandExists('omniroute');
     checks.push({
       name: 'OmniRoute CLI',
-      status: omnirouteExists ? 'ok' : 'warning',
+      status: omnirouteExists ? 'ok' : 'warn',
       detail: omnirouteExists ? 'Installed globally' : 'Not installed (optional for OmniRoute gateway)',
     });
 
@@ -215,15 +210,7 @@ program
         : 'File does not exist yet (clean state)',
     });
 
-    // Print Diagnostics Table
-    checks.forEach((chk) => {
-      let icon = pc.green('[OK]     ');
-      if (chk.status === 'warning') icon = pc.yellow('[WARNING]');
-      if (chk.status === 'fail') icon = pc.red('[FAIL]   ');
-      console.log(`${icon} ${pc.bold(chk.name)}: ${chk.detail}`);
-    });
-
-    console.log('\n');
+    printDoctorReport(checks);
   });
 
 // Command: rollback
@@ -263,7 +250,7 @@ program
   .command('sync')
   .description('Synchronize and verify skill registry catalog')
   .action(() => {
-    const items = getRegistryItems();
+    const items = loadRegistrySeed();
     console.log(pc.green(` Registry synchronized successfully. ${items.length} verified items active across all 11 fields.`));
   });
 
