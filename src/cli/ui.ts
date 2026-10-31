@@ -116,7 +116,7 @@ export function printBanner(version: string = `v${CLI_VERSION}`): void {
   );
 
   const descLine = slate(
-    'Automated Skills · Plugins · MCP Servers · CLI-Anything · OmniRoute Gateway'
+    'Automated Skills · Plugins · MCP Servers · OmniRoute Gateway'
   );
 
   const ruleLine =
