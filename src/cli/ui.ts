@@ -96,7 +96,7 @@ export function formatBadge(
 /**
  * Prints the upgraded Claude-Bench Hero Banner with 3D Anvil icon, gradient sparks, and telemetry bar.
  */
-export function printBanner(version = 'v1.0.0'): void {
+export function printBanner(version = 'v1.0.1'): void {
   const anvil = [
     `   ${amber('✦')}  ${coral(pc.bold('✦'))} ${peach('·')}    `,
     `  ${coral(pc.bold('▀█████████▀'))}  `,

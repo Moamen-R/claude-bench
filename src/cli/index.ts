@@ -31,7 +31,7 @@ const backupManager = new BackupManager();
 program
   .name('claude-bench')
   .description('Production-grade CLI bootstrapper for Claude Code & Claude Desktop across 11 professional fields')
-  .version('1.0.0');
+  .version('1.0.1');
 
 // Command: init
 program
