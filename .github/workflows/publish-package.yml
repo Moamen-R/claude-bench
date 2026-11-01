@@ -26,6 +26,9 @@ jobs:
       - name: Build bundle
         run: npm run build
 
+      - name: Configure package scope for GitHub Packages
+        run: npm pkg set name=@moamen-r/claude-bench
+
       - name: Publish to GitHub Packages
         run: npm publish
         env:
