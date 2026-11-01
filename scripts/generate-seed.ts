@@ -565,13 +565,13 @@ const domainTemplates: Record<FieldId, { owner: string; prefix: string; topics: 
       'redpanda-fast-streaming', 'apache-flink-stateful-processing', 'apache-iceberg-lakehouse', 'delta-lake-time-travel',
       'apache-arrow-zero-copy', 'parquet-snappy-optimization', 'snowflake-data-warehouse', 'google-bigquery-analytics',
       'aws-redshift-cluster', 'clickhouse-realtime-olap', 'trino-federated-sql', 'starrocks-subsecond-query',
-      'databricks-unity-catalog', 'datahub-metadata-lineage', 'open-lineage-marquez', 'cube-js-metrics-api',
+      'databricks-unity-catalog', 'metadata-lineage', 'open-lineage-marquez', 'cube-js-metrics-api',
       'evidence-dev-bi-markdown', 'metabase-sql-dashboards', 'superset-enterprise-bi', 'streamlit-data-apps',
       'marimo-reactive-notebook', 'jupyter-lab-enterprise', 'plotly-interactive-viz', 'seaborn-statistical-plots',
       'matplotlib-custom-theme', 'scipy-scientific-computation', 'statsmodels-econometrics', 'fastparquet-pyarrow-io',
       'debezium-cdc-replication', 'airbyte-connector-sync', 'fivetran-pipeline-config', 'dlt-python-loading',
-      'sqlglot-transpilation', 'sqlfluff-linter-formatter', 'databuildtool-macros', 'feature-store-feast',
-      'data-retention-gdpr-purge', 'anonymization-pii-scrubber'
+      'sqlglot-transpilation', 'sqlfluff-linter-formatter', 'dbt-macros', 'feature-store-feast',
+      'retention-gdpr-purge', 'anonymization-pii-scrubber'
     ],
   },
   'ai-ml': {
@@ -595,11 +595,40 @@ const domainTemplates: Record<FieldId, { owner: string; prefix: string; topics: 
   },
 };
 
+const NAME_OVERRIDES: Record<string, string> = {
+  'duckdb-embedded-olap': 'DuckDB Embedded OLAP',
+  'pyspark-cluster-etl': 'PySpark Cluster ETL',
+  'dbt-core-transformation': 'dbt Core Transformation',
+  'dbt-semantic-layer': 'dbt Semantic Layer',
+  'dbt-macros': 'dbt Macros',
+  'aws-redshift-cluster': 'AWS Redshift Cluster',
+  'google-bigquery-analytics': 'Google BigQuery Analytics',
+  'pytorch-2-compile-inductor': 'PyTorch 2 Compile & Inductor',
+  'huggingface-transformers-pipeline': 'Hugging Face Transformers Pipeline',
+  'huggingface-accelerate-fsdp': 'Hugging Face Accelerate FSDP',
+  'huggingface-trl-sft-dpo': 'Hugging Face TRL SFT & DPO',
+  'huggingface-peft-qlora': 'Hugging Face PEFT & QLoRA',
+  'vllm-paged-attention-serving': 'vLLM PagedAttention Serving',
+  'sglang-radix-attention': 'SGLang RadixAttention',
+  'langchain-rag-agent': 'LangChain RAG Agent',
+  'langgraph-stateful-graph': 'LangGraph Stateful Graph',
+  'crewai-multi-agent-system': 'CrewAI Multi-Agent System',
+  'qdrant-vector-database-client': 'Qdrant Vector Database',
+  'pgvector-cosine-similarity': 'pgvector Cosine Similarity',
+  'onnx-runtime-optimization': 'ONNX Runtime Optimization',
+  'tensorrt-llm-accelerator': 'TensorRT-LLM Accelerator',
+  'gguf-llama-cpp-conversion': 'GGUF & llama.cpp Conversion',
+  'bge-m3-multilingual-embedding': 'BGE-M3 Multilingual Embedding',
+  'mlflow-model-registry': 'MLflow Model Registry',
+  'weights-biases-wandb-logger': 'Weights & Biases (W&B) Logger',
+  'dvc-model-versioning': 'DVC Model Versioning',
+};
+
 for (const [field, conf] of Object.entries(domainTemplates)) {
   const fId = field as FieldId;
   conf.topics.forEach((topic, idx) => {
     const slug = `${conf.prefix}-${topic}`;
-    const name = topic.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+    const name = NAME_OVERRIDES[topic] ?? topic.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
     addItem({
       id: slug,
       name: `${name} Pro`,

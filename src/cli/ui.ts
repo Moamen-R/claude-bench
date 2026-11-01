@@ -1,5 +1,6 @@
 import pc from 'picocolors';
 import { CLI_VERSION } from './version.js';
+import type { FieldId } from '../core/schema.js';
 
 /**
  * Claude Brand & Bench TrueColor Palette
@@ -37,9 +38,9 @@ export const theme = {
 const { coral, peach, apricot, amber, emerald, cyan, slate, charcoal } = theme;
 
 /**
- * Canonical metadata for the 11 supported professional fields.
+ * Canonical metadata for the 13 supported professional fields.
  */
-const FIELD_META: Record<string, { label: string; icon: string; tag: string }> = {
+const FIELD_META: Record<FieldId, { label: string; icon: string; tag: string }> = {
   fullstack:       { label: 'Full Stack Web Developer', icon: '⚡', tag: 'Web & Cloud' },
   cybersecurity:   { label: 'Cyber Security',           icon: '🛡️', tag: 'SecOps & Pentest' },
   'video-editing': { label: 'Video Editing',            icon: '🎬', tag: 'Media & FFmpeg' },
@@ -151,7 +152,7 @@ export function formatFieldList(fields: string[]): string {
 
   return fields
     .map((rawField) => {
-      const key = rawField.trim().toLowerCase();
+      const key = rawField.trim().toLowerCase() as FieldId;
       const meta = FIELD_META[key];
       if (meta) {
         return (
@@ -222,7 +223,7 @@ export function printSummaryTable(summary: {
     summary.fields.length > 0
       ? summary.fields
           .map((f) => {
-            const meta = FIELD_META[f.toLowerCase()];
+            const meta = FIELD_META[f.toLowerCase() as FieldId];
             return meta ? `${coral(meta.label)}` : coral(f);
           })
           .join(slate(', '))

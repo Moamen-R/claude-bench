@@ -84,7 +84,7 @@ const DOMAIN_BLUEPRINTS: Record<FieldId, { title: string; body: string }> = {
     body: `- **Model Development**: PyTorch 2.x and Hugging Face ecosystem (Transformers, Accelerate, TRL, PEFT).
 - **Agent Orchestration**: Multi-agent collaboration with CrewAI, LangGraph, and deterministic state graphs.
 - **RAG & Retrieval**: Hybrid lexical + vector search with Qdrant, Pinecone, or pgvector, guarded against injection.
-- **MLOps & Evaluation**: Rigorous eval harness before promotion; track experiments and metrics via Trackio or MLflow.`,
+- **MLOps & Evaluation**: Rigorous eval harness before promotion; track experiments and metrics via MLflow or Weights & Biases.`,
   },
 };
 
