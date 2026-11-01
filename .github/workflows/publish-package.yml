@@ -14,6 +14,7 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -26,8 +27,10 @@ jobs:
       - name: Build bundle
         run: npm run build
 
-      - name: Configure package scope for GitHub Packages
-        run: npm pkg set name=@moamen-r/claude-bench
+      - name: Configure package for GitHub Packages
+        run: |
+          npm pkg set name=@moamen-r/claude-bench
+          npm pkg set publishConfig.registry=https://npm.pkg.github.com
 
       - name: Publish to GitHub Packages
         run: npm publish
