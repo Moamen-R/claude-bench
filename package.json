@@ -1,7 +1,7 @@
 {
   "name": "claude-bench",
-  "version": "1.0.2",
-  "description": "Production-grade, open-source CLI bootstrapper for Claude Code and Claude Desktop tailored across 11 professional fields",
+  "version": "1.1.0",
+  "description": "Production-grade, open-source CLI bootstrapper for Claude Code and Claude Desktop tailored across 13 professional fields",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
