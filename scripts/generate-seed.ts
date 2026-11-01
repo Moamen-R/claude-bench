@@ -24,6 +24,30 @@ addItem({
   trustScore: 95,
 });
 
+addItem({
+  id: 'brag',
+  name: 'Brag 20-Second Launch Video',
+  type: 'skill',
+  fields: ['video-editing', 'frontend-dev'],
+  repoUrl: 'https://github.com/latent-spaces/brag',
+  installCommand: 'npx -y skills add latent-spaces/brag --skill brag --agent claude-code',
+  description: 'Turn the project you just created into a twenty-second launch video with music, motion, and share copy',
+  stars: 19788,
+  trustScore: 99,
+});
+
+addItem({
+  id: 'brag-slim',
+  name: 'Brag Slim Lean Video Generator',
+  type: 'skill',
+  fields: ['video-editing', 'frontend-dev'],
+  repoUrl: 'https://github.com/latent-spaces/brag',
+  installCommand: 'npx -y skills add latent-spaces/brag --skill brag-slim --agent claude-code',
+  description: 'Rebuilt lean video generation using tools already on your machine without bundled assets',
+  stars: 19788,
+  trustScore: 99,
+});
+
 // --------------------------------------------------------------------------
 // 1. HYPERFRAMES VIDEO EDITING SUITE (All Hyperframes Skills & Plugins)
 // --------------------------------------------------------------------------

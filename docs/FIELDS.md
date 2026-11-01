@@ -45,6 +45,7 @@ This document details the configuration presets, tool packages, MCP servers, and
 - **Display Name**: Video Editing
 - **Focus**: Programmatic video creation, audio transcoding, subtitle generation, 3D motion graphics.
 - **Curated Skills**:
+  - `brag` & `brag-slim`: Turn your created project into a 20-second launch video (`npx -y skills add latent-spaces/brag --skill brag --agent claude-code`)
   - `remotion-best-practices`: `npx -y skills add remotion-dev/skills --skill remotion --agent claude-code`
   - `caption-generator`: `npx -y skills add media-skills/skills --skill caption-generator --agent claude-code`
 - **MCP Servers**:
@@ -149,6 +150,7 @@ This document details the configuration presets, tool packages, MCP servers, and
   - `shadcn-ui`: `npx -y skills add shadcn/ui --skill add-component --agent claude-code`
   - `tailwind-v4`: `npx -y skills add tailwindlabs/skills --skill tailwind-v4 --agent claude-code`
   - `wcag-accessibility`: `npx -y skills add a11y-skills/skills --skill wcag-audit --agent claude-code`
+  - `brag-launch-video`: Turn web frontend projects into 20s launch promo videos (`npx -y skills add latent-spaces/brag --skill brag --agent claude-code`)
 - **MCP Servers**:
   - `playwright`: Visual testing & DOM inspection (`npx -y @modelcontextprotocol/server-playwright`)
   - `lighthouse`: Core Web Vitals & performance auditing (`npx -y lighthouse-mcp`)
