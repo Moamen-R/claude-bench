@@ -5,8 +5,8 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "claude-bench": "./dist/index.js",
-    "create-claude-env": "./dist/index.js"
+    "claude-bench": "dist/index.js",
+    "create-claude-env": "dist/index.js"
   },
   "files": [
     "dist",
