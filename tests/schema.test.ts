@@ -5,6 +5,7 @@ import {
   RegistryItemSchema,
   UserProfileSchema,
   MCPServerConfigSchema,
+  GatewayModeSchema,
   CANONICAL_FIELDS,
 } from '../src/core/schema.js';
 
@@ -78,5 +79,12 @@ describe('Core Schema Validation', () => {
     };
     const parsed = UserProfileSchema.safeParse(profile);
     expect(parsed.success).toBe(true);
+  });
+
+  it('validates gateway modes including 9router', () => {
+    expect(GatewayModeSchema.parse('official')).toBe('official');
+    expect(GatewayModeSchema.parse('omniroute')).toBe('omniroute');
+    expect(GatewayModeSchema.parse('9router')).toBe('9router');
+    expect(GatewayModeSchema.safeParse('unknown').success).toBe(false);
   });
 });

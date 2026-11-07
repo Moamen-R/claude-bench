@@ -73,7 +73,7 @@ All CLI flags, wizard prompts, registry entries, and `CLAUDE.md` templates must 
 - **Windows WinGet**: `winget install Anthropic.ClaudeCode`
 - Always verify installation after execution by running `claude --version`.
 
-### B. Official Auth vs. OmniRoute Gateway (`src/installers/omniroute-installer.ts`)
+### B. Official Auth vs. OmniRoute vs. 9router Gateway
 - **`--gateway official`**: Preserves default Anthropic endpoints and guides the user through `claude /login` or `ANTHROPIC_API_KEY` setup.
 - **`--gateway omniroute`**:
   1. Installs [OmniRoute](https://www.npmjs.com/package/omniroute) (`npm install -g omniroute`) if not already installed.
@@ -81,7 +81,11 @@ All CLI flags, wizard prompts, registry entries, and `CLAUDE.md` templates must 
      - `npx -y skills add diegosouzapw/OmniRoute --skill cli-serve --agent claude-code`
      - `npx -y skills add mayankjain1815-commits/OmniRoute --skill cli-models --agent claude-code`
   3. Starts/verifies `omniroute serve` daemon health and merges `ANTHROPIC_BASE_URL` (pointing to the local OmniRoute gateway port) into the `"env"` block of `~/.claude/settings.json` without overwriting existing user settings.
-  4. Provides `claude-bench switch-gateway <official|omniroute>` to toggle cleanly at any time.
+  4. Provides `claude-bench switch-gateway <official|omniroute|9router>` to toggle cleanly at any time.
+- **`--gateway 9router`**:
+  1. Installs [9router](https://9router.com/) (`npm install -g 9router`) if not already installed.
+  2. Merges `ANTHROPIC_BASE_URL` (`http://127.0.0.1:4000`) into `~/.claude/settings.json` without overwriting existing user settings.
+  3. Provides `claude-bench switch-gateway 9router` to activate local 9router gateway routing.
 
 ## 7. Repository Architecture & Module Boundaries
 
@@ -99,6 +103,7 @@ src/
 ├── installers/
 │   ├── claude-installer.ts      # Official Claude Code CLI & Claude Desktop installer
 │   ├── omniroute-installer.ts   # OmniRoute gateway installer, daemon manager, and env router
+│   ├── ninerouter-installer.ts  # 9router gateway installer and env router
 │   ├── skill-installer.ts       # Executes `npx -y skills add ...` and plugin registrations concurrently
 │   ├── cli-anything-installer.ts# Installs HKUDS/CLI-Anything harnesses
 │   └── mcp-merger.ts            # Deep-merges MCP configs into ~/.claude/settings.json, ./.mcp.json, & claude_desktop_config.json

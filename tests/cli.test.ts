@@ -26,4 +26,10 @@ describe('CLI Commands Interface', () => {
     expect(optionFlags?.some((f) => f.includes('--scope'))).toBe(true);
     expect(optionFlags?.some((f) => f.includes('--dry-run'))).toBe(true);
   });
+
+  it('exposes switch-gateway command with mode argument', () => {
+    const switchCmd = program.commands.find((c) => c.name() === 'switch-gateway');
+    expect(switchCmd).toBeDefined();
+    expect(switchCmd?.description()).toContain('9router');
+  });
 });

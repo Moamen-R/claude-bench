@@ -12,6 +12,7 @@ import {
 import { OSDetector } from '../core/os-detector.js';
 import { ClaudeInstaller } from '../installers/claude-installer.js';
 import { OmniRouteInstaller } from '../installers/omniroute-installer.js';
+import { NineRouterInstaller } from '../installers/ninerouter-installer.js';
 import { SkillInstaller } from '../installers/skill-installer.js';
 import { MCPConfigMerger } from '../installers/mcp-merger.js';
 import { ClaudeMdGenerator } from '../generators/claude-md-generator.js';
@@ -32,6 +33,7 @@ export class WizardRunner {
   private backupManager = new BackupManager();
   private claudeInstaller = new ClaudeInstaller(this.detector);
   private omnirouteInstaller = new OmniRouteInstaller();
+  private nineRouterInstaller = new NineRouterInstaller(undefined, this.backupManager);
   private skillInstaller = new SkillInstaller();
   private mcpMerger = new MCPConfigMerger(this.backupManager);
   private claudeMdGenerator = new ClaudeMdGenerator(this.backupManager);
@@ -72,6 +74,7 @@ export class WizardRunner {
         options: [
           { value: 'official', label: 'Official Anthropic Authentication (/login or API Key)' },
           { value: 'omniroute', label: 'OmniRoute Gateway (Multi-provider routing, local daemon)' },
+          { value: '9router', label: '9router Gateway (Multi-provider routing, local daemon)' },
         ],
       })) as GatewayMode;
       if (p.isCancel(gateway)) {
@@ -122,12 +125,27 @@ export class WizardRunner {
 
     // Step B: Gateway Configuration
     s.start(`Configuring routing gateway (${gateway})...`);
-    if (gateway === 'omniroute') {
-      await this.omnirouteInstaller.setup({ port: 4000, dryRun });
-    } else {
-      await this.omnirouteInstaller.configureGatewayRoute('official', undefined, dryRun);
+    try {
+      let gatewayResult;
+      if (gateway === 'omniroute') {
+        gatewayResult = await this.omnirouteInstaller.setup({ port: 4000, dryRun });
+      } else if (gateway === '9router') {
+        gatewayResult = await this.nineRouterInstaller.setup({ port: 4000, dryRun });
+      } else {
+        gatewayResult = await this.omnirouteInstaller.configureGatewayRoute('official', undefined, dryRun);
+      }
+
+      if (!gatewayResult.success) {
+        s.stop(pc.red(`Gateway configuration failed (${gateway}).`));
+        console.error(pc.red(gatewayResult.error || 'Unknown error configuring gateway'));
+        process.exit(1);
+      }
+      s.stop(`Gateway route configured (${gateway}).`);
+    } catch (err: unknown) {
+      s.stop(pc.red(`Gateway configuration failed (${gateway}).`));
+      console.error(pc.red(err instanceof Error ? err.message : String(err)));
+      process.exit(1);
     }
-    s.stop(`Gateway route configured (${gateway}).`);
 
     // Step C: Filter Registry Items
     const registry = this.loadRegistry();

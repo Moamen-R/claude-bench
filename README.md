@@ -61,9 +61,10 @@ npx claude-bench init \
 ## 🌟 Key Features
 
 1. **Cross-Platform Claude Installer**: Automatically detects your host environment (`darwin`, `linux`, `win32`, or WSL) and installs the official Claude Code CLI and/or Claude Desktop via native package managers (`brew`, `winget`, `curl`, or `irm`).
-2. **Dual Gateway Routing Engine**: Switch seamlessly between first-party authentication and local multi-provider proxy routing at any time:
+2. **Multi-Gateway Routing Engine**: Switch seamlessly between first-party authentication and local multi-provider proxy routing at any time:
    - **Official Anthropic (`official`)**: Standard `/login` OAuth flow or direct `ANTHROPIC_API_KEY` configuration.
    - **OmniRoute AI Gateway (`omniroute`)**: Installs `omniroute`, launches the local routing daemon (`http://127.0.0.1:4000`), injects `ANTHROPIC_BASE_URL` into `~/.claude/settings.json`, and provisions the `cli-serve` and `cli-models` management skills.
+   - **9router AI Gateway (`9router`)**: Installs [9router](https://9router.com/) globally via npm (`npm install -g 9router`), launches local daemon routing (`http://127.0.0.1:4000`), and injects `ANTHROPIC_BASE_URL` into `~/.claude/settings.json`.
 3. **Safety-First Configuration Management**:
    - **Atomic Backups & Instant Rollback**: Takes a timestamped snapshot in `~/.claude-bench/backups/` prior to every write operation. Revert anytime via `claude-bench rollback`.
    - **Lossless Deep Merge**: Preserves existing MCP servers, custom hooks, environment variables, and permission rules inside `~/.claude/settings.json` and `claude_desktop_config.json`.
@@ -103,8 +104,8 @@ Each preset equips Claude with 50+ curated skills, plugins, and MCP servers alon
 | `claude-bench init` | Launch the interactive multi-step setup wizard or run headlessly with flags |
 | `claude-bench list [-f <field>]` | Browse and filter the 640+ curated skills, plugins, and MCP servers |
 | `claude-bench add <id>` | Install an individual skill or lossless-merge an MCP server by registry ID |
-| `claude-bench switch-gateway <mode>` | Toggle routing dynamically between `official` and `omniroute` |
-| `claude-bench doctor` | Run diagnostics on Node, Git, Claude CLI, OmniRoute daemon, and JSON configs |
+| `claude-bench switch-gateway <mode>` | Toggle routing dynamically between `official`, `omniroute`, and `9router` |
+| `claude-bench doctor` | Run diagnostics on Node, Git, Claude CLI, OmniRoute / 9router daemons, and JSON configs |
 | `claude-bench rollback` | Restore configurations from the latest or a selected atomic backup snapshot |
 | `claude-bench export [file]` | Export your active setup profile to a portable JSON manifest for team sharing |
 | `claude-bench import <file>` | Apply a shared team configuration manifest to the local machine |
@@ -115,7 +116,7 @@ Each preset equips Claude with 50+ curated skills, plugins, and MCP servers alon
 | Flag | Values | Description |
 | :--- | :--- | :--- |
 | `--target <target>` | `cli`, `desktop`, `both` | Target environment(s) to install and configure |
-| `--gateway <mode>` | `official`, `omniroute` | Authentication and inference routing backend |
+| `--gateway <mode>` | `official`, `omniroute`, `9router` | Authentication and inference routing backend |
 | `--fields <list>` | Comma-separated IDs | Domain presets to install (e.g., `fullstack,cybersecurity`) |
 | `--scope <scope>` | `global`, `project` | Write configuration to `~/.claude` or current workspace `./.claude` |
 | `-y, --yes` | Boolean | Bypass confirmation prompts for automated/CI execution |
@@ -152,6 +153,7 @@ src/
 ├── installers/
 │   ├── claude-installer.ts       # Cross-platform Claude CLI & Desktop installer
 │   ├── omniroute-installer.ts    # OmniRoute daemon installer & routing injector
+│   ├── ninerouter-installer.ts   # 9router daemon installer & routing injector
 │   ├── skill-installer.ts        # Audited batch skill installer (npx -y skills add)
 │   └── mcp-merger.ts             # Lossless deep-merge into settings & desktop configs
 ├── generators/

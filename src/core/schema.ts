@@ -46,7 +46,7 @@ export type RegistryItem = z.infer<typeof RegistryItemSchema>;
 export const InstallationTargetSchema = z.enum(['cli', 'desktop', 'both']);
 export type InstallationTarget = z.infer<typeof InstallationTargetSchema>;
 
-export const GatewayModeSchema = z.enum(['official', 'omniroute']);
+export const GatewayModeSchema = z.enum(['official', 'omniroute', '9router']);
 export type GatewayMode = z.infer<typeof GatewayModeSchema>;
 
 export const ScopeModeSchema = z.enum(['global', 'project']);

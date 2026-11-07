@@ -1,6 +1,5 @@
 import { Command } from 'commander';
 import fs from 'node:fs/promises';
-import { readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import pc from 'picocolors';
 import { loadRegistrySeed } from '../registry/registry-loader.js';
@@ -8,12 +7,14 @@ import { WizardRunner } from './wizard.js';
 import { printBanner, printSummaryTable, printDoctorReport } from './ui.js';
 import { OSDetector } from '../core/os-detector.js';
 import { BackupManager } from '../core/backup-manager.js';
-import { OmniRouteInstaller } from '../installers/omniroute-installer.js';
+import { OmniRouteInstaller, type OmniRouteSetupResult } from '../installers/omniroute-installer.js';
+import { NineRouterInstaller, type NineRouterSetupResult } from '../installers/ninerouter-installer.js';
 import { SkillInstaller } from '../installers/skill-installer.js';
 import { MCPConfigMerger } from '../installers/mcp-merger.js';
 import {
   CANONICAL_FIELDS,
   type FieldId,
+  GatewayModeSchema,
   type GatewayMode,
   type InstallationTarget,
   type ScopeMode,
@@ -35,7 +36,7 @@ program
   .command('init')
   .description('Initialize and configure Claude environment interactively or via flags')
   .option('-t, --target <target>', 'Target application: cli, desktop, or both')
-  .option('-g, --gateway <gateway>', 'Gateway routing mode: official or omniroute')
+  .option('-g, --gateway <gateway>', 'Gateway routing mode: official, omniroute, or 9router')
   .option('-f, --fields <fields>', 'Comma-separated fields (e.g. fullstack,cybersecurity)')
   .option('-s, --scope <scope>', 'Installation scope: global or project', 'global')
   .option('--dry-run', 'Preview changes without modifying host system', false)
@@ -51,6 +52,13 @@ program
     if (opts.yes && !opts.target) opts.target = 'both';
     if (opts.yes && !opts.gateway) opts.gateway = 'official';
     if (opts.yes && (!fields || fields.length === 0)) fields = ['fullstack'];
+
+    if (opts.gateway && !GatewayModeSchema.safeParse(opts.gateway).success) {
+      console.error(
+        pc.red(`Invalid gateway "${opts.gateway}". Must be one of: ${GatewayModeSchema.options.join(', ')}.`)
+      );
+      process.exit(1);
+    }
 
     const wizard = new WizardRunner();
     await wizard.run({
@@ -126,25 +134,48 @@ program
 // Command: switch-gateway
 program
   .command('switch-gateway <mode>')
-  .description('Switch Claude Code gateway routing between official and omniroute')
-  .option('-p, --port <port>', 'OmniRoute local port', '4000')
+  .description('Switch Claude Code gateway routing between official, omniroute, and 9router')
+  .option('-p, --port <port>', 'Gateway local port', '4000')
   .option('--dry-run', 'Preview changes without modifying settings.json', false)
   .action(async (mode, opts) => {
-    if (mode !== 'official' && mode !== 'omniroute') {
-      console.error(pc.red('Mode must be either "official" or "omniroute".'));
+    if (!GatewayModeSchema.safeParse(mode).success) {
+      console.error(pc.red(`Mode must be one of: ${GatewayModeSchema.options.join(', ')}.`));
       process.exit(1);
     }
 
-    const installer = new OmniRouteInstaller();
-    const res = await installer.configureGatewayRoute(mode, Number(opts.port), opts.dryRun);
+    const port = Number(opts.port);
+    if (!Number.isInteger(port) || port < 1 || port > 65535) {
+      console.error(pc.red(`Invalid port: ${opts.port}. Must be an integer between 1 and 65535.`));
+      process.exit(1);
+    }
 
-    if (res.success) {
-      console.log(pc.green(` Successfully switched routing gateway to: ${pc.bold(mode)}`));
-      if (mode === 'omniroute') {
-        console.log(pc.cyan(`   ANTHROPIC_BASE_URL set to ${res.daemonUrl}`));
+    let res: NineRouterSetupResult | OmniRouteSetupResult;
+    try {
+      if (mode === '9router') {
+        const installer = new NineRouterInstaller();
+        res = await installer.configureGatewayRoute('9router', port, opts.dryRun);
       } else {
-        console.log(pc.cyan(`   ANTHROPIC_BASE_URL removed; official Anthropic endpoints active.`));
+        const installer = new OmniRouteInstaller();
+        const gatewayPort = mode === 'official' ? undefined : port;
+        res = await installer.configureGatewayRoute(mode, gatewayPort, opts.dryRun);
       }
+
+      if (res.success) {
+        console.log(pc.green(` Successfully switched routing gateway to: ${pc.bold(mode)}`));
+        if (mode === 'omniroute' || mode === '9router') {
+          console.log(pc.cyan(`   ANTHROPIC_BASE_URL set to ${res.daemonUrl}`));
+        } else {
+          console.log(pc.cyan(`   ANTHROPIC_BASE_URL removed; official Anthropic endpoints active.`));
+        }
+      } else {
+        console.error(pc.red(` Failed to switch gateway: ${res.error || 'Unknown error'}`));
+        process.exit(1);
+      }
+    } catch (err: unknown) {
+      console.error(
+        pc.red(` Unexpected error switching gateway: ${err instanceof Error ? err.message : String(err)}`)
+      );
+      process.exit(1);
     }
   });
 
@@ -190,20 +221,32 @@ program
       detail: omnirouteExists ? 'Installed globally' : 'Not installed (optional for OmniRoute gateway)',
     });
 
+    // 9router
+    const nineRouterExists = await detector.checkCommandExists('9router');
+    checks.push({
+      name: '9router CLI',
+      status: nineRouterExists ? 'ok' : 'warn',
+      detail: nineRouterExists ? 'Installed globally' : 'Not installed (optional for 9router gateway)',
+    });
+
     // Config syntax check
     const paths = detector.resolveConfigPaths('global');
     let settingsOk = true;
-    if (existsSync(paths.claudeCodeSettings)) {
-      try {
-        JSON.parse(readFileSync(paths.claudeCodeSettings, 'utf8'));
-      } catch {
+    let settingsExists = false;
+    try {
+      const content = await fs.readFile(paths.claudeCodeSettings, 'utf8');
+      settingsExists = true;
+      JSON.parse(content);
+    } catch (err: unknown) {
+      if ((err as NodeJS.ErrnoException).code !== 'ENOENT') {
+        settingsExists = true;
         settingsOk = false;
       }
     }
     checks.push({
       name: 'Claude Settings JSON Syntax',
       status: settingsOk ? 'ok' : 'fail',
-      detail: existsSync(paths.claudeCodeSettings)
+      detail: settingsExists
         ? settingsOk
           ? 'Valid JSON syntax'
           : 'CORRUPTED JSON syntax!'
