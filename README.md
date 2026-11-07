@@ -20,9 +20,9 @@
 
 ---
 
-## ⚡ Quick Start
+##  Quick Start
 
-### 🚀 One-Line Run (Zero Install)
+###  One-Line Run (Zero Install)
 ```bash
 npx claude-bench init
 ```
@@ -73,7 +73,7 @@ npx claude-bench init \
 
 ---
 
-## 🎯 13 Domain Presets
+##  13 Domain Presets
 
 Each preset equips Claude with 50+ curated skills, plugins, and MCP servers along with domain-specific system instructions:
 
@@ -165,7 +165,7 @@ src/
 
 ---
 
-## 🛠️ Development & Contributing
+##  Development & Contributing
 
 ```bash
 # Clone the repository
