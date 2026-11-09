@@ -98,6 +98,30 @@ export function formatBadge(
 }
 
 /**
+ * Formats a sleek TrueColor terminal progress bar with percentage.
+ * Example: [██████████░░░░░░░░░░] 50%
+ */
+export function formatProgressBar(
+  completed: number,
+  total: number,
+  width: number = 20
+): string {
+  if (total <= 0) {
+    return `[${emerald('█'.repeat(width))}] ${pc.bold(pc.white('100%'))}`;
+  }
+
+  const ratio = Math.min(1, Math.max(0, completed / total));
+  const percent = Math.round(ratio * 100);
+  const filledCount = Math.round(ratio * width);
+  const emptyCount = Math.max(0, width - filledCount);
+
+  const filledBar = filledCount > 0 ? emerald('█'.repeat(filledCount)) : '';
+  const emptyBar = emptyCount > 0 ? charcoal('░'.repeat(emptyCount)) : '';
+
+  return `[${filledBar}${emptyBar}] ${pc.bold(pc.white(`${percent}%`))}`;
+}
+
+/**
  * Prints the upgraded Claude-Bench Hero Banner with 3D Anvil icon, gradient sparks, and telemetry bar.
  */
 export function printBanner(version: string = `v${CLI_VERSION}`): void {

@@ -10,6 +10,7 @@ import {
   padEndAnsi,
   printStepHeader,
   printDoctorReport,
+  formatProgressBar,
 } from '../src/cli/ui.js';
 
 describe('UI Utilities and Formatters', () => {
@@ -78,5 +79,19 @@ describe('UI Utilities and Formatters', () => {
     expect(logSpy).toHaveBeenCalled();
 
     logSpy.mockRestore();
+  });
+
+  it('formats progress bar accurately at 0%, 50%, and 100%', () => {
+    const bar0 = stripAnsi(formatProgressBar(0, 10, 10));
+    expect(bar0).toContain('0%');
+    expect(bar0).toContain('░░░░░░░░░░');
+
+    const bar50 = stripAnsi(formatProgressBar(5, 10, 10));
+    expect(bar50).toContain('50%');
+    expect(bar50).toContain('█████░░░░░');
+
+    const bar100 = stripAnsi(formatProgressBar(10, 10, 10));
+    expect(bar100).toContain('100%');
+    expect(bar100).toContain('██████████');
   });
 });

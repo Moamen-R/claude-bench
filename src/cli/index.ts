@@ -41,6 +41,8 @@ program
   .option('-s, --scope <scope>', 'Installation scope: global or project', 'global')
   .option('--dry-run', 'Preview changes without modifying host system', false)
   .option('-y, --yes', 'Accept defaults automatically without prompting', false)
+  .option('--force', 'Force re-installation of skills even if already present', false)
+  .option('-c, --concurrency <number>', 'Concurrent installation workers (default: 4)', '4')
   .action(async (opts) => {
     printBanner();
 
@@ -60,6 +62,8 @@ program
       process.exit(1);
     }
 
+    const concurrency = Math.max(1, parseInt(opts.concurrency, 10) || 4);
+
     const wizard = new WizardRunner();
     await wizard.run({
       target: opts.target as InstallationTarget,
@@ -68,6 +72,8 @@ program
       scope: opts.scope as ScopeMode,
       dryRun: opts.dryRun,
       yes: opts.yes,
+      force: opts.force,
+      concurrency,
     });
   });
 
@@ -116,7 +122,7 @@ program
 
     console.log(pc.cyan(`Installing ${match.name} (${match.id})...`));
     if (match.type === 'skill' || match.type === 'cli-anything') {
-      const installer = new SkillInstaller();
+      const installer = new SkillInstaller(undefined, detector);
       const res = await installer.installBatch([match], { scope: opts.scope, dryRun: opts.dryRun });
       if (res.success) {
         console.log(pc.green(` Successfully installed skill ${match.name}`));

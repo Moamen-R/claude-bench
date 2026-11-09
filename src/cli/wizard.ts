@@ -17,7 +17,7 @@ import { SkillInstaller } from '../installers/skill-installer.js';
 import { MCPConfigMerger } from '../installers/mcp-merger.js';
 import { ClaudeMdGenerator } from '../generators/claude-md-generator.js';
 import { BackupManager } from '../core/backup-manager.js';
-import { theme } from './ui.js';
+import { theme, formatProgressBar } from './ui.js';
 
 export interface WizardOptions {
   target?: InstallationTarget;
@@ -26,6 +26,8 @@ export interface WizardOptions {
   scope?: ScopeMode;
   dryRun?: boolean;
   yes?: boolean;
+  force?: boolean;
+  concurrency?: number;
 }
 
 export class WizardRunner {
@@ -34,7 +36,7 @@ export class WizardRunner {
   private claudeInstaller = new ClaudeInstaller(this.detector);
   private omnirouteInstaller = new OmniRouteInstaller();
   private nineRouterInstaller = new NineRouterInstaller(undefined, this.backupManager);
-  private skillInstaller = new SkillInstaller();
+  private skillInstaller = new SkillInstaller(undefined, this.detector);
   private mcpMerger = new MCPConfigMerger(this.backupManager);
   private claudeMdGenerator = new ClaudeMdGenerator(this.backupManager);
 
@@ -155,9 +157,40 @@ export class WizardRunner {
 
     // Step D: Install Skills & CLI-Anything Harnesses
     const skillItems = relevantItems.filter((i) => i.type === 'skill' || i.type === 'cli-anything');
-    s.start(`Installing ${skillItems.length} curated skills and harnesses...`);
-    await this.skillInstaller.installBatch(skillItems, { scope, dryRun });
-    s.stop(`Installed ${skillItems.length} skills & harnesses.`);
+    if (skillItems.length === 0) {
+      s.stop('No skills required for selected fields.');
+    } else {
+      s.start(`Installing ${skillItems.length} curated skills and harnesses...`);
+      const installResult = await this.skillInstaller.installBatch(skillItems, {
+        scope,
+        dryRun,
+        force: options.force,
+        concurrency: options.concurrency ?? 4,
+        onProgress: (p) => {
+          const bar = formatProgressBar(p.completed, p.total, 16);
+          const currentLabel =
+            p.currentItem.length > 25 ? p.currentItem.slice(0, 22) + '...' : p.currentItem;
+          const statusText = `[${p.completed}/${p.total}] ${bar} ${currentLabel}`;
+          s.message(statusText);
+        },
+      });
+
+      const parts: string[] = [`${installResult.installed.length} ready`];
+      if (installResult.cached.length > 0) parts.push(`${installResult.cached.length} cached`);
+      if (installResult.failed.length > 0) parts.push(`${installResult.failed.length} failed`);
+      s.stop(`Skills configured: ${parts.join(', ')}.`);
+
+      if (installResult.failed.length > 0 && !dryRun) {
+        console.log(pc.yellow(`\n  ▲ ${installResult.failed.length} skills could not be installed:`));
+        for (const f of installResult.failed.slice(0, 5)) {
+          console.log(pc.dim(`    - ${f.item}: ${f.error.split('\n')[0]}`));
+        }
+        if (installResult.failed.length > 5) {
+          console.log(pc.dim(`    ...and ${installResult.failed.length - 5} more`));
+        }
+        console.log();
+      }
+    }
 
     // Step E: Merge MCP Servers
     const mcpItems = relevantItems.filter((i) => i.type === 'mcp' && i.mcpConfig);

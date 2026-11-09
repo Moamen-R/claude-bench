@@ -1,6 +1,6 @@
 {
   "name": "claude-bench",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Production-grade, open-source CLI bootstrapper for Claude Code and Claude Desktop tailored across 13 professional fields",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -54,6 +54,7 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@dreamtree-org/graphify": "^1.9.2",
     "@types/node": "^22.13.9",
     "tsup": "^8.4.0",
     "tsx": "^4.19.3",
